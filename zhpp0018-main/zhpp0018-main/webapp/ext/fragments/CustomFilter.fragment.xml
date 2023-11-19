@@ -1,0 +1,100 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="issue" index="0" mandatory="mandatory"
+    label="{@i18n&gt;issue}"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl>
+        <ComboBox id="issue" change="onChangeIssue" selectedKey="{ui>/issue}" >
+            <core:Item key="Set Issue" text="Set"/>
+            <core:Item key="Individual Issue (For Re-Order Point)" text="Individual"/> 
+        </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="Plant" index="1" id="Plant" 
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="ProdOrd" index="2" id="ProdOrd" visible="{= ${ui>/issue} === 'Set Issue' }"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" visible="{= ${ui>/issue} === 'Set Issue' }"
+    key="ProdStartDate" index="3" id="ProdStartDate"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" visible="{= ${ui>/issue} === 'Set Issue' }"
+    key="ProdStartTime" index="4" id="ProdStartTime"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" visible="{= ${ui>/issue} === 'Set Issue' }"
+    key="ProdCreateDate" index="5" id="ProdCreateDate"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" visible="{= ${ui>/issue} === 'Set Issue' }"
+    key="ProdCreateTime" index="6" id="ProdCreateTime"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" visible="{= ${ui>/issue} === 'Set Issue' }"
+    key="SalesDoc" index="7" id="SalesDoc"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="SalesDocItem" index="8" id="SalesDocItem" visible="{= ${ui>/issue} === 'Set Issue' }"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="ReserCreDate" index="9" id="ReserCreDate" visible="{= ${ui>/issue} === 'Individual Issue (For Re-Order Point)' }"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="ReserCreTime" index="10" id="ReserCreTime" visible="{= ${ui>/issue} === 'Individual Issue (For Re-Order Point)' }"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC"  visible="{= ${ui>/issue} === 'Individual Issue (For Re-Order Point)' }"
+    key="ReserNo" index="11" id="ReserNo"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+<smartfilterbar:ControlConfiguration groupId="_BASIC"  visible="{= ${ui>/issue} === 'Individual Issue (For Re-Order Point)' }"
+    key="ReserItem" index="12" id="ReserItem"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl> 
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+
+</core:FragmentDefinition>

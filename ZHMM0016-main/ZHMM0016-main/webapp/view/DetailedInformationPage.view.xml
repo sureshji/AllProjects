@@ -1,0 +1,325 @@
+<mvc:View
+    controllerName="com.yokogawa.zhmm0016.controller.DetailedInformationPage"
+    displayBlock="true"
+    height="100%"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.uxap"
+    xmlns:m="sap.m"
+>
+    <ObjectPageLayout
+        upperCaseAnchorBar="false"
+        showFooter="true"
+    >
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <expandedHeading>
+                    <m:Title
+                        text="{zhmm0016>/info/title}"
+                        wrapping="true"
+                    />
+                </expandedHeading>
+
+                <snappedHeading>
+                    <m:HBox>
+                        <m:VBox>
+                            <m:Title
+                                text="{zhmm0016>/info/title}"
+                                wrapping="true"
+                            />
+                        </m:VBox>
+                    </m:HBox>
+                </snappedHeading>
+
+                <snappedTitleOnMobile>
+                    <m:Title text="{zhmm0016>/info/title}" />
+                </snappedTitleOnMobile>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+        <headerContent>
+            <m:HeaderContainer
+                scrollStep="200"
+                showDividers="false"
+            >
+                <m:VBox class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/PMKCode/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>PMKCode}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text text="{zhmm0016>/ObjectPage/pmk_code}" />
+                    </m:HBox>
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/PMKCodeDescription/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>PMKCodeDescription}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text text="{zhmm0016>/ObjectPage/pmk_code_desc}" />
+                    </m:HBox>
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/Material/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>Material}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text text="{zhmm0016>/ObjectPage/MaterialNumber}" />
+                    </m:HBox>
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/MaterialDescription/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>MaterialDescription}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text
+                            text="{zhmm0016>/ObjectPage/MaterialDescription}"
+                        />
+                    </m:HBox>
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/SalesOrg/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>SalesOrg}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text
+                            text="{zhmm0016>/ObjectPage/SalesOrganization}"
+                        />
+                    </m:HBox>
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/SalesOrgDescription/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>SalesOrgDescription}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text text="{zhmm0016>/ObjectPage/Sales_org_name}" />
+                    </m:HBox>
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/BUPFPGPL/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>BUPFPGPL}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text text="{zhmm0016>/ObjectPage/BUPFPGPL}" />
+                    </m:HBox>
+                    <m:HBox
+                        class="sapUiTinyMarginBottom"
+                        visible="{zhmm0016>/header/ValidOn/visible}"
+                    >
+                        <m:Label
+                            text="{i18n>ValidOn}:"
+                            class="sapUiSmallMarginEnd"
+                        />
+                        <m:Text
+                            text="{ path: 'zhmm0016>/ObjectPage/ValidOn', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'yyyy/MM/dd' }}"
+                        />
+                    </m:HBox>
+                </m:VBox>
+            </m:HeaderContainer>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection
+                visible="{=${zhmm0016>/info/key} === 'DiscountForReps'}"
+            >
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <m:Table
+                                columns="{zhmm0016>/table/discountForReps/columns}"
+                                items="{zhmm0016>/discountForReps_items}"
+                            >
+                                <m:columns>
+                                    <m:Column>
+                                        <m:Label text="{zhmm0016>name}" />
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem>
+                                        <m:cells>
+                                            <m:Text
+                                                text="{zhmm0016>SalesOrganization}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Customer_code}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Customer_name}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>ZZH_PRICE_LIST}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Price_list_description}"
+                                            />
+                                            <m:Text text="{zhmm0016>FLAG}" />
+                                            <m:Text
+                                                text="{zhmm0016>DISCOUNT}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>RATEUNIT}"
+                                            />
+                                            <m:Text text="{zhmm0016>DATAB}" />
+                                            <m:Text text="{zhmm0016>DATBI}" />
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                visible="{=${zhmm0016>/info/key} === 'SalesAreaLimit'}"
+            >
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <m:Table
+                                columns="{zhmm0016>/table/salesAreaLimit/columns}"
+                                items="{zhmm0016>/SalesAreaLimit_items}"
+                            >
+                                <m:columns>
+                                    <m:Column>
+                                        <m:Label text="{zhmm0016>name}" />
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem>
+                                        <m:cells>
+                                            <m:Text
+                                                text="{zhmm0016>spec_level}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>spec_code}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Country_code}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Country_Name}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>limitation}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Date_from}"
+                                            />
+                                            <m:Text text="{zhmm0016>Date_to}" />
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                visible="{=${zhmm0016>/info/key} === 'SoldToLimit'}"
+            >
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <m:Table
+                                columns="{zhmm0016>/table/soldToLimit/columns}"
+                                items="{zhmm0016>/SoldToLimit_items}"
+                            >
+                                <m:columns>
+                                    <m:Column>
+                                        <m:Label text="{zhmm0016>name}" />
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem>
+                                        <m:cells>
+                                            <m:Text
+                                                text="{zhmm0016>spec_level}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>spec_code}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>coustomer_code}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Customer_Name}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>limitation}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>Date_from}"
+                                            />
+                                            <m:Text text="{zhmm0016>Date_to}" />
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                visible="{=${zhmm0016>/info/key} === 'TransferFactor'}"
+            >
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <m:Table
+                                columns="{zhmm0016>/table/transferFactor/columns}"
+                                items="{zhmm0016>/table/transferFactor/items}"
+                            >
+                                <m:columns>
+                                    <m:Column>
+                                        <m:Label text="{zhmm0016>name}" />
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem>
+                                        <m:cells>
+                                            <m:Text
+                                                text="{zhmm0016>Customer}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>CustomerName}"
+                                            />
+                                            <m:Text text="{zhmm0016>Vendor}" />
+                                            <m:Text
+                                                text="{zhmm0016>VendorName}"
+                                            />
+                                            <m:Text text="{zhmm0016>Flag}" />
+                                            <m:Text
+                                                text="{zhmm0016>TF}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>RateUnit}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>ValidFrom}"
+                                            />
+                                            <m:Text text="{zhmm0016>ValidTo}" />
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+</mvc:View>

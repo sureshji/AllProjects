@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+<smartfilterbar:ControlConfiguration id="_IDGenControlConfiguration1" groupId="_BASIC" 
+    key="filter"
+    label="Mode"
+    visibleInAdvancedArea="true" mandatory="mandatory">
+    <smartfilterbar:customControl>
+        <MultiComboBox id="idMode">
+        <core:Item id="_IDGenItem1" key="1" text="Domestic"/>
+        <core:Item id="_IDGenItem2" key="2" text="Export"/>
+    </MultiComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>

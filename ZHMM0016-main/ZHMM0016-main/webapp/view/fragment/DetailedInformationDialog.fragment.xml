@@ -1,0 +1,35 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    width="300%"
+>
+    <Dialog
+        id="DetailedInformationDialog"
+        title="{i18n>DetailedInformationTitle}"
+        afterClose=".onDialogAfterClose"
+    >
+        <content>
+            <f:SimpleForm editable="true">
+                <f:content>
+                    <RadioButtonGroup
+                        id="InformationType"
+                        buttons="{zhmm0016>/infotypes}">        
+                        <RadioButton text="{zhmm0016>text}" enabled="{zhmm0016>enabled}" selected="{zhmm0016>selected}"/>
+                    </RadioButtonGroup>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+        <buttons>
+            <Button
+                text="{i18n>CloseButton}"
+                press=".onDialogClose"
+            />
+            <Button
+                text="{i18n>GoButton}"
+                press=".onGoButtonPress"
+                type="Emphasized"
+            />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

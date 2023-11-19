@@ -1,0 +1,2396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd.zsrvhps0006.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="ZCDSEHPSC0009Type">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                    <PropertyRef Name="ProjectDef"/>
+                    <PropertyRef Name="WBSElementId"/>
+                    <PropertyRef Name="Int_SO"/>
+                    <PropertyRef Name="Int_SO_LineItem"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="ProjectDef" Type="Edm.String" Nullable="false" MaxLength="24"/>
+                <Property Name="WBSElementId" Type="Edm.String" Nullable="false" MaxLength="24"/>
+                <Property Name="Int_SO" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="Int_SO_LineItem" Type="Edm.String" Nullable="false" MaxLength="6"/>
+                <Property Name="ProjectDesc" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="status_category" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="status_description" Type="Edm.String" Nullable="false" MaxLength="60"/>
+                <Property Name="ClosedProject" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="ProjectManager" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="ProjectManagerName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="LineManager" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LineManagerName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="AccountManager" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="AccountManagerName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="ConChecker" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="ConCheckerName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="soldtoparty" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="soldtopartyname" Type="Edm.String" Nullable="false" MaxLength="35"/>
+                <Property Name="soldtoparty2" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="soldtoparty2name" Type="Edm.String" Nullable="false" MaxLength="35"/>
+                <Property Name="salesperson" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="salespersonname" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="enduser" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="endusername" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="Customerrefno" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="quantity" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3"/>
+                <Property Name="unit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="RequirementDate" Type="Edm.Date"/>
+                <Property Name="LeadTime" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="Deadline" Type="Edm.Date"/>
+                <Property Name="material" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="ms_code" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="description" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="AWC1" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="AWC2" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="AWC3" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="AWC4" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="AWC5" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="comb_ind" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="comb_no" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="tokuchu_no_sell" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="tokuchu_no_sell_p" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="tokuchu_no_pur" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="tokuchu_no_pur_p" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="qic_del" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="sys_model" Type="Edm.String" Nullable="false" MaxLength="70"/>
+                <Property Name="doc_item_no" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="StorageLoc" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="StorageLocName" Type="Edm.String" Nullable="false" MaxLength="16"/>
+                <Property Name="linkagenumber" Type="Edm.String" Nullable="false" MaxLength="16"/>
+                <Property Name="matgrp" Type="Edm.String" Nullable="false" MaxLength="9"/>
+                <Property Name="Prodhierarchy" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="PRNo" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="PRItemNo" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="PRBlock" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="CommitDelDate" Type="Edm.Date"/>
+                <Property Name="PONo" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="POItemNo" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="Vendor" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="VendorName" Type="Edm.String" Nullable="false" MaxLength="35"/>
+                <Property Name="Production_Order" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="ProdOrderType" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="SVO" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="PlannedShipRDate" Type="Edm.Date"/>
+                <Property Name="ActShipRDate" Type="Edm.Date"/>
+                <Property Name="ShipDelay" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="PlannedProdSDate" Type="Edm.Date"/>
+                <Property Name="ActualProdSDate" Type="Edm.Date"/>
+                <Property Name="PlannedProdCDate" Type="Edm.Date"/>
+                <Property Name="ActualProdCDate" Type="Edm.Date"/>
+                <Property Name="ProdSDelay" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="ProdCDelay" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="MRPController" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="MRPControllerName" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="deliveryorder" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="deliveryitem" Type="Edm.String" Nullable="false" MaxLength="6"/>
+                <Property Name="shippedqty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3"/>
+                <Property Name="salesunit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="ShipPt" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="ShipPtText" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="ShippingCond" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="inco1" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="inco2" Type="Edm.String" Nullable="false" MaxLength="28"/>
+                <Property Name="shiptopartyname" Type="Edm.String" Nullable="false" MaxLength="35"/>
+                <Property Name="forwarding" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="forwardingname" Type="Edm.String" Nullable="false" MaxLength="35"/>
+                <Property Name="consignee" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="consigneename" Type="Edm.String" Nullable="false" MaxLength="35"/>
+                <Property Name="DOCreated" Type="Edm.Date"/>
+                <Property Name="DOChanged" Type="Edm.Date"/>
+                <Property Name="PlannedShipDate" Type="Edm.Date"/>
+                <Property Name="ActualShipDate" Type="Edm.Date"/>
+                <Property Name="ShipDateDelay" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="PlannedGIDate" Type="Edm.Date"/>
+                <Property Name="ActGIDate" Type="Edm.Date"/>
+                <Property Name="GIDateDelay" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="OverallDelay" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="werks" Type="Edm.String" Nullable="false" MaxLength="4"/>
+                <Property Name="cuobj" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="plifz" Type="Edm.Decimal" Nullable="false" Precision="3"/>
+                <Property Name="webaz" Type="Edm.Decimal" Nullable="false" Precision="3"/>
+                <Property Name="fabkl" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="lfdat" Type="Edm.Date"/>
+                <Property Name="GIComplete" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="layout" Type="Edm.String" Nullable="false" MaxLength="7"/>
+                <Property Name="InclDocItemNo" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="checkbox" Type="Edm.Boolean" Nullable="false"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="ZCDSEHPSC0009" EntityType="com.sap.gateway.srvd.zsrvhps0006.v0001.ZCDSEHPSC0009Type"/>
+            </EntityContainer>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/CompanyCode">
+                <Annotation Term="SAP__common.Label" String="Company Code"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_companycode/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.companycode'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="CoCd"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Company code for the project"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProjectDef">
+                <Annotation Term="SAP__common.Label" String="Project Definition"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0048/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.projectdef'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SemanticObject" String="Project"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/WBSElementId">
+                <Annotation Term="SAP__common.Label" String="WBS Element ID"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0048/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.wbselementid'/$metadata</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Int_SO">
+                <Annotation Term="SAP__common.Label" String="Int-SO No"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehsdb0034/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.int_so'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SemanticObject" String="SalesOrder"/>
+                <Annotation Term="SAP__common.Heading" String="Sales Doc."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Sales Document"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Int_SO_LineItem">
+                <Annotation Term="SAP__common.Label" String="Int-SO Item"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="Item"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Sales Document Item"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProjectDesc">
+                <Annotation Term="SAP__common.Label" String="Project Description"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0048/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.projectdesc'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="Description"/>
+                <Annotation Term="SAP__common.QuickInfo" String="PS: Short description (1st text line)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/status_category">
+                <Annotation Term="SAP__common.Label" String="Status Category"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/status_description">
+                <Annotation Term="SAP__common.Label" String="Status Description"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0043/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.status_description'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="Short Descript."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Short Text for Fixed Values"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ClosedProject">
+                <Annotation Term="SAP__common.Label" String="Closed Project"/>
+                <Annotation Term="SAP__common.Heading" String="Status"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Object status"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Plant">
+                <Annotation Term="SAP__common.Label" String="Plant"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Plnt"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Plant"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProjectManager">
+                <Annotation Term="SAP__common.Label" String="Project Manager"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0033/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.projectmanager'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.QuickInfo" String="Character Field of Length 12"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProjectManagerName">
+                <Annotation Term="SAP__common.Label" String="Project Manager Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name of employee or applicant"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Formatted Name of Employee or Applicant"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/LineManager">
+                <Annotation Term="SAP__common.Label" String="Line Manager"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0035/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.linemanager'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.QuickInfo" String="Character Field of Length 12"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/LineManagerName">
+                <Annotation Term="SAP__common.Label" String="Line Manager Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name of employee or applicant"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Formatted Name of Employee or Applicant"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AccountManager">
+                <Annotation Term="SAP__common.Label" String="Account Manager"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0036/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.accountmanager'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.QuickInfo" String="Character Field of Length 12"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AccountManagerName">
+                <Annotation Term="SAP__common.Label" String="Account Manager Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name of employee or applicant"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Formatted Name of Employee or Applicant"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ConChecker">
+                <Annotation Term="SAP__common.Label" String="Contents Checker"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehpsb0045/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.conchecker'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="Pers.No."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Personnel Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ConCheckerName">
+                <Annotation Term="SAP__common.Label" String="Contents Checker Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name of employee or applicant"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Formatted Name of Employee or Applicant"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/soldtoparty">
+                <Annotation Term="SAP__common.Label" String="Sold-to Party"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehsdb0036/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.soldtoparty'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="Customer"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Customer Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/soldtopartyname">
+                <Annotation Term="SAP__common.Label" String="Sold-to Party Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name 1"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/soldtoparty2">
+                <Annotation Term="SAP__common.Label" String="Sold-to Party 2"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehsdb0037/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.soldtoparty2'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="Customer"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Customer Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/soldtoparty2name">
+                <Annotation Term="SAP__common.Label" String="Sold-to Party 2 Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name 1"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/salesperson">
+                <Annotation Term="SAP__common.Label" String="Sales Person"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="Pers.No."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Personnel Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/salespersonname">
+                <Annotation Term="SAP__common.Label" String="Sales Person Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name of employee or applicant"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Formatted Name of Employee or Applicant"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/enduser">
+                <Annotation Term="SAP__common.Label" String="End User"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehsdb0038/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.enduser'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="Pers.No."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Personnel Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/endusername">
+                <Annotation Term="SAP__common.Label" String="End User Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name of employee or applicant"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Formatted Name of Employee or Applicant"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Customerrefno">
+                <Annotation Term="SAP__common.Label" String="Customer Reference Number"/>
+                <Annotation Term="SAP__common.Heading" String="Customer Reference"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Customer Reference"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/quantity">
+                <Annotation Term="SAP__common.Label" String="Quantity"/>
+                <Annotation Term="SAP__measures.Unit" Path="unit"/>
+                <Annotation Term="SAP__common.Heading" String="Order Quantity"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Cumulative order quantity in sales units"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/unit">
+                <Annotation Term="SAP__common.Label" String="Unit"/>
+                <Annotation Term="SAP__common.Heading" String="SU"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Sales unit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/RequirementDate">
+                <Annotation Term="SAP__common.Label" String="Requirement Date"/>
+                <Annotation Term="SAP__common.Heading" String="Deliv. date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Schedule line date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/LeadTime">
+                <Annotation Term="SAP__common.Label" String="Lead Time"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="AdditionalWorkLead Time"/>
+                <Annotation Term="SAP__common.QuickInfo" String="AdditionalWorkLead Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Deadline">
+                <Annotation Term="SAP__common.Label" String="Deadline"/>
+                <Annotation Term="SAP__common.Heading" String="Deliv. date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Item delivery date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/material">
+                <Annotation Term="SAP__common.Label" String="Material"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Material"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Material Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ms_code">
+                <Annotation Term="SAP__common.Label" String="MS Code"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehsdb0039/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.ms_code'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="MS Code"/>
+                <Annotation Term="SAP__common.QuickInfo" String="MS Code"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/description">
+                <Annotation Term="SAP__common.Label" String="Description"/>
+                <Annotation Term="SAP__common.Heading" String="Item Description"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Short text for sales order item"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC1">
+                <Annotation Term="SAP__common.Label" String="AWC 1"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehmmb0032/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.awc1'/$metadata</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC2">
+                <Annotation Term="SAP__common.Label" String="AWC 2"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehmmb0032/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.awc2'/$metadata</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC3">
+                <Annotation Term="SAP__common.Label" String="AWC 3"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehmmb0032/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.awc3'/$metadata</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC4">
+                <Annotation Term="SAP__common.Label" String="AWC 4"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehmmb0032/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.awc4'/$metadata</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC5">
+                <Annotation Term="SAP__common.Label" String="AWC 5"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehmmb0032/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.awc5'/$metadata</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/comb_ind">
+                <Annotation Term="SAP__common.Label" String="Combined MS-Code Indicator"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/comb_no">
+                <Annotation Term="SAP__common.Label" String="Combined MS-Code Control No"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/tokuchu_no_sell">
+                <Annotation Term="SAP__common.Label" String="TOKUCHU No (Sell)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/tokuchu_no_sell_p">
+                <Annotation Term="SAP__common.Label" String="TOKUCHU No for price (Sell)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/tokuchu_no_pur">
+                <Annotation Term="SAP__common.Label" String="TOKUCHU No (Pur.)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/tokuchu_no_pur_p">
+                <Annotation Term="SAP__common.Label" String="TOKUCHU No for price (Pur.)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/qic_del">
+                <Annotation Term="SAP__common.Label" String="QIC Delivery style"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/sys_model">
+                <Annotation Term="SAP__common.Label" String="System Model"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/doc_item_no">
+                <Annotation Term="SAP__common.Label" String="Document Item Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/StorageLoc">
+                <Annotation Term="SAP__common.Label" String="Storage Location"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="SLoc"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Storage location"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/StorageLocName">
+                <Annotation Term="SAP__common.Label" String="Storage Location　Name"/>
+                <Annotation Term="SAP__common.Heading" String="Stor. Loc. Descr."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Description of Storage Location"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/linkagenumber">
+                <Annotation Term="SAP__common.Label" String="Linkage Number"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehsdb0035/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.linkagenumber'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SemanticObject" String="zsem_orderLinkStatus"/>
+                <Annotation Term="SAP__common.Heading" String="Linkage Number"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Linkage Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/matgrp">
+                <Annotation Term="SAP__common.Label" String="Material Group"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Matl Group"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Material Group"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Prodhierarchy">
+                <Annotation Term="SAP__common.Label" String="Product hierarchy"/>
+                <Annotation Term="SAP__common.Heading" String="Description"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PRNo">
+                <Annotation Term="SAP__common.Label" String="PR No."/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_purchaserequisitionstdvh/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.prno'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="Purch.Req."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Purchase Requisition Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PRItemNo">
+                <Annotation Term="SAP__common.Label" String="PR Item No."/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="Item"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Item number of purchase requisition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PRBlock">
+                <Annotation Term="SAP__common.Label" String="PR Block"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Block"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Purchase Requisition Blocked"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/CommitDelDate">
+                <Annotation Term="SAP__common.Label" String="Commitment Delivery Date"/>
+                <Annotation Term="SAP__common.Heading" String="Deliv. date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Schedule line date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PONo">
+                <Annotation Term="SAP__common.Label" String="PO No."/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_purchaseorderstdvh/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.pono'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SemanticObject" String="PurchaseOrder"/>
+                <Annotation Term="SAP__common.Heading" String="Pur. Doc."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Purchasing Document Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/POItemNo">
+                <Annotation Term="SAP__common.Label" String="PO Item No."/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="Item"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Item Number of Purchasing Document"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Vendor">
+                <Annotation Term="SAP__common.Label" String="Vendor"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Supplier"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Vendor&amp;apos;s account number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/VendorName">
+                <Annotation Term="SAP__common.Label" String="Vendor Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name 1"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Production_Order">
+                <Annotation Term="SAP__common.Label" String="Production order"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_mfgorderstdvh/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.production_order'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SemanticObject" String="ProductionOrder"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Manufacturing Order ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProdOrderType">
+                <Annotation Term="SAP__common.Label" String="Production order type"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Type"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Order Type"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/SVO">
+                <Annotation Term="SAP__common.Label" String="SVO"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zcdsehcsb0025/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.svo'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SemanticObject" String="ServiceOrder"/>
+                <Annotation Term="SAP__common.Heading" String="Transaction ID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Transaction ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedShipRDate">
+                <Annotation Term="SAP__common.Label" String="Planned Shipping Ready Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Manufacturing Order Planned End Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActShipRDate">
+                <Annotation Term="SAP__common.Label" String="Actual Shipping Ready Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Manufacturing Order Actual End Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ShipDelay">
+                <Annotation Term="SAP__common.Label" String="Shipping Ready Delay"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedProdSDate">
+                <Annotation Term="SAP__common.Label" String="Planned Production Start Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Manufacturing Order Scheduled Start Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActualProdSDate">
+                <Annotation Term="SAP__common.Label" String="Actual Production Start Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Manufacturing Order Actual Start Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedProdCDate">
+                <Annotation Term="SAP__common.Label" String="Planned Production Completion Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Manufacturing Order Planned End Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActualProdCDate">
+                <Annotation Term="SAP__common.Label" String="Actual Production Completion Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Manufacturing Order Actual End Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProdSDelay">
+                <Annotation Term="SAP__common.Label" String="Production Start Delay"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProdCDelay">
+                <Annotation Term="SAP__common.Label" String="Production Completion Delay"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/MRPController">
+                <Annotation Term="SAP__common.Label" String="MRP Controller"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_mrpcontrollervh/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.mrpcontroller'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="MRPCn"/>
+                <Annotation Term="SAP__common.QuickInfo" String="MRP Controller"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/MRPControllerName">
+                <Annotation Term="SAP__common.Label" String="MRP Controller Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name of MRP controller"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/deliveryorder">
+                <Annotation Term="SAP__common.Label" String="Delivery Order"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_deliverydocumentstdvh/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.deliveryorder'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.SemanticObject" String="OutboundDelivery"/>
+                <Annotation Term="SAP__common.Heading" String="Delivery"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Delivery"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/deliveryitem">
+                <Annotation Term="SAP__common.Label" String="Delivery Item"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="Item"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Delivery Item"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/shippedqty">
+                <Annotation Term="SAP__common.Label" String="Shipped Qty"/>
+                <Annotation Term="SAP__measures.Unit" Path="salesunit"/>
+                <Annotation Term="SAP__common.Heading" String="Delivery Quantity"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Actual quantity delivered (in sales units)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ShipPt">
+                <Annotation Term="SAP__common.Label" String="Shipping Point"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_shippingpointstdvh/0001;ps='srvd-zsrvhps0006-0001';va='com.sap.gateway.srvd.zsrvhps0006.v0001.et-zcdsehpsc0009.shippt'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Heading" String="ShPt"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Shipping Point / Receiving Point"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ShipPtText">
+                <Annotation Term="SAP__common.Label" String="Shipping Point Text"/>
+                <Annotation Term="SAP__common.Heading" String="Description"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ShippingCond">
+                <Annotation Term="SAP__common.Label" String="Shipping Condition"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="SC"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Shipping Conditions"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/inco1">
+                <Annotation Term="SAP__common.Label" String="Incoterms1"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="IncoT"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Incoterms (Part 1)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/inco2">
+                <Annotation Term="SAP__common.Label" String="Incoterms2"/>
+                <Annotation Term="SAP__common.Heading" String="Inco. 2"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Incoterms (Part 2)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/shiptopartyname">
+                <Annotation Term="SAP__common.Label" String="Ship-to Party Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name 1"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/forwarding">
+                <Annotation Term="SAP__common.Label" String="Forwarding"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Customer"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Customer Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/forwardingname">
+                <Annotation Term="SAP__common.Label" String="Forwarding Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name 1"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/consignee">
+                <Annotation Term="SAP__common.Label" String="Consignee"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Customer"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Customer Number"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/consigneename">
+                <Annotation Term="SAP__common.Label" String="Consignee Name"/>
+                <Annotation Term="SAP__common.Heading" String="Name 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name 1"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/DOCreated">
+                <Annotation Term="SAP__common.Label" String="DO Created on"/>
+                <Annotation Term="SAP__common.Heading" String="Created on"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Date on which the record was created"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/DOChanged">
+                <Annotation Term="SAP__common.Label" String="DO Changed on"/>
+                <Annotation Term="SAP__common.Heading" String="Chngd On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed On"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedShipDate">
+                <Annotation Term="SAP__common.Label" String="Planned Shipping Date"/>
+                <Annotation Term="SAP__common.Heading" String="Loadg Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Loading Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActualShipDate">
+                <Annotation Term="SAP__common.Label" String="Actual Shipping Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ShipDateDelay">
+                <Annotation Term="SAP__common.Label" String="Shipping Date Delay"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedGIDate">
+                <Annotation Term="SAP__common.Label" String="Planned Goods Issue Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActGIDate">
+                <Annotation Term="SAP__common.Label" String="Actual Goods Issue Date"/>
+                <Annotation Term="SAP__common.Heading" String="Ac.GI Date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Actual Goods Movement Date"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/GIDateDelay">
+                <Annotation Term="SAP__common.Label" String="Goods Issue Date Delay"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/OverallDelay">
+                <Annotation Term="SAP__common.Label" String="Overall Delay"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/werks">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Plant"/>
+                <Annotation Term="SAP__common.Heading" String="Plnt"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Plant (Own or External)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/cuobj">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Configuration"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/fabkl">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Factory Calendar"/>
+                <Annotation Term="SAP__common.Heading" String="Cal"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Factory calendar key"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/layout">
+                <Annotation Term="SAP__common.Label" String="Layout for Linkage Number App"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/checkbox">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="TRUE"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Data element for domain BOOLE: TRUE (=&amp;apos;X&amp;apos;) and FALSE (=&amp;apos; &amp;apos;)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type">
+                <Annotation Term="SAP__common.Label" String="CDS View For Project Order Status List"/>
+                <Annotation Term="SAP__UI.Facets">
+                    <Collection>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Project Order Status Record"/>
+                            <PropertyValue Property="ID" String="GeneralData"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="GeneralData1"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#GeneralData1"/>
+                                        <Annotation Term="SAP__UI.PartOfPreview" Bool="true"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="GeneralData1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Company Code"/>
+                                    <PropertyValue Property="Value" Path="CompanyCode"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Project Definition"/>
+                                    <PropertyValue Property="Value" Path="ProjectDef"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Project Description"/>
+                                    <PropertyValue Property="Value" Path="ProjectDesc"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Status Category"/>
+                                    <PropertyValue Property="Value" Path="status_category"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Status Description"/>
+                                    <PropertyValue Property="Value" Path="status_description"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Closed Project"/>
+                                    <PropertyValue Property="Value" Path="ClosedProject"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Plant"/>
+                                    <PropertyValue Property="Value" Path="Plant"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Project Manager"/>
+                                    <PropertyValue Property="Value" Path="ProjectManager"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Project Manager Name"/>
+                                    <PropertyValue Property="Value" Path="ProjectManagerName"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Line Manager"/>
+                                    <PropertyValue Property="Value" Path="LineManager"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Line Manager Name"/>
+                                    <PropertyValue Property="Value" Path="LineManagerName"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Account Manager"/>
+                                    <PropertyValue Property="Value" Path="AccountManager"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Account Manager Name"/>
+                                    <PropertyValue Property="Value" Path="AccountManagerName"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Contents Checker"/>
+                                    <PropertyValue Property="Value" Path="ConChecker"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Contents Checker Name"/>
+                                    <PropertyValue Property="Value" Path="ConCheckerName"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Sold-to Party"/>
+                                    <PropertyValue Property="Value" Path="soldtoparty"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Sold-to Party Name"/>
+                                    <PropertyValue Property="Value" Path="soldtopartyname"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Sold-to Party 2"/>
+                                    <PropertyValue Property="Value" Path="soldtoparty2"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Sold-to Party 2 Name"/>
+                                    <PropertyValue Property="Value" Path="soldtoparty2name"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Sales Person"/>
+                                    <PropertyValue Property="Value" Path="salesperson"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Sales Person Name"/>
+                                    <PropertyValue Property="Value" Path="salespersonname"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="End User"/>
+                                    <PropertyValue Property="Value" Path="enduser"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="End User Name"/>
+                                    <PropertyValue Property="Value" Path="endusername"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Customer Reference Number"/>
+                                    <PropertyValue Property="Value" Path="Customerrefno"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="WBS Element ID"/>
+                                    <PropertyValue Property="Value" Path="WBSElementId"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Int-SO No"/>
+                                    <PropertyValue Property="Value" Path="Int_SO"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Int-SO Item"/>
+                                    <PropertyValue Property="Value" Path="Int_SO_LineItem"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Quantity"/>
+                                    <PropertyValue Property="Value" Path="quantity"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Unit"/>
+                                    <PropertyValue Property="Value" Path="unit"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Requirement Date"/>
+                                    <PropertyValue Property="Value" Path="RequirementDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Lead Time"/>
+                                    <PropertyValue Property="Value" Path="LeadTime"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Deadline"/>
+                                    <PropertyValue Property="Value" Path="Deadline"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Material"/>
+                                    <PropertyValue Property="Value" Path="material"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="MS Code"/>
+                                    <PropertyValue Property="Value" Path="ms_code"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Description"/>
+                                    <PropertyValue Property="Value" Path="description"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="AWC 1"/>
+                                    <PropertyValue Property="Value" Path="AWC1"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="AWC 2"/>
+                                    <PropertyValue Property="Value" Path="AWC2"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="AWC 3"/>
+                                    <PropertyValue Property="Value" Path="AWC3"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="AWC 4"/>
+                                    <PropertyValue Property="Value" Path="AWC4"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="AWC 5"/>
+                                    <PropertyValue Property="Value" Path="AWC5"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Combined MS-Code Indicator"/>
+                                    <PropertyValue Property="Value" Path="comb_ind"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Combined MS-Code Control No"/>
+                                    <PropertyValue Property="Value" Path="comb_no"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="TOKUCHU No (Sell)"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_sell"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="TOKUCHU No for price (Sell)"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_sell_p"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="TOKUCHU No (Pur.)"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_pur"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="TOKUCHU No for price (Pur.)"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_pur_p"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="QIC Delivery style"/>
+                                    <PropertyValue Property="Value" Path="qic_del"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="System Model"/>
+                                    <PropertyValue Property="Value" Path="sys_model"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Document Item Number"/>
+                                    <PropertyValue Property="Value" Path="doc_item_no"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Storage Location"/>
+                                    <PropertyValue Property="Value" Path="StorageLoc"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Storage Location　Name"/>
+                                    <PropertyValue Property="Value" Path="StorageLocName"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Linkage Number"/>
+                                    <PropertyValue Property="Value" Path="linkagenumber"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Material Group"/>
+                                    <PropertyValue Property="Value" Path="matgrp"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Product hierarchy"/>
+                                    <PropertyValue Property="Value" Path="Prodhierarchy"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="PR No."/>
+                                    <PropertyValue Property="Value" Path="PRNo"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="PR Item No."/>
+                                    <PropertyValue Property="Value" Path="PRItemNo"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="PR Block"/>
+                                    <PropertyValue Property="Value" Path="PRBlock"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Commitment Delivery Date"/>
+                                    <PropertyValue Property="Value" Path="CommitDelDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="PO No."/>
+                                    <PropertyValue Property="Value" Path="PONo"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="PO Item No."/>
+                                    <PropertyValue Property="Value" Path="POItemNo"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Vendor"/>
+                                    <PropertyValue Property="Value" Path="Vendor"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Vendor Name"/>
+                                    <PropertyValue Property="Value" Path="VendorName"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Production order"/>
+                                    <PropertyValue Property="Value" Path="Production_Order"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Production order type"/>
+                                    <PropertyValue Property="Value" Path="ProdOrderType"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Planned Shipping Ready Date"/>
+                                    <PropertyValue Property="Value" Path="PlannedShipRDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Actual Shipping Ready Date"/>
+                                    <PropertyValue Property="Value" Path="ActShipRDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Shipping Ready Delay"/>
+                                    <PropertyValue Property="Value" Path="ShipDelay"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Planned Production Start Date"/>
+                                    <PropertyValue Property="Value" Path="PlannedProdSDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Actual Production Start Date"/>
+                                    <PropertyValue Property="Value" Path="ActualProdSDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Planned Production Completion Date"/>
+                                    <PropertyValue Property="Value" Path="PlannedProdCDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Actual Production Completion Date"/>
+                                    <PropertyValue Property="Value" Path="ActualProdCDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Production Start Delay"/>
+                                    <PropertyValue Property="Value" Path="ProdSDelay"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Production Completion Delay"/>
+                                    <PropertyValue Property="Value" Path="ProdCDelay"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Delivery Order"/>
+                                    <PropertyValue Property="Value" Path="deliveryorder"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Delivery Item"/>
+                                    <PropertyValue Property="Value" Path="deliveryitem"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Shipped Qty"/>
+                                    <PropertyValue Property="Value" Path="shippedqty"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Shipping Point"/>
+                                    <PropertyValue Property="Value" Path="ShipPt"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Shipping Point Text"/>
+                                    <PropertyValue Property="Value" Path="ShipPtText"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Shipping Condition"/>
+                                    <PropertyValue Property="Value" Path="ShippingCond"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Incoterms1"/>
+                                    <PropertyValue Property="Value" Path="inco1"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Incoterms2"/>
+                                    <PropertyValue Property="Value" Path="inco2"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Ship-to Party Name"/>
+                                    <PropertyValue Property="Value" Path="shiptopartyname"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Forwarding"/>
+                                    <PropertyValue Property="Value" Path="forwarding"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Forwarding Name"/>
+                                    <PropertyValue Property="Value" Path="forwardingname"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Consignee"/>
+                                    <PropertyValue Property="Value" Path="consignee"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Consignee Name"/>
+                                    <PropertyValue Property="Value" Path="consigneename"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="DO Created on"/>
+                                    <PropertyValue Property="Value" Path="DOCreated"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="DO Changed on"/>
+                                    <PropertyValue Property="Value" Path="DOChanged"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Planned Shipping Date"/>
+                                    <PropertyValue Property="Value" Path="PlannedShipDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Actual Shipping Date"/>
+                                    <PropertyValue Property="Value" Path="ActualShipDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Shipping Date Delay"/>
+                                    <PropertyValue Property="Value" Path="ShipDateDelay"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Planned Goods Issue Date"/>
+                                    <PropertyValue Property="Value" Path="PlannedGIDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Actual Goods Issue Date"/>
+                                    <PropertyValue Property="Value" Path="ActGIDate"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Goods Issue Date Delay"/>
+                                    <PropertyValue Property="Value" Path="GIDateDelay"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Overall Delay"/>
+                                    <PropertyValue Property="Value" Path="OverallDelay"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="MRP Controller"/>
+                                    <PropertyValue Property="Value" Path="MRPController"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="MRP Controller Name"/>
+                                    <PropertyValue Property="Value" Path="MRPControllerName"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="SVO"/>
+                                    <PropertyValue Property="Value" Path="SVO"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Layout for Linkage Number App"/>
+                                    <PropertyValue Property="Value" Path="layout"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Project Order Status List"/>
+                        <PropertyValue Property="TypeNamePlural" String="Project Order Status List"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Account Manager"/>
+                            <PropertyValue Property="Value" Path="AccountManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Account Manager Name"/>
+                            <PropertyValue Property="Value" Path="AccountManagerName"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataFieldWithIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="zsem_orderLinkStatus"/>
+                            <PropertyValue Property="Action" String="display"/>
+                            <PropertyValue Property="Value" Path="linkagenumber"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="Project"/>
+                            <PropertyValue Property="Action" String="analyzeProjectStructureOverview"/>
+                            <PropertyValue Property="RequiresContext" Bool="false"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="SalesOrder"/>
+                            <PropertyValue Property="Action" String="display"/>
+                            <PropertyValue Property="RequiresContext" Bool="false"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="PurchaseOrder"/>
+                            <PropertyValue Property="Action" String="display"/>
+                            <PropertyValue Property="RequiresContext" Bool="false"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="ProductionOrder"/>
+                            <PropertyValue Property="Action" String="display"/>
+                            <PropertyValue Property="RequiresContext" Bool="false"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="ServiceOrder"/>
+                            <PropertyValue Property="Action" String="search"/>
+                            <PropertyValue Property="RequiresContext" Bool="false"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="OutboundDelivery"/>
+                            <PropertyValue Property="Action" String="displayOutboundDelivery"/>
+                            <PropertyValue Property="RequiresContext" Bool="false"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem" Qualifier="GeneralHP">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Company Code"/>
+                            <PropertyValue Property="Value" Path="CompanyCode"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Definition"/>
+                            <PropertyValue Property="Value" Path="ProjectDef"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Description"/>
+                            <PropertyValue Property="Value" Path="ProjectDesc"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Status Category"/>
+                            <PropertyValue Property="Value" Path="status_category"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Status Description"/>
+                            <PropertyValue Property="Value" Path="status_description"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Closed Project"/>
+                            <PropertyValue Property="Value" Path="ClosedProject"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Plant"/>
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Manager"/>
+                            <PropertyValue Property="Value" Path="ProjectManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Manager Name"/>
+                            <PropertyValue Property="Value" Path="ProjectManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Line Manager"/>
+                            <PropertyValue Property="Value" Path="LineManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Line Manager Name"/>
+                            <PropertyValue Property="Value" Path="LineManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Account Manager"/>
+                            <PropertyValue Property="Value" Path="AccountManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Account Manager Name"/>
+                            <PropertyValue Property="Value" Path="AccountManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Contents Checker"/>
+                            <PropertyValue Property="Value" Path="ConChecker"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Contents Checker Name"/>
+                            <PropertyValue Property="Value" Path="ConCheckerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party"/>
+                            <PropertyValue Property="Value" Path="soldtoparty"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party Name"/>
+                            <PropertyValue Property="Value" Path="soldtopartyname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party 2"/>
+                            <PropertyValue Property="Value" Path="soldtoparty2"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party 2 Name"/>
+                            <PropertyValue Property="Value" Path="soldtoparty2name"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Person"/>
+                            <PropertyValue Property="Value" Path="salesperson"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Person Name"/>
+                            <PropertyValue Property="Value" Path="salespersonname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="End User"/>
+                            <PropertyValue Property="Value" Path="enduser"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="End User Name"/>
+                            <PropertyValue Property="Value" Path="endusername"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Customer Reference Number"/>
+                            <PropertyValue Property="Value" Path="Customerrefno"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="WBS Element ID"/>
+                            <PropertyValue Property="Value" Path="WBSElementId"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Int-SO No"/>
+                            <PropertyValue Property="Value" Path="Int_SO"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Int-SO Item"/>
+                            <PropertyValue Property="Value" Path="Int_SO_LineItem"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Quantity"/>
+                            <PropertyValue Property="Value" Path="quantity"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Unit"/>
+                            <PropertyValue Property="Value" Path="unit"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Requirement Date"/>
+                            <PropertyValue Property="Value" Path="RequirementDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Lead Time"/>
+                            <PropertyValue Property="Value" Path="LeadTime"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Deadline"/>
+                            <PropertyValue Property="Value" Path="Deadline"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Material"/>
+                            <PropertyValue Property="Value" Path="material"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="MS Code"/>
+                            <PropertyValue Property="Value" Path="ms_code"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Description"/>
+                            <PropertyValue Property="Value" Path="description"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 1"/>
+                            <PropertyValue Property="Value" Path="AWC1"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 2"/>
+                            <PropertyValue Property="Value" Path="AWC2"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 3"/>
+                            <PropertyValue Property="Value" Path="AWC3"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 4"/>
+                            <PropertyValue Property="Value" Path="AWC4"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 5"/>
+                            <PropertyValue Property="Value" Path="AWC5"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Combined MS-Code Indicator"/>
+                            <PropertyValue Property="Value" Path="comb_ind"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Combined MS-Code Control No"/>
+                            <PropertyValue Property="Value" Path="comb_no"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No (Sell)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_sell"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No for price (Sell)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_sell_p"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No (Pur.)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_pur"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No for price (Pur.)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_pur_p"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="QIC Delivery style"/>
+                            <PropertyValue Property="Value" Path="qic_del"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="System Model"/>
+                            <PropertyValue Property="Value" Path="sys_model"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Storage Location"/>
+                            <PropertyValue Property="Value" Path="StorageLoc"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Storage Location　Name"/>
+                            <PropertyValue Property="Value" Path="StorageLocName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Linkage Number"/>
+                            <PropertyValue Property="Value" Path="linkagenumber"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Material Group"/>
+                            <PropertyValue Property="Value" Path="matgrp"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Product hierarchy"/>
+                            <PropertyValue Property="Value" Path="Prodhierarchy"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PR No."/>
+                            <PropertyValue Property="Value" Path="PRNo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PR Item No."/>
+                            <PropertyValue Property="Value" Path="PRItemNo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PR Block"/>
+                            <PropertyValue Property="Value" Path="PRBlock"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Commitment Delivery Date"/>
+                            <PropertyValue Property="Value" Path="CommitDelDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PO No."/>
+                            <PropertyValue Property="Value" Path="PONo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PO Item No."/>
+                            <PropertyValue Property="Value" Path="POItemNo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor"/>
+                            <PropertyValue Property="Value" Path="Vendor"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor Name"/>
+                            <PropertyValue Property="Value" Path="VendorName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production order"/>
+                            <PropertyValue Property="Value" Path="Production_Order"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production order type"/>
+                            <PropertyValue Property="Value" Path="ProdOrderType"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Shipping Ready Date"/>
+                            <PropertyValue Property="Value" Path="PlannedShipRDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Shipping Ready Date"/>
+                            <PropertyValue Property="Value" Path="ActShipRDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Ready Delay"/>
+                            <PropertyValue Property="Value" Path="ShipDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Production Start Date"/>
+                            <PropertyValue Property="Value" Path="PlannedProdSDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Production Start Date"/>
+                            <PropertyValue Property="Value" Path="ActualProdSDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Production Completion Date"/>
+                            <PropertyValue Property="Value" Path="PlannedProdCDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Production Completion Date"/>
+                            <PropertyValue Property="Value" Path="ActualProdCDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production Start Delay"/>
+                            <PropertyValue Property="Value" Path="ProdSDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production Completion Delay"/>
+                            <PropertyValue Property="Value" Path="ProdCDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Delivery Order"/>
+                            <PropertyValue Property="Value" Path="deliveryorder"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Delivery Item"/>
+                            <PropertyValue Property="Value" Path="deliveryitem"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipped Qty"/>
+                            <PropertyValue Property="Value" Path="shippedqty"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Point"/>
+                            <PropertyValue Property="Value" Path="ShipPt"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Point Text"/>
+                            <PropertyValue Property="Value" Path="ShipPtText"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Condition"/>
+                            <PropertyValue Property="Value" Path="ShippingCond"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Incoterms1"/>
+                            <PropertyValue Property="Value" Path="inco1"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Incoterms2"/>
+                            <PropertyValue Property="Value" Path="inco2"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Ship-to Party Name"/>
+                            <PropertyValue Property="Value" Path="shiptopartyname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Forwarding"/>
+                            <PropertyValue Property="Value" Path="forwarding"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Forwarding Name"/>
+                            <PropertyValue Property="Value" Path="forwardingname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Consignee"/>
+                            <PropertyValue Property="Value" Path="consignee"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Consignee Name"/>
+                            <PropertyValue Property="Value" Path="consigneename"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="DO Created on"/>
+                            <PropertyValue Property="Value" Path="DOCreated"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="DO Changed on"/>
+                            <PropertyValue Property="Value" Path="DOChanged"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Shipping Date"/>
+                            <PropertyValue Property="Value" Path="PlannedShipDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Shipping Date"/>
+                            <PropertyValue Property="Value" Path="ActualShipDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Date Delay"/>
+                            <PropertyValue Property="Value" Path="ShipDateDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Goods Issue Date"/>
+                            <PropertyValue Property="Value" Path="PlannedGIDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Goods Issue Date"/>
+                            <PropertyValue Property="Value" Path="ActGIDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Goods Issue Date Delay"/>
+                            <PropertyValue Property="Value" Path="GIDateDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Overall Delay"/>
+                            <PropertyValue Property="Value" Path="OverallDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="MRP Controller"/>
+                            <PropertyValue Property="Value" Path="MRPController"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="MRP Controller Name"/>
+                            <PropertyValue Property="Value" Path="MRPControllerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="SVO"/>
+                            <PropertyValue Property="Value" Path="SVO"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Layout for Linkage Number App"/>
+                            <PropertyValue Property="Value" Path="layout"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="doc_item_no"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem" Qualifier="GeneralP">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Company Code"/>
+                            <PropertyValue Property="Value" Path="CompanyCode"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Definition"/>
+                            <PropertyValue Property="Value" Path="ProjectDef"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Description"/>
+                            <PropertyValue Property="Value" Path="ProjectDesc"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Status Category"/>
+                            <PropertyValue Property="Value" Path="status_category"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Status Description"/>
+                            <PropertyValue Property="Value" Path="status_description"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Closed Project"/>
+                            <PropertyValue Property="Value" Path="ClosedProject"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Plant"/>
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Manager"/>
+                            <PropertyValue Property="Value" Path="ProjectManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Project Manager Name"/>
+                            <PropertyValue Property="Value" Path="ProjectManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Line Manager"/>
+                            <PropertyValue Property="Value" Path="LineManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Line Manager Name"/>
+                            <PropertyValue Property="Value" Path="LineManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Account Manager"/>
+                            <PropertyValue Property="Value" Path="AccountManager"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Account Manager Name"/>
+                            <PropertyValue Property="Value" Path="AccountManagerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Contents Checker"/>
+                            <PropertyValue Property="Value" Path="ConChecker"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Contents Checker Name"/>
+                            <PropertyValue Property="Value" Path="ConCheckerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party"/>
+                            <PropertyValue Property="Value" Path="soldtoparty"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party Name"/>
+                            <PropertyValue Property="Value" Path="soldtopartyname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party 2"/>
+                            <PropertyValue Property="Value" Path="soldtoparty2"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sold-to Party 2 Name"/>
+                            <PropertyValue Property="Value" Path="soldtoparty2name"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Person"/>
+                            <PropertyValue Property="Value" Path="salesperson"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Person Name"/>
+                            <PropertyValue Property="Value" Path="salespersonname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="End User"/>
+                            <PropertyValue Property="Value" Path="enduser"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="End User Name"/>
+                            <PropertyValue Property="Value" Path="endusername"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Customer Reference Number"/>
+                            <PropertyValue Property="Value" Path="Customerrefno"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="WBS Element ID"/>
+                            <PropertyValue Property="Value" Path="WBSElementId"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Int-SO No"/>
+                            <PropertyValue Property="Value" Path="Int_SO"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Int-SO Item"/>
+                            <PropertyValue Property="Value" Path="Int_SO_LineItem"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Quantity"/>
+                            <PropertyValue Property="Value" Path="quantity"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Unit"/>
+                            <PropertyValue Property="Value" Path="unit"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Requirement Date"/>
+                            <PropertyValue Property="Value" Path="RequirementDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Lead Time"/>
+                            <PropertyValue Property="Value" Path="LeadTime"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Deadline"/>
+                            <PropertyValue Property="Value" Path="Deadline"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Material"/>
+                            <PropertyValue Property="Value" Path="material"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="MS Code"/>
+                            <PropertyValue Property="Value" Path="ms_code"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Description"/>
+                            <PropertyValue Property="Value" Path="description"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 1"/>
+                            <PropertyValue Property="Value" Path="AWC1"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 2"/>
+                            <PropertyValue Property="Value" Path="AWC2"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 3"/>
+                            <PropertyValue Property="Value" Path="AWC3"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 4"/>
+                            <PropertyValue Property="Value" Path="AWC4"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="AWC 5"/>
+                            <PropertyValue Property="Value" Path="AWC5"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Combined MS-Code Indicator"/>
+                            <PropertyValue Property="Value" Path="comb_ind"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Combined MS-Code Control No"/>
+                            <PropertyValue Property="Value" Path="comb_no"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No (Sell)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_sell"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No for price (Sell)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_sell_p"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No (Pur.)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_pur"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="TOKUCHU No for price (Pur.)"/>
+                            <PropertyValue Property="Value" Path="tokuchu_no_pur_p"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="QIC Delivery style"/>
+                            <PropertyValue Property="Value" Path="qic_del"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="System Model"/>
+                            <PropertyValue Property="Value" Path="sys_model"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Document Item Number"/>
+                            <PropertyValue Property="Value" Path="doc_item_no"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Storage Location"/>
+                            <PropertyValue Property="Value" Path="StorageLoc"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Storage Location　Name"/>
+                            <PropertyValue Property="Value" Path="StorageLocName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Linkage Number"/>
+                            <PropertyValue Property="Value" Path="linkagenumber"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Material Group"/>
+                            <PropertyValue Property="Value" Path="matgrp"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Product hierarchy"/>
+                            <PropertyValue Property="Value" Path="Prodhierarchy"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PR No."/>
+                            <PropertyValue Property="Value" Path="PRNo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PR Item No."/>
+                            <PropertyValue Property="Value" Path="PRItemNo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PR Block"/>
+                            <PropertyValue Property="Value" Path="PRBlock"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Commitment Delivery Date"/>
+                            <PropertyValue Property="Value" Path="CommitDelDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PO No."/>
+                            <PropertyValue Property="Value" Path="PONo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PO Item No."/>
+                            <PropertyValue Property="Value" Path="POItemNo"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor"/>
+                            <PropertyValue Property="Value" Path="Vendor"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor Name"/>
+                            <PropertyValue Property="Value" Path="VendorName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production order"/>
+                            <PropertyValue Property="Value" Path="Production_Order"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production order type"/>
+                            <PropertyValue Property="Value" Path="ProdOrderType"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Shipping Ready Date"/>
+                            <PropertyValue Property="Value" Path="PlannedShipRDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Shipping Ready Date"/>
+                            <PropertyValue Property="Value" Path="ActShipRDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Ready Delay"/>
+                            <PropertyValue Property="Value" Path="ShipDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Production Start Date"/>
+                            <PropertyValue Property="Value" Path="PlannedProdSDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Production Start Date"/>
+                            <PropertyValue Property="Value" Path="ActualProdSDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Production Completion Date"/>
+                            <PropertyValue Property="Value" Path="PlannedProdCDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Production Completion Date"/>
+                            <PropertyValue Property="Value" Path="ActualProdCDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production Start Delay"/>
+                            <PropertyValue Property="Value" Path="ProdSDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Production Completion Delay"/>
+                            <PropertyValue Property="Value" Path="ProdCDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Delivery Order"/>
+                            <PropertyValue Property="Value" Path="deliveryorder"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Delivery Item"/>
+                            <PropertyValue Property="Value" Path="deliveryitem"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipped Qty"/>
+                            <PropertyValue Property="Value" Path="shippedqty"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Point"/>
+                            <PropertyValue Property="Value" Path="ShipPt"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Point Text"/>
+                            <PropertyValue Property="Value" Path="ShipPtText"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Condition"/>
+                            <PropertyValue Property="Value" Path="ShippingCond"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Incoterms1"/>
+                            <PropertyValue Property="Value" Path="inco1"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Incoterms2"/>
+                            <PropertyValue Property="Value" Path="inco2"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Ship-to Party Name"/>
+                            <PropertyValue Property="Value" Path="shiptopartyname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Forwarding"/>
+                            <PropertyValue Property="Value" Path="forwarding"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Forwarding Name"/>
+                            <PropertyValue Property="Value" Path="forwardingname"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Consignee"/>
+                            <PropertyValue Property="Value" Path="consignee"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Consignee Name"/>
+                            <PropertyValue Property="Value" Path="consigneename"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="DO Created on"/>
+                            <PropertyValue Property="Value" Path="DOCreated"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="DO Changed on"/>
+                            <PropertyValue Property="Value" Path="DOChanged"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Shipping Date"/>
+                            <PropertyValue Property="Value" Path="PlannedShipDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Shipping Date"/>
+                            <PropertyValue Property="Value" Path="ActualShipDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Date Delay"/>
+                            <PropertyValue Property="Value" Path="ShipDateDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Goods Issue Date"/>
+                            <PropertyValue Property="Value" Path="PlannedGIDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Goods Issue Date"/>
+                            <PropertyValue Property="Value" Path="ActGIDate"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Goods Issue Date Delay"/>
+                            <PropertyValue Property="Value" Path="GIDateDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Overall Delay"/>
+                            <PropertyValue Property="Value" Path="OverallDelay"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="MRP Controller"/>
+                            <PropertyValue Property="Value" Path="MRPController"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="MRP Controller Name"/>
+                            <PropertyValue Property="Value" Path="MRPControllerName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="SVO"/>
+                            <PropertyValue Property="Value" Path="SVO"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Layout for Linkage Number App"/>
+                            <PropertyValue Property="Value" Path="layout"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.PresentationVariant" Qualifier="GeneralHP">
+                    <Record>
+                        <PropertyValue Property="Text" String="Hidden Field"/>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@SAP__UI.LineItem#GeneralHP</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.PresentationVariant" Qualifier="GeneralP">
+                    <Record>
+                        <PropertyValue Property="Text" String="All Fields"/>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@SAP__UI.LineItem#GeneralP</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>CompanyCode</PropertyPath>
+                        <PropertyPath>ProjectDef</PropertyPath>
+                        <PropertyPath>ProjectDesc</PropertyPath>
+                        <PropertyPath>ProjectManager</PropertyPath>
+                        <PropertyPath>LineManager</PropertyPath>
+                        <PropertyPath>AccountManager</PropertyPath>
+                        <PropertyPath>ConChecker</PropertyPath>
+                        <PropertyPath>Int_SO</PropertyPath>
+                        <PropertyPath>PRNo</PropertyPath>
+                        <PropertyPath>PONo</PropertyPath>
+                        <PropertyPath>SVO</PropertyPath>
+                        <PropertyPath>Production_Order</PropertyPath>
+                        <PropertyPath>deliveryorder</PropertyPath>
+                        <PropertyPath>linkagenumber</PropertyPath>
+                        <PropertyPath>status_description</PropertyPath>
+                        <PropertyPath>soldtoparty</PropertyPath>
+                        <PropertyPath>soldtoparty2</PropertyPath>
+                        <PropertyPath>enduser</PropertyPath>
+                        <PropertyPath>MRPController</PropertyPath>
+                        <PropertyPath>ms_code</PropertyPath>
+                        <PropertyPath>WBSElementId</PropertyPath>
+                        <PropertyPath>RequirementDate</PropertyPath>
+                        <PropertyPath>CommitDelDate</PropertyPath>
+                        <PropertyPath>PlannedProdSDate</PropertyPath>
+                        <PropertyPath>ShipPt</PropertyPath>
+                        <PropertyPath>ActualProdSDate</PropertyPath>
+                        <PropertyPath>PlannedProdCDate</PropertyPath>
+                        <PropertyPath>ActualProdCDate</PropertyPath>
+                        <PropertyPath>PlannedShipRDate</PropertyPath>
+                        <PropertyPath>ActShipRDate</PropertyPath>
+                        <PropertyPath>PlannedShipDate</PropertyPath>
+                        <PropertyPath>ActualShipDate</PropertyPath>
+                        <PropertyPath>AWC1</PropertyPath>
+                        <PropertyPath>AWC2</PropertyPath>
+                        <PropertyPath>AWC3</PropertyPath>
+                        <PropertyPath>AWC4</PropertyPath>
+                        <PropertyPath>AWC5</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionVariant" Qualifier="SCLSD">
+                    <Record>
+                        <PropertyValue Property="Text" String="Incl CLSD (Project)"/>
+                        <PropertyValue Property="SelectOptions">
+                            <Collection>
+                                <Record Type="SAP__UI.SelectOptionType">
+                                    <PropertyValue Property="PropertyName" PropertyPath="ClosedProject"/>
+                                    <PropertyValue Property="Ranges">
+                                        <Collection>
+                                            <Record Type="SAP__UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="SAP__UI.SelectionRangeSignType/I"/>
+                                                <PropertyValue Property="Option" EnumMember="SAP__UI.SelectionRangeOptionType/EQ"/>
+                                                <PropertyValue Property="Low" String="CLOSED"/>
+                                            </Record>
+                                        </Collection>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionVariant" Qualifier="SGIcomplete">
+                    <Record>
+                        <PropertyValue Property="Text" String="Incl GI complete"/>
+                        <PropertyValue Property="SelectOptions">
+                            <Collection>
+                                <Record Type="SAP__UI.SelectOptionType">
+                                    <PropertyValue Property="PropertyName" PropertyPath="GIComplete"/>
+                                    <PropertyValue Property="Ranges">
+                                        <Collection>
+                                            <Record Type="SAP__UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="SAP__UI.SelectionRangeSignType/I"/>
+                                                <PropertyValue Property="Option" EnumMember="SAP__UI.SelectionRangeOptionType/EQ"/>
+                                                <PropertyValue Property="Low" String="X"/>
+                                            </Record>
+                                        </Collection>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/ZCDSEHPSC0009">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="true"/>
+                        <PropertyValue Property="UnsupportedExpressions" EnumMember="SAP__capabilities.SearchExpressions/AND SAP__capabilities.SearchExpressions/OR SAP__capabilities.SearchExpressions/NOT SAP__capabilities.SearchExpressions/group SAP__capabilities.SearchExpressions/phrase"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="Filterable" Bool="true"/>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="CompanyCode"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequiredProperties">
+                            <Collection>
+                                <PropertyPath>CompanyCode</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>LeadTime</PropertyPath>
+                                <PropertyPath>Deadline</PropertyPath>
+                                <PropertyPath>doc_item_no</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>LeadTime</PropertyPath>
+                                <PropertyPath>Deadline</PropertyPath>
+                                <PropertyPath>doc_item_no</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="SAP__aggregation.RollupType/None"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/salesunit">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Sales unit"/>
+                <Annotation Term="SAP__common.Heading" String="SU"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/plifz">
+                <Annotation Term="SAP__common.Label" String="Planned Deliv. Time"/>
+                <Annotation Term="SAP__common.Heading" String="PDT"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Planned Delivery Time in Days"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/webaz">
+                <Annotation Term="SAP__common.Label" String="GR processing time"/>
+                <Annotation Term="SAP__common.Heading" String="GRT"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Goods receipt processing time in days"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/lfdat">
+                <Annotation Term="SAP__common.Label" String="Delivery date"/>
+                <Annotation Term="SAP__common.Heading" String="Deliv. date"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Item delivery date"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

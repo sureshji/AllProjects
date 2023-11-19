@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zsrvbhfi0008/$metadata">
+        <edmx:Include Namespace="ZSRVBHFI0008" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zsrvbhfi0008_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="cds_zsrvehfi0009.ZCDSEHFIC0014Type/seq">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.ZCDSEHFIC0014Type/FIELD84">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.ZCDSEHFIC0014Type/FIELD85">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.ZCDSEHFIC0014Type/message">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.ZCDSEHFIC0014Type">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Vat data download"/>
+                            <PropertyValue Property="ID" String="idGeneralInformation"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="idIdentification"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field1"/>
+                            <PropertyValue Property="Value" Path="FIELD1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field2"/>
+                            <PropertyValue Property="Value" Path="FIELD2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field3"/>
+                            <PropertyValue Property="Value" Path="FIELD3"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field4"/>
+                            <PropertyValue Property="Value" Path="FIELD4"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field5"/>
+                            <PropertyValue Property="Value" Path="FIELD5"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field6"/>
+                            <PropertyValue Property="Value" Path="FIELD6"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field7"/>
+                            <PropertyValue Property="Value" Path="FIELD7"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field8"/>
+                            <PropertyValue Property="Value" Path="FIELD8"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field9"/>
+                            <PropertyValue Property="Value" Path="FIELD9"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field10"/>
+                            <PropertyValue Property="Value" Path="FIELD10"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field11"/>
+                            <PropertyValue Property="Value" Path="FIELD11"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field12"/>
+                            <PropertyValue Property="Value" Path="FIELD12"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field13"/>
+                            <PropertyValue Property="Value" Path="FIELD13"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field14"/>
+                            <PropertyValue Property="Value" Path="FIELD14"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field15"/>
+                            <PropertyValue Property="Value" Path="FIELD15"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field16"/>
+                            <PropertyValue Property="Value" Path="FIELD16"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field17"/>
+                            <PropertyValue Property="Value" Path="FIELD17"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field18"/>
+                            <PropertyValue Property="Value" Path="FIELD18"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field19"/>
+                            <PropertyValue Property="Value" Path="FIELD19"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field20"/>
+                            <PropertyValue Property="Value" Path="FIELD20"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field21"/>
+                            <PropertyValue Property="Value" Path="FIELD21"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field22"/>
+                            <PropertyValue Property="Value" Path="FIELD22"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field23"/>
+                            <PropertyValue Property="Value" Path="FIELD23"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field24"/>
+                            <PropertyValue Property="Value" Path="FIELD24"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field25"/>
+                            <PropertyValue Property="Value" Path="FIELD25"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field26"/>
+                            <PropertyValue Property="Value" Path="FIELD26"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field27"/>
+                            <PropertyValue Property="Value" Path="FIELD27"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field28"/>
+                            <PropertyValue Property="Value" Path="FIELD28"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field29"/>
+                            <PropertyValue Property="Value" Path="FIELD29"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field30"/>
+                            <PropertyValue Property="Value" Path="FIELD30"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field31"/>
+                            <PropertyValue Property="Value" Path="FIELD31"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field32"/>
+                            <PropertyValue Property="Value" Path="FIELD32"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field33"/>
+                            <PropertyValue Property="Value" Path="FIELD33"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field34"/>
+                            <PropertyValue Property="Value" Path="FIELD34"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field35"/>
+                            <PropertyValue Property="Value" Path="FIELD35"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field36"/>
+                            <PropertyValue Property="Value" Path="FIELD36"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field37"/>
+                            <PropertyValue Property="Value" Path="FIELD37"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field38"/>
+                            <PropertyValue Property="Value" Path="FIELD38"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field39"/>
+                            <PropertyValue Property="Value" Path="FIELD39"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field40"/>
+                            <PropertyValue Property="Value" Path="FIELD40"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field41"/>
+                            <PropertyValue Property="Value" Path="FIELD41"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field42"/>
+                            <PropertyValue Property="Value" Path="FIELD42"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field43"/>
+                            <PropertyValue Property="Value" Path="FIELD43"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field44"/>
+                            <PropertyValue Property="Value" Path="FIELD44"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field45"/>
+                            <PropertyValue Property="Value" Path="FIELD45"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field46"/>
+                            <PropertyValue Property="Value" Path="FIELD46"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field47"/>
+                            <PropertyValue Property="Value" Path="FIELD47"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field48"/>
+                            <PropertyValue Property="Value" Path="FIELD48"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field49"/>
+                            <PropertyValue Property="Value" Path="FIELD49"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field50"/>
+                            <PropertyValue Property="Value" Path="FIELD50"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field51"/>
+                            <PropertyValue Property="Value" Path="FIELD51"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field52"/>
+                            <PropertyValue Property="Value" Path="FIELD52"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field53"/>
+                            <PropertyValue Property="Value" Path="FIELD53"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field54"/>
+                            <PropertyValue Property="Value" Path="FIELD54"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field55"/>
+                            <PropertyValue Property="Value" Path="FIELD55"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field56"/>
+                            <PropertyValue Property="Value" Path="FIELD56"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field57"/>
+                            <PropertyValue Property="Value" Path="FIELD57"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field58"/>
+                            <PropertyValue Property="Value" Path="FIELD58"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field59"/>
+                            <PropertyValue Property="Value" Path="FIELD59"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field60"/>
+                            <PropertyValue Property="Value" Path="FIELD60"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field61"/>
+                            <PropertyValue Property="Value" Path="FIELD61"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field62"/>
+                            <PropertyValue Property="Value" Path="FIELD62"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field63"/>
+                            <PropertyValue Property="Value" Path="FIELD63"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field64"/>
+                            <PropertyValue Property="Value" Path="FIELD64"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field65"/>
+                            <PropertyValue Property="Value" Path="FIELD65"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field66"/>
+                            <PropertyValue Property="Value" Path="FIELD66"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field67"/>
+                            <PropertyValue Property="Value" Path="FIELD67"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field68"/>
+                            <PropertyValue Property="Value" Path="FIELD68"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field69"/>
+                            <PropertyValue Property="Value" Path="FIELD69"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field70"/>
+                            <PropertyValue Property="Value" Path="FIELD70"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field71"/>
+                            <PropertyValue Property="Value" Path="FIELD71"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field72"/>
+                            <PropertyValue Property="Value" Path="FIELD72"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field73"/>
+                            <PropertyValue Property="Value" Path="FIELD73"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field74"/>
+                            <PropertyValue Property="Value" Path="FIELD74"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field75"/>
+                            <PropertyValue Property="Value" Path="FIELD75"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field76"/>
+                            <PropertyValue Property="Value" Path="FIELD76"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field77"/>
+                            <PropertyValue Property="Value" Path="FIELD77"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field78"/>
+                            <PropertyValue Property="Value" Path="FIELD78"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field79"/>
+                            <PropertyValue Property="Value" Path="FIELD79"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field80"/>
+                            <PropertyValue Property="Value" Path="FIELD80"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field81"/>
+                            <PropertyValue Property="Value" Path="FIELD81"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field82"/>
+                            <PropertyValue Property="Value" Path="FIELD82"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field83"/>
+                            <PropertyValue Property="Value" Path="FIELD83"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field84"/>
+                            <PropertyValue Property="Value" Path="FIELD84"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field85"/>
+                            <PropertyValue Property="Value" Path="FIELD85"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field86"/>
+                            <PropertyValue Property="Value" Path="FIELD86"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field87"/>
+                            <PropertyValue Property="Value" Path="FIELD87"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field1"/>
+                            <PropertyValue Property="Value" Path="FIELD1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field2"/>
+                            <PropertyValue Property="Value" Path="FIELD2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field3"/>
+                            <PropertyValue Property="Value" Path="FIELD3"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field4"/>
+                            <PropertyValue Property="Value" Path="FIELD4"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field5"/>
+                            <PropertyValue Property="Value" Path="FIELD5"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field6"/>
+                            <PropertyValue Property="Value" Path="FIELD6"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field7"/>
+                            <PropertyValue Property="Value" Path="FIELD7"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field8"/>
+                            <PropertyValue Property="Value" Path="FIELD8"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field9"/>
+                            <PropertyValue Property="Value" Path="FIELD9"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field10"/>
+                            <PropertyValue Property="Value" Path="FIELD10"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field11"/>
+                            <PropertyValue Property="Value" Path="FIELD11"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field12"/>
+                            <PropertyValue Property="Value" Path="FIELD12"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field13"/>
+                            <PropertyValue Property="Value" Path="FIELD13"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field14"/>
+                            <PropertyValue Property="Value" Path="FIELD14"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field15"/>
+                            <PropertyValue Property="Value" Path="FIELD15"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field16"/>
+                            <PropertyValue Property="Value" Path="FIELD16"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field17"/>
+                            <PropertyValue Property="Value" Path="FIELD17"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field18"/>
+                            <PropertyValue Property="Value" Path="FIELD18"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field19"/>
+                            <PropertyValue Property="Value" Path="FIELD19"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field20"/>
+                            <PropertyValue Property="Value" Path="FIELD20"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field21"/>
+                            <PropertyValue Property="Value" Path="FIELD21"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field22"/>
+                            <PropertyValue Property="Value" Path="FIELD22"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field23"/>
+                            <PropertyValue Property="Value" Path="FIELD23"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field24"/>
+                            <PropertyValue Property="Value" Path="FIELD24"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field25"/>
+                            <PropertyValue Property="Value" Path="FIELD25"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field26"/>
+                            <PropertyValue Property="Value" Path="FIELD26"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field27"/>
+                            <PropertyValue Property="Value" Path="FIELD27"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field28"/>
+                            <PropertyValue Property="Value" Path="FIELD28"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field29"/>
+                            <PropertyValue Property="Value" Path="FIELD29"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field30"/>
+                            <PropertyValue Property="Value" Path="FIELD30"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field31"/>
+                            <PropertyValue Property="Value" Path="FIELD31"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field32"/>
+                            <PropertyValue Property="Value" Path="FIELD32"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field33"/>
+                            <PropertyValue Property="Value" Path="FIELD33"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field34"/>
+                            <PropertyValue Property="Value" Path="FIELD34"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field35"/>
+                            <PropertyValue Property="Value" Path="FIELD35"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field36"/>
+                            <PropertyValue Property="Value" Path="FIELD36"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field37"/>
+                            <PropertyValue Property="Value" Path="FIELD37"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field38"/>
+                            <PropertyValue Property="Value" Path="FIELD38"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field39"/>
+                            <PropertyValue Property="Value" Path="FIELD39"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field40"/>
+                            <PropertyValue Property="Value" Path="FIELD40"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field41"/>
+                            <PropertyValue Property="Value" Path="FIELD41"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field42"/>
+                            <PropertyValue Property="Value" Path="FIELD42"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field43"/>
+                            <PropertyValue Property="Value" Path="FIELD43"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field44"/>
+                            <PropertyValue Property="Value" Path="FIELD44"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field45"/>
+                            <PropertyValue Property="Value" Path="FIELD45"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field46"/>
+                            <PropertyValue Property="Value" Path="FIELD46"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field47"/>
+                            <PropertyValue Property="Value" Path="FIELD47"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field48"/>
+                            <PropertyValue Property="Value" Path="FIELD48"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field49"/>
+                            <PropertyValue Property="Value" Path="FIELD49"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field50"/>
+                            <PropertyValue Property="Value" Path="FIELD50"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field51"/>
+                            <PropertyValue Property="Value" Path="FIELD51"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field52"/>
+                            <PropertyValue Property="Value" Path="FIELD52"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field53"/>
+                            <PropertyValue Property="Value" Path="FIELD53"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field54"/>
+                            <PropertyValue Property="Value" Path="FIELD54"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field55"/>
+                            <PropertyValue Property="Value" Path="FIELD55"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field56"/>
+                            <PropertyValue Property="Value" Path="FIELD56"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field57"/>
+                            <PropertyValue Property="Value" Path="FIELD57"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field58"/>
+                            <PropertyValue Property="Value" Path="FIELD58"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field59"/>
+                            <PropertyValue Property="Value" Path="FIELD59"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field60"/>
+                            <PropertyValue Property="Value" Path="FIELD60"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field61"/>
+                            <PropertyValue Property="Value" Path="FIELD61"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field62"/>
+                            <PropertyValue Property="Value" Path="FIELD62"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field63"/>
+                            <PropertyValue Property="Value" Path="FIELD63"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field64"/>
+                            <PropertyValue Property="Value" Path="FIELD64"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field65"/>
+                            <PropertyValue Property="Value" Path="FIELD65"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field66"/>
+                            <PropertyValue Property="Value" Path="FIELD66"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field67"/>
+                            <PropertyValue Property="Value" Path="FIELD67"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field68"/>
+                            <PropertyValue Property="Value" Path="FIELD68"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field69"/>
+                            <PropertyValue Property="Value" Path="FIELD69"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field70"/>
+                            <PropertyValue Property="Value" Path="FIELD70"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field71"/>
+                            <PropertyValue Property="Value" Path="FIELD71"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field72"/>
+                            <PropertyValue Property="Value" Path="FIELD72"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field73"/>
+                            <PropertyValue Property="Value" Path="FIELD73"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field74"/>
+                            <PropertyValue Property="Value" Path="FIELD74"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field75"/>
+                            <PropertyValue Property="Value" Path="FIELD75"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field76"/>
+                            <PropertyValue Property="Value" Path="FIELD76"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field77"/>
+                            <PropertyValue Property="Value" Path="FIELD77"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field78"/>
+                            <PropertyValue Property="Value" Path="FIELD78"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field79"/>
+                            <PropertyValue Property="Value" Path="FIELD79"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field80"/>
+                            <PropertyValue Property="Value" Path="FIELD80"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field81"/>
+                            <PropertyValue Property="Value" Path="FIELD81"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field82"/>
+                            <PropertyValue Property="Value" Path="FIELD82"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field83"/>
+                            <PropertyValue Property="Value" Path="FIELD83"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field84"/>
+                            <PropertyValue Property="Value" Path="FIELD84"/>
+                            <Annotation Term="UI.Hidden"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Field85"/>
+                            <PropertyValue Property="Value" Path="FIELD85"/>
+                            <Annotation Term="UI.Hidden"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>FIELD4</PropertyPath>
+                        <PropertyPath>FIELD86</PropertyPath>
+                        <PropertyPath>FIELD87</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

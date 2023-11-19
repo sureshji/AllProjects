@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title="Language Key"
+		items="{oModel>/LanguageData}"
+		search=".onLanguageKeyValueHelpDialogSearch"
+		confirm=".onLanguageKeyValueHelpDialogClose"
+		cancel=".onLanguageKeyValueHelpDialogClose">
+		<StandardListItem
+			title="{oModel>LanguageISOCode}"
+			description="{oModel>Language_Text}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

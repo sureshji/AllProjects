@@ -1,0 +1,73 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/scheduler/(.*)$",
+      "target": "/scheduler/$1",
+      "destination": "dest-bgjob-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/v2/(.*)$",
+      "target": "/v2/$1",
+      "destination": "cap-zhs402-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZSRVBHMM0017/(.*)$",
+      "target": "/sap/opu/odata/sap/ZSRVBHMM0017/$1",
+      "destination": "s4003-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0051_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0051_001_SRV/$1",
+      "destination": "bw001-ap-https-jobs",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0052_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0052_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0059_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0059_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0078_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0078_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^/test-resources/(.*)$",
+      "target": "/test-resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

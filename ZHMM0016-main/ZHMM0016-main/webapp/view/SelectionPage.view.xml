@@ -1,0 +1,98 @@
+<mvc:View
+    controllerName="com.yokogawa.zhmm0016.controller.SelectionPage"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+>
+    <!-- <HBox>
+        <Button
+            text="{i18n>GoButton}"
+            press=".onGoExecuteButtonPress"
+        >
+            <layoutData>
+                <FlexItemData growFactor="1" />
+            </layoutData>
+        </Button>
+    </HBox> -->
+
+    <VBox class="sapUiSmallMargin">
+        <f:SimpleForm
+            editable="true"
+            layout="ResponsiveGridLayout"
+            singleContainerFullSize="false"
+        >
+            <f:content>
+                <Toolbar>
+                    <Title text="{i18n>FormTitle}" />
+                    <ToolbarSpacer />
+                </Toolbar>
+
+                <Label text="{i18n>MaterialNumber}" required="true" />
+                <Input value="{zhmm0016>/MaterialNumber}" width="250px" id="idMaterialNumber" required="true" maxLength="40" showValueHelp="true"
+			           valueHelpRequest=".onMaterialValueHelpRequest"/>
+
+                <Label text="{i18n>SalesOrganization}" />
+                <Input value="{zhmm0016>/SalesOrganization}" width="100px" id="idSalesOrganization" maxLength="4" showValueHelp="true"
+			           valueHelpRequest=".onSalesOrganizationValueHelpRequest"/>
+
+                <Label text="{i18n>DistributionChannel}" />
+                <Input value="{zhmm0016>/DistributionChannel}" width="50px" id="idDistributionChannel" maxLength="2" showValueHelp="true"
+			           valueHelpRequest=".onDistributionChannelValueHelpRequest"/>
+
+                <Label text="{i18n>Plant}" />
+                <Input value="{zhmm0016>/Plant}" width="80px" id="idPlant" maxLength="4" showValueHelp="true"
+		               valueHelpRequest=".onPlantValueHelpRequest"/>
+
+                <Label text="{i18n>ValidOn}" required="true" />
+                <DatePicker value="{'path':'zhmm0016>/ValidOn',
+						'type':'sap.ui.model.type.Date',
+						formatOptions: {
+							style: 'medium',
+							strictParsing: true
+						}
+                    }" id="idValidOn" required="true" change="handleChange" width="200px" />
+                
+                <Label text="{i18n>LanguageKey}" required="true" />
+                <Input value="{zhmm0016>/LanguageKey}" width="50px" id="idLanguageKey" required="true" maxLength="2" showValueHelp="true"
+			           valueHelpRequest=".onLanguageKeyValueHelpRequest"/>
+                       <!-- suggestionRows="{
+				       path: '/I_Language',
+			           }"> -->
+			        <!-- <suggestionColumns>
+				    <Column>
+					    <Label text="LanguageISOCode"/>
+				    </Column>
+			        </suggestionColumns>
+			        <suggestionRows>
+				    <ColumnListItem>
+					    <Label text="{LanguageISOCode}" />
+				    </ColumnListItem>
+			        </suggestionRows>
+		        </Input> -->
+                
+                <Label text="{i18n>RSP}" required="true" />
+                <Select selectedKey="{zhmm0016>/RSP}" required="true" width="300px">
+                    <items>
+                        <core:Item
+                            text="USD+JPY"
+                            key="1"
+                        />
+                        <core:Item
+                            text="USD+EUR"
+                            key="2"
+                        />
+                    </items>
+                </Select>
+            </f:content>
+        </f:SimpleForm>
+        <HBox>
+        <Button
+            type="Emphasized"
+            text="Go"
+            press="onGoExecuteButtonPress"
+        />
+        </HBox>
+    </VBox>
+</mvc:View>

@@ -1,0 +1,34 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" id="dialogSalesRateUpdate">
+	<Dialog id="InvoiceHistorySelectionDialog" title="{i18n>Selection}" contentWidth="400px">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm id="idFormSolTeam" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3"
+					emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2" singleContainerFullSize="false">
+					<f:content>
+						<Label text="{i18n>Company Code}" required="true"/>
+						<Input id="idCompanyCode" enabled="true" fieldGroupIds="fgUser" showValueHelp="true" valueHelpRequest="onValueHelpRequested"/>
+						<Label text="{i18n>Project Definition}" required="true"/>
+						<Input id="idProjectID" showValueHelp="true" fieldGroupIds="fgUser" valueHelpRequest="onValueHelpRequestedProject"/>
+						<Label text="{i18n>Target Period}"/>
+						<DateRangeSelection
+						id="idDate"
+						displayFormat="dd/MM/yyyy" 
+						change="handleChange"/>
+
+						<!-- <Label text="{i18n>Target Cost}"/>
+						<CheckBox text="Resource" selected="true" />
+		                <CheckBox text="Expense" />
+		                <CheckBox text="Material" selected="true" /> -->
+						
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</content>
+		<beginButton>
+			<Button text="{i18n>Create}" press="onCreateInvoice" type="Emphasized"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}" press="onCancelCreateDialog"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

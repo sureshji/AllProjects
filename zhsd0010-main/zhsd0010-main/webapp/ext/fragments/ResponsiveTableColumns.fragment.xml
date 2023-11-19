@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns="sap.m">
+    <table:Column id="_IDGenColumn1" width="80px">
+        <Text id="_IDGenText1" text="Unit Price"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;PRAT1&quot;, &quot;columnIndex&quot;: &quot;121&quot;}"/>
+        </table:customData>
+        <table:template>
+            <CheckBox id="_IDGenCheckBox1" select="onSelectPRAT1" selected="{PRAT1}"/>
+        </table:template>
+    </table:Column>
+    <table:Column id="_IDGenColumn2" width="50px">
+        <Text id="_IDGenText2" text="Tax"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;PRAT2&quot;, &quot;columnIndex&quot;: &quot;131&quot;}"/>
+        </table:customData>
+        <table:template>
+            <CheckBox id="_IDGenCheckBox2" select="onSelectPRAT2" selected="{PRAT2}"/>
+        </table:template>
+    </table:Column>
+    <table:Column id="_IDGenColumn3" width="80px">
+        <Text id="_IDGenText3" text="Suffix and Option"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;PRAT3&quot;, &quot;columnIndex&quot;: &quot;141&quot;}"/>
+        </table:customData>
+        <table:template>
+            <CheckBox id="_IDGenCheckBox3" select="onSelectPRAT3" selected="{PRAT3}"/>
+        </table:template>
+    </table:Column>
+    <table:Column id="_IDGenColumn4" width="80px">
+        <Text id="_IDGenText4" text="Order instruction"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;PRAT4&quot;, &quot;columnIndex&quot;: &quot;151&quot;}"/>
+        </table:customData>
+        <table:template>
+            <CheckBox id="_IDGenCheckBox4" select="onSelectPRAT4" selected="{PRAT4}"/>
+        </table:template>
+    </table:Column>
+</core:FragmentDefinition>

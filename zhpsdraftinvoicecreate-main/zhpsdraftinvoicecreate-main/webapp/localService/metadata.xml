@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCDSEHPSC0002_CDS" xml:lang="en" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+                <EntityType Name="ZCDSEHPSB0004Type" sap:label="Search Help for Company Code" sap:value-list="true" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="CompanyCode"/>
+                    </Key>
+                    <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Company code" sap:quickinfo="Company code for the project"/>
+                    <Property Name="CompanyCodeDesc" Type="Edm.String" MaxLength="25" sap:label="Company Name" sap:quickinfo="Name of Company Code or Company"/>
+                </EntityType>
+                <EntityType Name="ZCDSEHPSB0005Type" sap:label="Search Help for Project Ids" sap:value-list="true" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="InternalNumber"/>
+                    </Key>
+                    <Property Name="InternalNumber" Type="Edm.String" Nullable="false" MaxLength="24" sap:display-format="NonNegative" sap:label="Project def." sap:quickinfo="Project (internal)"/>
+                    <Property Name="ProjectId" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Project definition"/>
+                    <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company code" sap:quickinfo="Company code for the project"/>
+                    <Property Name="ProjDesc" Type="Edm.String" MaxLength="40" sap:label="Description" sap:quickinfo="PS: Short description (1st text line)"/>
+                    <Property Name="ApproverLM" Type="Edm.String" MaxLength="40" sap:label="Line Manager" sap:quickinfo="Formatted Name of Employee or Applicant"/>
+                    <Property Name="ApproverAM" Type="Edm.String" MaxLength="40" sap:label="Account Manager" sap:quickinfo="Formatted Name of Employee or Applicant"/>
+                </EntityType>
+                <EntityType Name="ZCDSEHPSB0007Type" sap:label="WBS SO Item" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="wbsElement"/>
+                        <PropertyRef Name="SalesOrderNumber"/>
+                        <PropertyRef Name="SalesOrderItem"/>
+                    </Key>
+                    <Property Name="wbsElement" Type="Edm.String" Nullable="false" MaxLength="24" sap:display-format="NonNegative" sap:label="WBS Element" sap:quickinfo="Work Breakdown Structure Element (WBS Element)"/>
+                    <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Sales document" sap:quickinfo="Sales Document"/>
+                    <Property Name="SalesOrderItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Sales Document Item"/>
+                    <Property Name="SalesOrderStatus" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="Object status"/>
+                    <Property Name="BillingStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Billing status" sap:quickinfo="Billing status for the billing plan/invoice plan date"/>
+                    <Property Name="BillingStatusMsg" Type="Edm.String" MaxLength="32"/>
+                    <Property Name="SalesOrderStatusMsg" Type="Edm.String" MaxLength="35"/>
+                    <Property Name="SalesOrderDocCat" Type="Edm.String" MaxLength="4" sap:label="SD Document Category"/>
+                    <Property Name="ProjectId" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Project (internal)"/>
+                </EntityType>
+                <EntityType Name="ZCDSEHPSB0014Type" sap:label="WBS WF Status" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="pspnr"/>
+                        <PropertyRef Name="counter"/>
+                        <PropertyRef Name="request_type"/>
+                    </Key>
+                    <Property Name="pspnr" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="NonNegative" sap:label="Project (internal)"/>
+                    <Property Name="counter" Type="Edm.Byte" Nullable="false" sap:label="Counter"/>
+                    <Property Name="request_type" Type="Edm.Byte" Nullable="false" sap:label="Request Type" sap:quickinfo="WBS Approval Request Type"/>
+                    <Property Name="stat" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="Object status"/>
+                    <Property Name="wfstatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Workflow Status"/>
+                    <Property Name="note" Type="Edm.String" MaxLength="255" sap:label="Text" sap:quickinfo="Text, 255 Characters"/>
+                    <Property Name="btp_fiori_url" Type="Edm.String" sap:display-format="UpperCase" sap:label="Tile URL"/>
+                    <Property Name="is_resubmitted" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="TRUE" sap:quickinfo="Data element for domain BOOLE: TRUE (='X') and FALSE (=' ')"/>
+                    <Property Name="resubmitted_on" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Changed On" sap:quickinfo="Last Changed On"/>
+                    <Property Name="resubmitted_by" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Changed By" sap:quickinfo="Name of Person Who Changed Object"/>
+                    <Property Name="zzh_idats" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Creation Date"/>
+                    <Property Name="zzh_iuzeit" Type="Edm.Time" Precision="0" sap:label="Creation Time"/>
+                    <Property Name="zzh_iusr" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created by"/>
+                    <Property Name="zzh_irepid" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Created Program"/>
+                    <Property Name="zzh_udats" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Change Date"/>
+                    <Property Name="zzh_uuzeit" Type="Edm.Time" Precision="0" sap:label="Change Time"/>
+                    <Property Name="zzh_uusr" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Changed by"/>
+                    <Property Name="zzh_urepid" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Changed Program"/>
+                    <Property Name="zzh_d_flg" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Delete Flag"/>
+                </EntityType>
+                <EntityType Name="ZCDSEHPSC0002Type" sap:label="Consumption view for WBS Workflow" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="InternalNumber"/>
+                    </Key>
+                    <Property Name="InternalNumber" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="NonNegative" sap:label="Project (internal)"/>
+                    <Property Name="ProjectId" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Project definition" sap:value-list="standard"/>
+                    <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company code" sap:quickinfo="Company code for the project" sap:value-list="standard"/>
+                    <Property Name="ProjDesc" Type="Edm.String" MaxLength="40" sap:label="Description" sap:quickinfo="PS: Short description (1st text line)"/>
+                    <Property Name="ApproverPM" Type="Edm.String" MaxLength="40" sap:label="Employee/app.name" sap:quickinfo="Formatted Name of Employee or Applicant"/>
+                    <Property Name="ApproverLM" Type="Edm.String" MaxLength="40" sap:label="Employee/app.name" sap:quickinfo="Formatted Name of Employee or Applicant"/>
+                    <Property Name="ApproverAM" Type="Edm.String" MaxLength="40" sap:label="Employee/app.name" sap:quickinfo="Formatted Name of Employee or Applicant"/>
+                    <Property Name="ApprovalOpen" Type="Edm.String" MaxLength="1"/>
+                    <Property Name="request_type" Type="Edm.Byte" sap:label="Request Type" sap:quickinfo="WBS Approval Request Type"/>
+                    <Property Name="gp_perc" Type="Edm.Decimal" Precision="15" Scale="1"/>
+                    <Property Name="planCost" Type="Edm.Decimal" Precision="27" Scale="3" sap:unit="TransactionalCurr"/>
+                    <Property Name="SalesOrderCurrency" Type="Edm.String" MaxLength="5" sap:label="Document Currency" sap:quickinfo="SD Document Currency" sap:semantics="currency-code"/>
+                    <Property Name="SalesOrderTot" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="SalesOrderCurrency"/>
+                    <Property Name="TransactionalCurr" Type="Edm.String" MaxLength="5" sap:label="Transaction Currency" sap:semantics="currency-code"/>
+                    <Property Name="validatePlanCost" Type="Edm.String" MaxLength="1"/>
+                    <Property Name="validateSOAmount" Type="Edm.String" MaxLength="1"/>
+                    <Property Name="CompanyCodeDesc" Type="Edm.String" MaxLength="25" sap:label="Company Code Description" sap:quickinfo="Name of Company Code or Company"/>
+                    <NavigationProperty Name="to_SoItem" Relationship="ZCDSEHPSC0002_CDS.assoc_084505799C0E4A5CB134B3753F79639E" FromRole="FromRole_assoc_084505799C0E4A5CB134B3753F79639E" ToRole="ToRole_assoc_084505799C0E4A5CB134B3753F79639E"/>
+                    <NavigationProperty Name="to_WbsWfStatus" Relationship="ZCDSEHPSC0002_CDS.assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE" FromRole="FromRole_assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE" ToRole="ToRole_assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE"/>
+                </EntityType>
+                <Association Name="assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE" sap:content-version="1">
+                    <End Type="ZCDSEHPSC0002_CDS.ZCDSEHPSC0002Type" Multiplicity="1" Role="FromRole_assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE"/>
+                    <End Type="ZCDSEHPSC0002_CDS.ZCDSEHPSB0014Type" Multiplicity="*" Role="ToRole_assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE"/>
+                </Association>
+                <Association Name="assoc_084505799C0E4A5CB134B3753F79639E" sap:content-version="1">
+                    <End Type="ZCDSEHPSC0002_CDS.ZCDSEHPSC0002Type" Multiplicity="1" Role="FromRole_assoc_084505799C0E4A5CB134B3753F79639E"/>
+                    <End Type="ZCDSEHPSC0002_CDS.ZCDSEHPSB0007Type" Multiplicity="*" Role="ToRole_assoc_084505799C0E4A5CB134B3753F79639E"/>
+                </Association>
+                <EntityContainer Name="ZCDSEHPSC0002_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                    <EntitySet Name="ZCDSEHPSB0004" EntityType="ZCDSEHPSC0002_CDS.ZCDSEHPSB0004Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                    <EntitySet Name="ZCDSEHPSB0005" EntityType="ZCDSEHPSC0002_CDS.ZCDSEHPSB0005Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                    <EntitySet Name="ZCDSEHPSB0007" EntityType="ZCDSEHPSC0002_CDS.ZCDSEHPSB0007Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                    <EntitySet Name="ZCDSEHPSB0014" EntityType="ZCDSEHPSC0002_CDS.ZCDSEHPSB0014Type" sap:deletable="false" sap:content-version="1"/>
+                    <EntitySet Name="ZCDSEHPSC0002" EntityType="ZCDSEHPSC0002_CDS.ZCDSEHPSC0002Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                    <AssociationSet Name="assoc_084505799C0E4A5CB134B3753F79639E" Association="ZCDSEHPSC0002_CDS.assoc_084505799C0E4A5CB134B3753F79639E" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                        <End EntitySet="ZCDSEHPSC0002" Role="FromRole_assoc_084505799C0E4A5CB134B3753F79639E"/>
+                        <End EntitySet="ZCDSEHPSB0007" Role="ToRole_assoc_084505799C0E4A5CB134B3753F79639E"/>
+                    </AssociationSet>
+                    <AssociationSet Name="assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE" Association="ZCDSEHPSC0002_CDS.assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                        <End EntitySet="ZCDSEHPSC0002" Role="FromRole_assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE"/>
+                        <End EntitySet="ZCDSEHPSB0014" Role="ToRole_assoc_DF7AFDE0BDE44D40D08C6FD88B565CAE"/>
+                    </AssociationSet>
+                </EntityContainer>
+                <Annotations Target="ZCDSEHPSC0002_CDS.ZCDSEHPSC0002Type/ProjectId"
+                    xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                    <Annotation Term="Common.ValueList">
+                        <Record>
+                            <PropertyValue Property="Label" String="Search Help for Project Ids"/>
+                            <PropertyValue Property="CollectionPath" String="ZCDSEHPSB0005"/>
+                            <PropertyValue Property="SearchSupported" Bool="false"/>
+                            <PropertyValue Property="Parameters">
+                                <Collection>
+                                    <Record Type="Common.ValueListParameterInOut">
+                                        <PropertyValue Property="LocalDataProperty" PropertyPath="ProjectId"/>
+                                        <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                    </Record>
+                                    <Record Type="Common.ValueListParameterInOut">
+                                        <PropertyValue Property="LocalDataProperty" PropertyPath="CompanyCode"/>
+                                        <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                    </Record>
+                                    <Record Type="Common.ValueListParameterDisplayOnly">
+                                        <PropertyValue Property="ValueListProperty" String="InternalNumber"/>
+                                    </Record>
+                                    <Record Type="Common.ValueListParameterDisplayOnly">
+                                        <PropertyValue Property="ValueListProperty" String="ProjectId"/>
+                                    </Record>
+                                    <Record Type="Common.ValueListParameterDisplayOnly">
+                                        <PropertyValue Property="ValueListProperty" String="ProjDesc"/>
+                                    </Record>
+                                    <Record Type="Common.ValueListParameterDisplayOnly">
+                                        <PropertyValue Property="ValueListProperty" String="ApproverLM"/>
+                                    </Record>
+                                    <Record Type="Common.ValueListParameterDisplayOnly">
+                                        <PropertyValue Property="ValueListProperty" String="ApproverAM"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </Annotations>
+                <Annotations Target="ZCDSEHPSC0002_CDS.ZCDSEHPSC0002Type/CompanyCode"
+                    xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                    <Annotation Term="Common.ValueList">
+                        <Record>
+                            <PropertyValue Property="Label" String="Search Help for Company Code"/>
+                            <PropertyValue Property="CollectionPath" String="ZCDSEHPSB0004"/>
+                            <PropertyValue Property="SearchSupported" Bool="false"/>
+                            <PropertyValue Property="Parameters">
+                                <Collection>
+                                    <Record Type="Common.ValueListParameterInOut">
+                                        <PropertyValue Property="LocalDataProperty" PropertyPath="CompanyCode"/>
+                                        <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                    </Record>
+                                    <Record Type="Common.ValueListParameterDisplayOnly">
+                                        <PropertyValue Property="ValueListProperty" String="CompanyCodeDesc"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </Annotations>
+                <Annotations Target="ZCDSEHPSC0002_CDS.ZCDSEHPSC0002_CDS_Entities"
+                    xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                    <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                </Annotations>
+                <Annotations Target="ZCDSEHPSC0002_CDS.ZCDSEHPSC0002_CDS_Entities/ZCDSEHPSB0014"
+                    xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                    <Annotation Term="Capabilities.FilterRestrictions">
+                        <Record>
+                            <PropertyValue Property="FilterExpressionRestrictions">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="Property" PropertyPath="btp_fiori_url"/>
+                                        <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                    <Annotation Term="Capabilities.SortRestrictions">
+                        <Record>
+                            <PropertyValue Property="NonSortableProperties">
+                                <Collection>
+                                    <PropertyPath>btp_fiori_url</PropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </Annotations>
+                <Annotations Target="ZCDSEHPSC0002_CDS.ZCDSEHPSB0014Type"
+                    xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                    <Annotation Term="Common.SemanticKey">
+                        <Collection>
+                            <PropertyPath>pspnr</PropertyPath>
+                        </Collection>
+                    </Annotation>
+                </Annotations>
+                <atom:link rel="self" href="https://s4apdevds1:44300/sap/opu/odata/sap/ZCDSEHPSC0002_CDS/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                    <atom:link rel="latest-version" href="https://s4apdevds1:44300/sap/opu/odata/sap/ZCDSEHPSC0002_CDS/$metadata"
+                        xmlns:atom="http://www.w3.org/2005/Atom"/>
+                    </Schema>
+                </edmx:DataServices>
+            </edmx:Edmx>

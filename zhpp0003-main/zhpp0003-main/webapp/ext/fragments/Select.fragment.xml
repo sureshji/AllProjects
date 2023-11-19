@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="mySelectDialog" noDataText="No Printers Found" title="Select Queue" search=".onQueueSearch" confirm=".onQDialogClose" cancel=".onQDialogClose" items="{path: 'ui>/aQueues'}">
+        <StandardListItem id="listQueue" title="{ui>PRINTERID}" description="{ui>KEY1}"  info="{ui>KEY1}" iconDensityAware="false" iconInset="false" type="Active" />
+    </SelectDialog>
+</core:FragmentDefinition>

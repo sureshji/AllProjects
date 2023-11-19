@@ -1,0 +1,19 @@
+{
+	"cols": [
+		{
+			"label": "Project Definition",
+			"template": "projectId",
+			"width": "15rem"
+		},
+		{
+			"label": "Project Definition Desc",
+			"template": "ProjectDesc"
+		}
+		,
+		{
+			"label": "Company Code",
+			"template": "vbukr"
+		}
+		
+	]
+}

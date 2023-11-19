@@ -1,0 +1,428 @@
+{
+    "_version": "1.37.0",
+    "sap.app": {
+        "id": "com.yokogawa.zhmm0016",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.10.4",
+            "toolsId": "eadbf08c-526e-42bf-93b9-1150f674664d"
+        },
+        "dataSources": {
+            "s4-service": {
+                "uri": "/sap/opu/odata/sap/ZSRVBHMM0020/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0031": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0051_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0040": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0144_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0" 
+                }
+            },
+            "bw-service-0043": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0124_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0047": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0165_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0066": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0075_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0243": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0434_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0247": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0432_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0252": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0436_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0037": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0113_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0051": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0097_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0044": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0163_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0242": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0438_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0244": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0446_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+
+            "bw-service-0253": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0436_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0069": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0505_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0248": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0444_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0249": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0508_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0251": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0453_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0050": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0192_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "bw-service-0070": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0076_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            },
+            "btp-service": {
+                "uri": "/v2/ZAPIBPS0028/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "com-yokogawa-zhmm0016-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "MaterialMasterReferenceReport",
+                    "action": "display",
+                    "title": "{{appTitle}}",
+                    "subTitle": "",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.96.12",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.yokogawa.zhmm0016.i18n.i18n"
+                }
+            },
+            "s4": {
+                "dataSource": "s4-service",
+                "preload": true,
+                "settings": {}
+            },
+            "btp": {
+                "dataSource": "btp-service",
+                "preload": true,
+                "settings": {}
+            },
+
+            "bw-0031": {
+                "dataSource": "bw-service-0031",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0040": {
+                "dataSource": "bw-service-0040",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0252": {
+                "dataSource": "bw-service-0252",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0047": {
+                "dataSource": "bw-service-0047",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0248": {
+                "dataSource": "bw-service-0248",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0243": {
+                "dataSource": "bw-service-0243",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0066": {
+                "dataSource": "bw-service-0066",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0247": {
+                "dataSource": "bw-service-0247",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0037": {
+                "dataSource": "bw-service-0037",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0242": {
+                "dataSource": "bw-service-0242",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0044": {
+                "dataSource": "bw-service-0044",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0051": {
+                "dataSource": "bw-service-0051",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0244": {
+                "dataSource": "bw-service-0244",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0253": {
+                "dataSource": "bw-service-0253",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0251": {
+                "dataSource": "bw-service-0251",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0249": {
+                "dataSource": "bw-service-0249",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0069": {
+                "dataSource": "bw-service-0069",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0070": {
+                "dataSource": "bw-service-0070",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0043": {
+                "dataSource": "bw-service-0043",
+                "preload": true,
+                "settings": {}
+            },
+            "bw-0050": {
+                "dataSource": "bw-service-0050",
+                "preload": true,
+                "settings": {}
+            },
+
+            "zhmm0016": {
+                "type": "sap.ui.model.json.JSONModel"
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "com.yokogawa.zhmm0016.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteSelectionPage",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetSelectionPage"
+                    ]
+                },
+                {
+                    "name": "RouteObjectPage",
+                    "pattern": "Detail/",
+                    "target": [
+                        "TargetObjectPage"
+                    ]
+                },
+                {
+                    "name": "RouteDetailedInformationPage",
+                    "pattern": "Detail/:InformationType:",
+                    "target": [
+                        "TargetDetailedInformationPage"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetSelectionPage": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "SelectionPage",
+                    "viewName": "SelectionPage"
+                },
+                "TargetObjectPage": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "ObjectPage",
+                    "viewName": "ObjectPage"
+                },
+                "TargetDetailedInformationPage": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "DetailedInformationPage",
+                    "viewName": "DetailedInformationPage"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.yokogawa.zhmm0016.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "comyokogawazhmm0016"
+    }
+}

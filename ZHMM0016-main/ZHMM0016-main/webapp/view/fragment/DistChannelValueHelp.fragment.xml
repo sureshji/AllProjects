@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title="Distribution Chanel"
+		items="{oModel>/DischanneData}"
+		search=".onDistributionChannelValueHelpDialogSearch"
+		confirm=".onDistributionChannelValueHelpDialogClose"
+		cancel=".onDistributionChannelValueHelpDialogClose">
+		<StandardListItem
+			title="{oModel>DistributionChannel}"
+			description="{oModel>DistributionChannel_Text}-{oModel>SalesOrganization}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

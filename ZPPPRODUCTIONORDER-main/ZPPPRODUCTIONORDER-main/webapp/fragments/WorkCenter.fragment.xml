@@ -1,0 +1,55 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<TableSelectDialog
+		id="myDialog"
+		noDataText="No Work Center Found"
+		title="Select Work Center"
+		search="handleSearch"
+		confirm="handleClose"
+		cancel="handleClose"
+		items="{
+			path : '/CramnSet',
+			sorter : {
+				path : 'Arbpl',
+				descending : false
+			}
+		}">
+		
+
+
+
+
+		<ColumnListItem vAlign="Middle" id="clif11">
+			<cells>
+				<ObjectIdentifier title="{Arbpl}" id="oif19"/>
+                <Text text="{Werks}"  id="tf119"/>
+                <Text text="{Ktext}" wrapping="false" id="tf129"/>
+				<Text text="{Spras}" wrapping="false" id="tf139"/>
+				
+			</cells>
+		</ColumnListItem>
+        <columns>
+            <Column width="11rem" id="cf19">
+				<header>
+				    <Text text="Work Center" id="lf119"/>
+                </header>
+			</Column>
+			 <Column width="11rem" id="cf259">
+				<header>
+				    <Text text="Plant" id="lf259"/>
+                </header>
+			</Column>
+            <Column width="11rem" id="cf129">
+				<header>
+					<Text text="Description" id="lf129"/>
+				</header>
+			</Column>
+			 <Column width="11rem" id="cf139">
+				<header>
+					<Text text="Language" id="lf139"/>
+				</header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

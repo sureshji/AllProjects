@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns:smartfield="sap.ui.comp.smartfield" xmlns="sap.m" xmlns:smartMultiInput="sap.ui.comp.smartmultiinput" xmlns:l="sap.ui.layout" xmlns:smartField="sap.ui.comp.smartfield" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Dialog id="selectOutputDialog" title="Output Option" class="sapUiContentPadding">
+        <customHeader>
+            <Bar id="oBar">
+                <contentMiddle>
+                    <Title id="idSelectOutput" text="Select Output" />
+                </contentMiddle>
+                <contentRight />
+            </Bar>
+        </customHeader>
+        <!-- <f:SimpleForm editable="true" id="simpeForm" layout="ColumnLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="4" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false">
+            <f:content> -->
+        <VBox id="12">
+            <FlexBox id="13">
+                <Label width="14rem" id="1" text="Paper Immediatly" />
+                <VBox width="14rem" id="2">
+                    <RadioButton groupName="paperIm" select="onSelectDefaultPrinter" selected="true" id="defaultPrinter" text="Use Default Printer Queue of work center" />
+                    <HBox id="box">
+                        <RadioButton groupName="paperIm" select="onSpecificPrinterSelect" selected="{= ${ui>/SpecifiedPrinter} ? true : false}" id="specifyPrinter" text="Specify Printer Queue" />
+                        <Input id="7v" enabled="false" valueState="None" value="{ui>/SpecifiedPrinter}" showValueHelp="true" liveChange="onPrinterValEntered" valueHelpRequest="onValueHelpSpecifyPrinter" />
+                    </HBox>
+                </VBox>
+            </FlexBox>
+            <FlexBox id="14">
+                <Label width="14rem" id="8" text="PDF Immediately" />
+                <Button width="14rem" id="9" text="Download" press="onPDFDownload" />
+            </FlexBox>
+            <FlexBox id="15" >
+                <Label width="14rem" id="10" text="Text Immediately" />
+                <Button width="14rem" id="11" text="Download" press="onTextDownload" />
+            </FlexBox>
+        </VBox>
+        <!-- </f:content>
+        </f:SimpleForm> -->
+        <buttons>
+            <Button id="btnPrint" width="8rem" type="Accept" press="onPrint" text="Print" />
+            <Button id="btnCancel" width="8rem" type="Reject" press="onClose" text="Cancel" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

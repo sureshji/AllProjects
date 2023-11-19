@@ -1,0 +1,2254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zcdsehmmc0001_cds/$metadata">
+        <edmx:Include Namespace="ZCDSEHMMC0001_CDS" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zcdsehmmc0001_cds_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_BusinessSolutionOrderStdVHType/ServiceDocumentStatusName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_BusinessSolutionOrderStdVHType/ServiceDocumentStatus">
+                <Annotation Term="Common.Text" Path="ServiceDocumentStatusName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_BusinessSolutionOrderStdVHType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ServiceDocumentStatusName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ServiceDocumentStatus"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_Customer_VHType/CustomerAccountGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_Customer_VHType/AuthorizationGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_Customer_VHType/IsBusinessPurposeCompleted">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_Customer_VHType/IsCompetitor">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_DeliveryBlockReasonType/DeliveryBlockReason">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_DeliveryBlockReasonType/DeliveryBlockReason_Text">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_MaterialType/ProdCharc1InternalNumber">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_MaterialType/ProdCharc2InternalNumber">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_MaterialType/ProdCharc3InternalNumber">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseContractType/PurchaseContractTargetAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseContractItemType/ContractNetPriceAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseContractItemType/TargetQuantity"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseContractItemType/TargetAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/ProductPurchasePointsQty"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/NetPriceQuantity"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/NetAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/GrossAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/EffectiveAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/Subtotal1Amount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/Subtotal2Amount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/Subtotal3Amount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/Subtotal4Amount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/Subtotal5Amount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/Subtotal6Amount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/OrderQuantity"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/NetPriceAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/ItemVolume"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/ItemGrossWeight"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/ItemNetWeight"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseOrderItemType/NonDeductibleInputTaxAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/ManufacturerMaterial">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/ManufacturerPartProfile">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/ManufacturerPartNmbr">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/AccountAssignmentCategory_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/BaseUnit_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/Batch_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/BudgetPeriod_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/CommitmentItem_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/CostCenter_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/DeliveryDate_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/EarmarkedFundsDocument_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/EarmarkedFundsDocumentItem_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/ExpectedOverallLimitAmount_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/FixedSupplier_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/FunctionalArea_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/Fund_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/FundedProgram_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/FundsCenter_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/GLAccount_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/GoodsReceiptIsExpected_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/GoodsReceiptIsNonValuated_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/GrantID_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/InvoiceIsExpected_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/IsClosed_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/IsPurReqnBlocked_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/ItemNetAmount_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/Material_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MaterialGoodsReceiptDuration_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MaterialGroup_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MaterialOrderUnit_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MaterialPlannedDeliveryDurn_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MaterialRevisionLevel_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MinRemainingShelfLife_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MRPController_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/MultipleAcctAssgmtDistribution_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/OverallLimitAmount_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PartialInvoiceDistribution_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PerformancePeriodEndDate_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PerformancePeriodStartDate_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/Plant_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/ProcessingStatus_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchaseOrderPriceType_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchaseRequisitionIsFixed_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchaseRequisitionItemText_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchaseRequisitionPrice_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchaseRequisitionReleaseDate_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchaseRequisitionType_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchasingDocumentItemCategory_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchasingGroup_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurchasingOrganization_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurReqCreationDate_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurReqnCatalog_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurReqnCatalogItem_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurReqnItemCurrency_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurReqnLimitConsumptionAmt_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurReqnPriceQuantity_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/PurReqnSSPRequestor_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/RequestedQuantity_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/RequirementTracking_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/RequisitionerName_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/ServicePerformer_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/StorageLocation_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/Supplier_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/SupplierMaterialNumber_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/TaxCode_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/WBSElement_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/Material">
+                <Annotation Term="Common.SemanticObject" String="Material"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaseReqnItemType/Supplier">
+                <Annotation Term="Common.SemanticObject" String="Supplier"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaserequisitionitemType/RequestedQuantity"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaserequisitionitemType/PurchaseRequisitionPrice"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaserequisitionitemType/PurReqnPriceQuantity"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_PurchaserequisitionitemType">
+                <Annotation Term="Common.SemanticObject" String="PurchaseRequisition"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_SalesOrderType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_SalesOrderType/TotalNetAmount"/>
+            <Annotations Target="ZCDSEHMMC0001_CDS.I_SalesOrganizationType/AddressID">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.ZCDSEHMMC0001Type/ekko_ebeln">
+                <Annotation Term="UI.DataFieldDefault">
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ekko_ebeln"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.ZCDSEHMMC0001Type/ekpo_ebelp">
+                <Annotation Term="UI.DataFieldDefault">
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ekpo_ebelp"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.ZCDSEHMMC0001Type/ekpo_meins">
+                <Annotation Term="UI.DataFieldDefault">
+                    <Record Type="UI.DataField">
+                        <PropertyValue Property="Value" Path="ekpo_meins"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDSEHMMC0001_CDS.ZCDSEHMMC0001Type">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Purchase Requisition List Details"/>
+                            <PropertyValue Property="ID" String="SContractId"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="SContractIdFGID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SContractIdFG"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="POType"/>
+                                    <Annotation Term="UI.Hidden"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="SContractIdFG">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Item Number of Purchase Requisition"/>
+                                    <PropertyValue Property="Value" Path="PurchReqItem"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition"/>
+                                    <PropertyValue Property="Value" Path="PurchReq"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition Document Type"/>
+                                    <PropertyValue Property="Value" Path="PurchReqDocType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchasing Document Deletion Indicator"/>
+                                    <PropertyValue Property="Value" Path="PurchDocDelInd"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Processing Status"/>
+                                    <PropertyValue Property="Value" Path="PurchReqProcStat"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Creation Indicator"/>
+                                    <PropertyValue Property="Value" Path="PurchReqCreInd"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Release Indicator"/>
+                                    <PropertyValue Property="Value" Path="ReleaseInd"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Release Strategy in Purchase Requisition"/>
+                                    <PropertyValue Property="Value" Path="PurchReqRelStg"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchasing Group"/>
+                                    <PropertyValue Property="Value" Path="PurchasingGrp"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition CreatedBy"/>
+                                    <PropertyValue Property="Value" Path="PurchReqCreatedby"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Item Category in Purchasing Document"/>
+                                    <PropertyValue Property="Value" Path="ItemCatPurDoc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition Changedon"/>
+                                    <PropertyValue Property="Value" Path="PurchReqChangedat"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Requisitioner"/>
+                                    <PropertyValue Property="Value" Path="Requisitioner"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Short Text"/>
+                                    <PropertyValue Property="Value" Path="ShortText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Material Number"/>
+                                    <PropertyValue Property="Value" Path="Material"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Plant"/>
+                                    <PropertyValue Property="Value" Path="Plant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Storage location"/>
+                                    <PropertyValue Property="Value" Path="StorageLoc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Requirement Tracking Number"/>
+                                    <PropertyValue Property="Value" Path="ReqTrackNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Material Group"/>
+                                    <PropertyValue Property="Value" Path="MaterialGroup"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Supplying Plant in Stock Transport Order"/>
+                                    <PropertyValue Property="Value" Path="StockTransportOrder"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition Quantity"/>
+                                    <PropertyValue Property="Value" Path="PurchReqQuantity"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Shortage Quantity"/>
+                                    <PropertyValue Property="Value" Path="ShortageQuantity"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Category of Delivery Date"/>
+                                    <PropertyValue Property="Value" Path="CategoryDeliveryDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Item Delivery Date"/>
+                                    <PropertyValue Property="Value" Path="ItemDeliveryDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Release Date"/>
+                                    <PropertyValue Property="Value" Path="PRReleaseDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Goods Recepit Process Time"/>
+                                    <PropertyValue Property="Value" Path="GoodsRecepitProcessTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Price in Purchase Requisition"/>
+                                    <PropertyValue Property="Value" Path="PricePurchReq"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Account Assignment Category"/>
+                                    <PropertyValue Property="Value" Path="AccAssignCategory"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Consumption Posting"/>
+                                    <PropertyValue Property="Value" Path="ConsumptionPost"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Distribution Indicator"/>
+                                    <PropertyValue Property="Value" Path="DisIndicator"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Partial Invoice Indicator"/>
+                                    <PropertyValue Property="Value" Path="PartialInvoiceIndicator"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Goods Receipt Indicator"/>
+                                    <PropertyValue Property="Value" Path="GoodsReceiptIndicator"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Goods Receipt Non.Valuated"/>
+                                    <PropertyValue Property="Value" Path="GoodsReceiptNotValuated"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Invoice Receipt Indicator"/>
+                                    <PropertyValue Property="Value" Path="InvoiceReceiptIndicator"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Desired Vendor"/>
+                                    <PropertyValue Property="Value" Path="DesiredVendor"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Fixed Vendor"/>
+                                    <PropertyValue Property="Value" Path="FixedVendor"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchasing Organization"/>
+                                    <PropertyValue Property="Value" Path="PurchasingOrganization"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="No of Principal Purchase Agreement"/>
+                                    <PropertyValue Property="Value" Path="NumofPrincipalPurchAgreement"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="No of Principal Purchase Agreement Item"/>
+                                    <PropertyValue Property="Value" Path="ItemNumPrincipalPurchAgreement"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="No of Purchasing Info Record"/>
+                                    <PropertyValue Property="Value" Path="PorchInfoRecordNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="MRP Controller"/>
+                                    <PropertyValue Property="Value" Path="MRPController"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Order Number"/>
+                                    <PropertyValue Property="Value" Path="PurchaseOrderNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Order Item Number"/>
+                                    <PropertyValue Property="Value" Path="PurchaseOrderItemNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Order Date"/>
+                                    <PropertyValue Property="Value" Path="PurchaseOrderDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Quantity Ordered Against PR"/>
+                                    <PropertyValue Property="Value" Path="QuantityOrdered"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Entry Sheet Number"/>
+                                    <PropertyValue Property="Value" Path="EntrySheetNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Valuation Type"/>
+                                    <PropertyValue Property="Value" Path="ValuationType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition Closed"/>
+                                    <PropertyValue Property="Value" Path="PurchRequisitionClosed"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Number of Reservation"/>
+                                    <PropertyValue Property="Value" Path="NumofReservation"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Special Stock Indicator"/>
+                                    <PropertyValue Property="Value" Path="SpecialStockIndicator"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Origin of Configuration"/>
+                                    <PropertyValue Property="Value" Path="OriginofConfiguration"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Cross Plant Configurable Material"/>
+                                    <PropertyValue Property="Value" Path="CrossPlantConfigMaterial"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Committed Date"/>
+                                    <PropertyValue Property="Value" Path="CommittedDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Material Category"/>
+                                    <PropertyValue Property="Value" Path="MaterialCategory"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Customer"/>
+                                    <PropertyValue Property="Value" Path="Customer"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Receive Delivery"/>
+                                    <PropertyValue Property="Value" Path="ReceiveDelivery"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Subcontracting Vendor"/>
+                                    <PropertyValue Property="Value" Path="SubcontractingVendor"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Valuation of Special Stock"/>
+                                    <PropertyValue Property="Value" Path="ValuationSpecialStock"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Currency Key"/>
+                                    <PropertyValue Property="Value" Path="CurrencyKey"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Material Number Used by Vendor"/>
+                                    <PropertyValue Property="Value" Path="MaterialUsedByVendor"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Overall Release of PR"/>
+                                    <PropertyValue Property="Value" Path="OverallReleasePurchRequ"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Manufacturer Part Profile"/>
+                                    <PropertyValue Property="Value" Path="MfrPartProfile"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Manufacturer Part Number"/>
+                                    <PropertyValue Property="Value" Path="ManufacturerPartNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Manufacturer Number"/>
+                                    <PropertyValue Property="Value" Path="ManufacturerNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="External Manufacturer Code"/>
+                                    <PropertyValue Property="Value" Path="ExternalManufacturer"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Framework Order"/>
+                                    <PropertyValue Property="Value" Path="FrameworkOrder"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Item of Framework Order"/>
+                                    <PropertyValue Property="Value" Path="ItemFrameworkOrder"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Planned Delivery Time"/>
+                                    <PropertyValue Property="Value" Path="PlannedDeliveryTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Delivery Date Time Spot"/>
+                                    <PropertyValue Property="Value" Path="DeliveryDateTimeSpot"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Requisition Processing State"/>
+                                    <PropertyValue Property="Value" Path="RequProcState"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Total value at time of release"/>
+                                    <PropertyValue Property="Value" Path="TotalValueTimeRelease"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition Blocking Indicator"/>
+                                    <PropertyValue Property="Value" Path="PurchRequBlocked"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Procuring Plant"/>
+                                    <PropertyValue Property="Value" Path="ProcuringPlant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Issuing Storage Location"/>
+                                    <PropertyValue Property="Value" Path="IssuStorLocStockTransport"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Requirement Urgency"/>
+                                    <PropertyValue Property="Value" Path="RequirementUrgency"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Requirement Priority"/>
+                                    <PropertyValue Property="Value" Path="RequirementPriority"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="MS Code"/>
+                                    <PropertyValue Property="Value" Path="MSCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Item Number of Purchase Requisition"/>
+                                    <PropertyValue Property="Value" Path="ItemNumberPurchRequ"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Deletion Indicator in Purchase Document"/>
+                                    <PropertyValue Property="Value" Path="DeletionIndicator"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Account Assignment Creation Date"/>
+                                    <PropertyValue Property="Value" Path="AccAssignCreatedon"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Cost Center"/>
+                                    <PropertyValue Property="Value" Path="CostCenter"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Account Assignment Created By"/>
+                                    <PropertyValue Property="Value" Path="AccAssignCreatedby"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Sales Order Number"/>
+                                    <PropertyValue Property="Value" Path="SalesOrderNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Sales Document Item"/>
+                                    <PropertyValue Property="Value" Path="SalesDocItem"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Main Asset Number"/>
+                                    <PropertyValue Property="Value" Path="MainAssetNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Asset Subnumber"/>
+                                    <PropertyValue Property="Value" Path="AssetSubNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Order"/>
+                                    <PropertyValue Property="Value" Path="OrderNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="WBS Element"/>
+                                    <PropertyValue Property="Value" Path="WBSElement"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Network"/>
+                                    <PropertyValue Property="Value" Path="Network"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Operation Number"/>
+                                    <PropertyValue Property="Value" Path="OperationNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Requisition Date"/>
+                                    <PropertyValue Property="Value" Path="PRDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PR Created by"/>
+                                    <PropertyValue Property="Value" Path="PRCreatedby"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Vendor Name"/>
+                                    <PropertyValue Property="Value" Path="VendorName1"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Vendor Country"/>
+                                    <PropertyValue Property="Value" Path="VendorCountry"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Vendor Material Number"/>
+                                    <PropertyValue Property="Value" Path="VendorMaterialNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Price in Purchase Requisition"/>
+                                    <PropertyValue Property="Value" Path="PRPrice"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PR Currency"/>
+                                    <PropertyValue Property="Value" Path="PRCurrency"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PR Unit of Measure"/>
+                                    <PropertyValue Property="Value" Path="meins"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Order Unit of Measure"/>
+                                    <PropertyValue Property="Value" Path="PurchOrderUOM"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Release Date"/>
+                                    <PropertyValue Property="Value" Path="ReleaseDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Release Status"/>
+                                    <PropertyValue Property="Value" Path="ReleaseState"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Approval Status of SO"/>
+                                    <PropertyValue Property="Value" Path="ApprovalStatusSO"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Order Date"/>
+                                    <PropertyValue Property="Value" Path="PurchOrdDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PO Delivery Date"/>
+                                    <PropertyValue Property="Value" Path="PODeliveryDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PO CreatedBy"/>
+                                    <PropertyValue Property="Value" Path="POCreatedBy"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PO Currency"/>
+                                    <PropertyValue Property="Value" Path="Waers"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchasing Document Number"/>
+                                    <PropertyValue Property="Value" Path="PurchasingDocNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchasing Document Item Number"/>
+                                    <PropertyValue Property="Value" Path="PurchasingDocItemNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PO Unit of Measure"/>
+                                    <PropertyValue Property="Value" Path="POUnitofMeasure"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Purchase Order Quantity"/>
+                                    <PropertyValue Property="Value" Path="POQuantity"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Net Price"/>
+                                    <PropertyValue Property="Value" Path="NetPrice"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Deletion Indicator"/>
+                                    <PropertyValue Property="Value" Path="DelIndicatorPurchDoc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="SO Number"/>
+                                    <PropertyValue Property="Value" Path="SONum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Sales Office"/>
+                                    <PropertyValue Property="Value" Path="SalesOffice"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Shipping Point"/>
+                                    <PropertyValue Property="Value" Path="ShippingPoint"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Ship.to Customer"/>
+                                    <PropertyValue Property="Value" Path="SOCustNum"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Address"/>
+                                    <PropertyValue Property="Value" Path="Address"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Sales Document Country"/>
+                                    <PropertyValue Property="Value" Path="SDocCountry"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Name 1"/>
+                                    <PropertyValue Property="Value" Path="Name1"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Name 2"/>
+                                    <PropertyValue Property="Value" Path="Name2"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Name 3"/>
+                                    <PropertyValue Property="Value" Path="Name3"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Name 4"/>
+                                    <PropertyValue Property="Value" Path="Name4"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Country"/>
+                                    <PropertyValue Property="Value" Path="Country"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="City"/>
+                                    <PropertyValue Property="Value" Path="City"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="City Postal Code"/>
+                                    <PropertyValue Property="Value" Path="CityPostalCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Street"/>
+                                    <PropertyValue Property="Value" Path="Street"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Contact Ship Name1"/>
+                                    <PropertyValue Property="Value" Path="ContactShipName1"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Contact Ship Name2"/>
+                                    <PropertyValue Property="Value" Path="ContactShipName2"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Contact Ship Name3"/>
+                                    <PropertyValue Property="Value" Path="ContactShipName3"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Contact Ship Name4"/>
+                                    <PropertyValue Property="Value" Path="ContactShipName4"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Contact Ship Tel No"/>
+                                    <PropertyValue Property="Value" Path="ContactShipTelNo"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Tokuchu No"/>
+                                    <PropertyValue Property="Value" Path="TokuchuNo"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="PR Item Text"/>
+                                    <PropertyValue Property="Value" Path="PRItemText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Payment Terms"/>
+                                    <PropertyValue Property="Value" Path="VendorTermsofPay"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Incoterms1"/>
+                                    <PropertyValue Property="Value" Path="Incoterms1"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Incoterms2"/>
+                                    <PropertyValue Property="Value" Path="Incoterms2"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Payment Terms"/>
+                                    <PropertyValue Property="Value" Path="PaymentTerms"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Vendor Item Code"/>
+                                    <PropertyValue Property="Value" Path="VendorItemCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Safety Stock"/>
+                                    <PropertyValue Property="Value" Path="SafetyStock"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Reorder Point"/>
+                                    <PropertyValue Property="Value" Path="ReorderPoint"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Lot Sizing Procedure"/>
+                                    <PropertyValue Property="Value" Path="LotSizing"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Min. Lot Size"/>
+                                    <PropertyValue Property="Value" Path="MinimumLotSize"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Max. Lot Size"/>
+                                    <PropertyValue Property="Value" Path="MaximumLotSize"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="MRP Type"/>
+                                    <PropertyValue Property="Value" Path="MRPType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Initial PO"/>
+                                    <PropertyValue Property="Value" Path="InitialPO"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Subcon Law PO"/>
+                                    <PropertyValue Property="Value" Path="SubconLawPO"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Due Date (Price)"/>
+                                    <PropertyValue Property="Value" Path="DueDatePrice"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Due Date (Delivery)"/>
+                                    <PropertyValue Property="Value" Path="DueDateDelv"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Construction law PO"/>
+                                    <PropertyValue Property="Value" Path="ConstructionlawPO"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Construction start date."/>
+                                    <PropertyValue Property="Value" Path="Constructdate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Return Item"/>
+                                    <PropertyValue Property="Value" Path="RetItem"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Qty still to be delivered"/>
+                                    <PropertyValue Property="Value" Path="QtyStillDel"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Purchase Requisition"/>
+                    </Record>
+                    <Annotation Term="Core.Messages">
+                        <Collection>
+                            <Record>
+                                <PropertyValue Property="message" String="UI.HEADERINFO: TypeNamePlural is mandatory"/>
+                                <PropertyValue Property="severity" String="error"/>
+                            </Record>
+                        </Collection>
+                    </Annotation>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReq"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqItem"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqDocType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchDocDelInd"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqProcStat"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqCreInd"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReleaseInd"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqRelStg"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchasingGrp"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqCreatedby"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ItemCatPurDoc"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqChangedat"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Requisitioner"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShortText"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StorageLoc"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReqTrackNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaterialGroup"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StockTransportOrder"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchReqQuantity"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShortageQuantity"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CategoryDeliveryDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ItemDeliveryDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PRReleaseDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="GoodsRecepitProcessTime"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PricePurchReq"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="AccAssignCategory"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ConsumptionPost"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DisIndicator"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PartialInvoiceIndicator"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="GoodsReceiptIndicator"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="GoodsReceiptNotValuated"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InvoiceReceiptIndicator"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DesiredVendor"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FixedVendor"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchasingOrganization"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NumofPrincipalPurchAgreement"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ItemNumPrincipalPurchAgreement"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PorchInfoRecordNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MRPController"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchaseOrderNumber"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchaseOrderItemNumber"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchaseOrderDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="QuantityOrdered"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EntrySheetNumber"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValuationType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchRequisitionClosed"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NumofReservation"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SpecialStockIndicator"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OriginofConfiguration"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CrossPlantConfigMaterial"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CommittedDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaterialCategory"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Customer"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReceiveDelivery"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SubcontractingVendor"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ValuationSpecialStock"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CurrencyKey"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaterialUsedByVendor"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OverallReleasePurchRequ"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MfrPartProfile"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ManufacturerPartNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ManufacturerNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ExternalManufacturer"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FrameworkOrder"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ItemFrameworkOrder"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PlannedDeliveryTime"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeliveryDateTimeSpot"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequProcState"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalValueTimeRelease"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchRequBlocked"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ProcuringPlant"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="IssuStorLocStockTransport"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RequirementUrgency"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MSCode"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ItemNumberPurchRequ"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeletionIndicator"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="AccAssignCreatedon"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CostCenter"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="AccAssignCreatedby"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrderNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesDocItem"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MainAssetNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="AssetSubNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OrderNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="WBSElement"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Network"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OperationNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PRDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PRCreatedby"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VendorName1"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VendorCountry"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VendorMaterialNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PRPrice"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PRCurrency"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="meins"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchOrderUOM"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReleaseDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReleaseState"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ApprovalStatusSO"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchOrdDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PODeliveryDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="POCreatedBy"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Waers"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchasingDocNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchasingDocItemNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="POUnitofMeasure"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="POQuantity"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NetPrice"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DelIndicatorPurchDoc"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SONum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOffice"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShippingPoint"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SOCustNum"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Address"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SDocCountry"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Name1"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Name2"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Name3"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Name4"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Country"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="City"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CityPostalCode"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Street"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ContactShipName1"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ContactShipName2"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ContactShipName3"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ContactShipName4"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ContactShipTelNo"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TokuchuNo"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PRItemText"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VendorTermsofPay"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Incoterms1"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Incoterms2"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PaymentTerms"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VendorItemCode"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SafetyStock"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReorderPoint"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="LotSizing"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MinimumLotSize"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MaximumLotSize"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MRPType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InitialPO"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SubconLawPO"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DueDatePrice"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DueDateDelv"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ConstructionlawPO"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Constructdate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RetItem"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="QtyStillDel"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="POType"/>
+                            <Annotation Term="UI.Hidden"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Requisition"/>
+                            <PropertyValue Property="Value" Path="PurchReq"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Item Number of Purchase Requisition"/>
+                            <PropertyValue Property="Value" Path="PurchReqItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Requisition Document Type"/>
+                            <PropertyValue Property="Value" Path="PurchReqDocType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Deletion Indicator"/>
+                            <PropertyValue Property="Value" Path="PurchDocDelInd"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Processing Status of PR"/>
+                            <PropertyValue Property="Value" Path="PurchReqProcStat"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Creation Indicator"/>
+                            <PropertyValue Property="Value" Path="PurchReqCreInd"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Release Indicator"/>
+                            <PropertyValue Property="Value" Path="ReleaseInd"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Release Strategy in Purchase Requisition"/>
+                            <PropertyValue Property="Value" Path="PurchReqRelStg"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchasing Group"/>
+                            <PropertyValue Property="Value" Path="PurchasingGrp"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name of Person who Created the Object"/>
+                            <PropertyValue Property="Value" Path="PurchReqCreatedby"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Changedon"/>
+                            <PropertyValue Property="Value" Path="PurchReqChangedat"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name of Requisitioner"/>
+                            <PropertyValue Property="Value" Path="Requisitioner"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Short Text"/>
+                            <PropertyValue Property="Value" Path="ShortText"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Number"/>
+                            <PropertyValue Property="Value" Path="Material"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Plant"/>
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Storage location"/>
+                            <PropertyValue Property="Value" Path="StorageLoc"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Requirement Tracking Number"/>
+                            <PropertyValue Property="Value" Path="ReqTrackNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Group"/>
+                            <PropertyValue Property="Value" Path="MaterialGroup"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Supplying Plant in Stock Transport Order"/>
+                            <PropertyValue Property="Value" Path="StockTransportOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Requisition Quantity"/>
+                            <PropertyValue Property="Value" Path="PurchReqQuantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Shortage Quantity"/>
+                            <PropertyValue Property="Value" Path="ShortageQuantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Category of Delivery Date"/>
+                            <PropertyValue Property="Value" Path="CategoryDeliveryDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Item Delivery Date"/>
+                            <PropertyValue Property="Value" Path="ItemDeliveryDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Requisition Release Date"/>
+                            <PropertyValue Property="Value" Path="PRReleaseDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Goods Receipt Processing Time in Days"/>
+                            <PropertyValue Property="Value" Path="GoodsRecepitProcessTime"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Price in Purchase Requisition"/>
+                            <PropertyValue Property="Value" Path="PricePurchReq"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Item category in purchasing document"/>
+                            <PropertyValue Property="Value" Path="ItemCatPurDoc"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Account Assignment Category"/>
+                            <PropertyValue Property="Value" Path="AccAssignCategory"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Consumption Posting"/>
+                            <PropertyValue Property="Value" Path="ConsumptionPost"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Distribution Indicator for Multiple AA"/>
+                            <PropertyValue Property="Value" Path="DisIndicator"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Partial Invoice Indicator"/>
+                            <PropertyValue Property="Value" Path="PartialInvoiceIndicator"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Goods Receipt Indicator"/>
+                            <PropertyValue Property="Value" Path="GoodsReceiptIndicator"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Goods Receipt, Non.Valuated"/>
+                            <PropertyValue Property="Value" Path="GoodsReceiptNotValuated"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Invoice Receipt Indicator"/>
+                            <PropertyValue Property="Value" Path="InvoiceReceiptIndicator"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Desired Vendor"/>
+                            <PropertyValue Property="Value" Path="DesiredVendor"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Fixed Vendor"/>
+                            <PropertyValue Property="Value" Path="FixedVendor"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchasing Organization"/>
+                            <PropertyValue Property="Value" Path="PurchasingOrganization"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Number of Principal Purchase Agreement"/>
+                            <PropertyValue Property="Value" Path="NumofPrincipalPurchAgreement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Item Principal Purchase Agreement"/>
+                            <PropertyValue Property="Value" Path="ItemNumPrincipalPurchAgreement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Number of Purchasing Info Record"/>
+                            <PropertyValue Property="Value" Path="PorchInfoRecordNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="MRP Controller"/>
+                            <PropertyValue Property="Value" Path="MRPController"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Order Number"/>
+                            <PropertyValue Property="Value" Path="PurchaseOrderNumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Order Item Number"/>
+                            <PropertyValue Property="Value" Path="PurchaseOrderItemNumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Order Date"/>
+                            <PropertyValue Property="Value" Path="PurchaseOrderDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Quantity Ordered Against PR"/>
+                            <PropertyValue Property="Value" Path="QuantityOrdered"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Entry Sheet Number"/>
+                            <PropertyValue Property="Value" Path="EntrySheetNumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Valuation Type"/>
+                            <PropertyValue Property="Value" Path="ValuationType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Requisition Closed"/>
+                            <PropertyValue Property="Value" Path="PurchRequisitionClosed"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Number of Reservation"/>
+                            <PropertyValue Property="Value" Path="NumofReservation"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Special Stock Indicator"/>
+                            <PropertyValue Property="Value" Path="SpecialStockIndicator"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Origin of Configuration"/>
+                            <PropertyValue Property="Value" Path="OriginofConfiguration"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Cross-Plant Configurable Material"/>
+                            <PropertyValue Property="Value" Path="CrossPlantConfigMaterial"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Committed Date"/>
+                            <PropertyValue Property="Value" Path="CommittedDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Category"/>
+                            <PropertyValue Property="Value" Path="MaterialCategory"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Customer"/>
+                            <PropertyValue Property="Value" Path="Customer"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor to be Supplied"/>
+                            <PropertyValue Property="Value" Path="ReceiveDelivery"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Subcontracting Vendor"/>
+                            <PropertyValue Property="Value" Path="SubcontractingVendor"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Valuation of Special Stock"/>
+                            <PropertyValue Property="Value" Path="ValuationSpecialStock"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Currency Key"/>
+                            <PropertyValue Property="Value" Path="CurrencyKey"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Number Used by Vendor"/>
+                            <PropertyValue Property="Value" Path="MaterialUsedByVendor"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Overall Release of Purchase Requisitions"/>
+                            <PropertyValue Property="Value" Path="OverallReleasePurchRequ"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Manufacturer Part Profile"/>
+                            <PropertyValue Property="Value" Path="MfrPartProfile"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Manufacturer Part Number"/>
+                            <PropertyValue Property="Value" Path="ManufacturerPartNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Number of a Manufacturer"/>
+                            <PropertyValue Property="Value" Path="ManufacturerNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="External Manufacturer Code"/>
+                            <PropertyValue Property="Value" Path="ExternalManufacturer"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Framework Order"/>
+                            <PropertyValue Property="Value" Path="FrameworkOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Item of Framework Order"/>
+                            <PropertyValue Property="Value" Path="ItemFrameworkOrder"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Planned Delivery Time in Days"/>
+                            <PropertyValue Property="Value" Path="PlannedDeliveryTime"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Delivery Date Time-Spot"/>
+                            <PropertyValue Property="Value" Path="DeliveryDateTimeSpot"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Requisition Processing State"/>
+                            <PropertyValue Property="Value" Path="RequProcState"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Total Value for Release Time"/>
+                            <PropertyValue Property="Value" Path="TotalValueTimeRelease"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Blocking Indicator"/>
+                            <PropertyValue Property="Value" Path="PurchRequBlocked"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Procuring Plant"/>
+                            <PropertyValue Property="Value" Path="ProcuringPlant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Issuing Storage Location"/>
+                            <PropertyValue Property="Value" Path="IssuStorLocStockTransport"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Requirement Urgency"/>
+                            <PropertyValue Property="Value" Path="RequirementUrgency"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Requirement Priority"/>
+                            <PropertyValue Property="Value" Path="RequirementPriority"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="MS Code"/>
+                            <PropertyValue Property="Value" Path="MSCode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Item Number of Purchase Requisition"/>
+                            <PropertyValue Property="Value" Path="ItemNumberPurchRequ"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Deletion Indicator in Purchase Document"/>
+                            <PropertyValue Property="Value" Path="DeletionIndicator"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Date on Which Record Was Created"/>
+                            <PropertyValue Property="Value" Path="AccAssignCreatedon"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Cost Center"/>
+                            <PropertyValue Property="Value" Path="CostCenter"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name of Person who Created the Object"/>
+                            <PropertyValue Property="Value" Path="AccAssignCreatedby"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Order Number"/>
+                            <PropertyValue Property="Value" Path="SalesOrderNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Document Item"/>
+                            <PropertyValue Property="Value" Path="SalesDocItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Asset"/>
+                            <PropertyValue Property="Value" Path="MainAssetNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Asset Subnumber"/>
+                            <PropertyValue Property="Value" Path="AssetSubNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Order"/>
+                            <PropertyValue Property="Value" Path="OrderNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="WBS Element"/>
+                            <PropertyValue Property="Value" Path="WBSElement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Network"/>
+                            <PropertyValue Property="Value" Path="Network"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Operation Number"/>
+                            <PropertyValue Property="Value" Path="OperationNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PR Date"/>
+                            <PropertyValue Property="Value" Path="PRDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PR Created by"/>
+                            <PropertyValue Property="Value" Path="PRCreatedby"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor Name"/>
+                            <PropertyValue Property="Value" Path="VendorName1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor Country"/>
+                            <PropertyValue Property="Value" Path="VendorCountry"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor Material Number"/>
+                            <PropertyValue Property="Value" Path="VendorMaterialNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PR Price"/>
+                            <PropertyValue Property="Value" Path="PRPrice"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Currency Key"/>
+                            <PropertyValue Property="Value" Path="PRCurrency"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PR Unit of Measure"/>
+                            <PropertyValue Property="Value" Path="meins"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Order Unit of Measure"/>
+                            <PropertyValue Property="Value" Path="PurchOrderUOM"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Release Date"/>
+                            <PropertyValue Property="Value" Path="ReleaseDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Release Status"/>
+                            <PropertyValue Property="Value" Path="ReleaseState"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Approval Status of SO"/>
+                            <PropertyValue Property="Value" Path="ApprovalStatusSO"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Order Date"/>
+                            <PropertyValue Property="Value" Path="PurchOrdDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PO Delivery Date"/>
+                            <PropertyValue Property="Value" Path="PODeliveryDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PO CreatedBy"/>
+                            <PropertyValue Property="Value" Path="POCreatedBy"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PO Currency"/>
+                            <PropertyValue Property="Value" Path="Waers"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchasing Document Number"/>
+                            <PropertyValue Property="Value" Path="PurchasingDocNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchasing Document Item Number"/>
+                            <PropertyValue Property="Value" Path="PurchasingDocItemNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PO Unit of Measure"/>
+                            <PropertyValue Property="Value" Path="POUnitofMeasure"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Net Price"/>
+                            <PropertyValue Property="Value" Path="NetPrice"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Purchase Order Quantity"/>
+                            <PropertyValue Property="Value" Path="POQuantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Deletion Indicator"/>
+                            <PropertyValue Property="Value" Path="DelIndicatorPurchDoc"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="SO Number"/>
+                            <PropertyValue Property="Value" Path="SONum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Office"/>
+                            <PropertyValue Property="Value" Path="SalesOffice"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Shipping Point"/>
+                            <PropertyValue Property="Value" Path="ShippingPoint"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Ship.to Customer"/>
+                            <PropertyValue Property="Value" Path="SOCustNum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Address"/>
+                            <PropertyValue Property="Value" Path="Address"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sales Document Country"/>
+                            <PropertyValue Property="Value" Path="SDocCountry"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name 1"/>
+                            <PropertyValue Property="Value" Path="Name1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name 2"/>
+                            <PropertyValue Property="Value" Path="Name2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name 3"/>
+                            <PropertyValue Property="Value" Path="Name3"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Name 4"/>
+                            <PropertyValue Property="Value" Path="Name4"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Country"/>
+                            <PropertyValue Property="Value" Path="Country"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="City"/>
+                            <PropertyValue Property="Value" Path="City"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="City Postal Code"/>
+                            <PropertyValue Property="Value" Path="CityPostalCode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Street"/>
+                            <PropertyValue Property="Value" Path="Street"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Contact Ship Name1"/>
+                            <PropertyValue Property="Value" Path="ContactShipName1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Contact Ship Name2"/>
+                            <PropertyValue Property="Value" Path="ContactShipName2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Contact Ship Name3"/>
+                            <PropertyValue Property="Value" Path="ContactShipName3"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Contact Ship Name4"/>
+                            <PropertyValue Property="Value" Path="ContactShipName4"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Contact Ship Tel No"/>
+                            <PropertyValue Property="Value" Path="ContactShipTelNo"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Tokuchu No"/>
+                            <PropertyValue Property="Value" Path="TokuchuNo"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="PR Item Text"/>
+                            <PropertyValue Property="Value" Path="PRItemText"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Payment Terms"/>
+                            <PropertyValue Property="Value" Path="VendorTermsofPay"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Incoterms1"/>
+                            <PropertyValue Property="Value" Path="Incoterms1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Incoterms2"/>
+                            <PropertyValue Property="Value" Path="Incoterms2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Payment Terms"/>
+                            <PropertyValue Property="Value" Path="PaymentTerms"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Vendor Item Code"/>
+                            <PropertyValue Property="Value" Path="VendorItemCode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Safety Stock"/>
+                            <PropertyValue Property="Value" Path="SafetyStock"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Reorder Point"/>
+                            <PropertyValue Property="Value" Path="ReorderPoint"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Lot Sizing Procedure"/>
+                            <PropertyValue Property="Value" Path="LotSizing"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Min. Lot Size"/>
+                            <PropertyValue Property="Value" Path="MinimumLotSize"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Max. Lot Size"/>
+                            <PropertyValue Property="Value" Path="MaximumLotSize"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="MRP Type"/>
+                            <PropertyValue Property="Value" Path="MRPType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Initial PO"/>
+                            <PropertyValue Property="Value" Path="InitialPO"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Subcon Law PO"/>
+                            <PropertyValue Property="Value" Path="SubconLawPO"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Due Date (Price)"/>
+                            <PropertyValue Property="Value" Path="DueDatePrice"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Due Date (Delivery)"/>
+                            <PropertyValue Property="Value" Path="DueDateDelv"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Construction law PO"/>
+                            <PropertyValue Property="Value" Path="ConstructionlawPO"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Construction start date"/>
+                            <PropertyValue Property="Value" Path="Constructdate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Return Item"/>
+                            <PropertyValue Property="Value" Path="RetItem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Qty still to be delivered"/>
+                            <PropertyValue Property="Value" Path="QtyStillDel"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="POType"/>
+                            <Annotation Term="UI.Hidden"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Plant</PropertyPath>
+                        <PropertyPath>PurchasingGrp</PropertyPath>
+                        <PropertyPath>Material</PropertyPath>
+                        <PropertyPath>DesiredVendor</PropertyPath>
+                        <PropertyPath>RequProcState</PropertyPath>
+                        <PropertyPath>DeletionIndicator</PropertyPath>
+                        <PropertyPath>ItemDeliveryDate</PropertyPath>
+                        <PropertyPath>AccAssignCreatedby</PropertyPath>
+                        <PropertyPath>Requisitioner</PropertyPath>
+                        <PropertyPath>AccAssignCategory</PropertyPath>
+                        <PropertyPath>PurchReq</PropertyPath>
+                        <PropertyPath>PurchReqItem</PropertyPath>
+                        <PropertyPath>PurchaseOrderNumber</PropertyPath>
+                        <PropertyPath>PurchaseOrderItemNumber</PropertyPath>
+                        <PropertyPath>WBSElement</PropertyPath>
+                        <PropertyPath>SalesDocItem</PropertyPath>
+                        <PropertyPath>DueDatePrice</PropertyPath>
+                        <PropertyPath>DueDateDelv</PropertyPath>
+                        <PropertyPath>Constructdate</PropertyPath>
+                        <PropertyPath>POType</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

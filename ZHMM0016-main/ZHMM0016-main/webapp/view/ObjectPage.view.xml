@@ -1,0 +1,326 @@
+<mvc:View
+    controllerName="com.yokogawa.zhmm0016.controller.ObjectPage"
+    height="100%"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+    xmlns="sap.uxap"
+    xmlns:l="sap.ui.layout"
+    xmlns:forms="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+>
+    <ObjectPageLayout upperCaseAnchorBar="false">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <expandedHeading>
+                    <m:HBox>
+                        <m:VBox>
+                            <m:Label text="{i18n>MaterialNumber}" />
+                            <m:Title
+                                text="{zhmm0016>/ObjectPage/MaterialNumber}"
+                                wrapping="true"
+                            />
+                        </m:VBox>
+                    </m:HBox>
+                </expandedHeading>
+                <snappedHeading>
+                    <m:HBox>
+                        <m:VBox>
+                            <m:Label text="{i18n>MaterialNumber}" />
+                            <m:Title
+                                text="{zhmm0016>/ObjectPage/MaterialNumber}"
+                                wrapping="true"
+                            />
+                        </m:VBox>
+                    </m:HBox>
+                </snappedHeading>
+                <snappedTitleOnMobile>
+                    <m:Label text="{i18n>MaterialNumber}" />
+                    <m:Title text="{zhmm0016>/ObjectPage/MaterialNumber}" />
+                </snappedTitleOnMobile>
+
+                <actions>
+                    <m:Button
+                        type="Emphasized"
+                        text="{i18n>DetailedInformationButton}"
+                        press=".onDetailedInformationButtonPress"
+                    />
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+        <sections>
+            <ObjectPageSection>
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <forms:SimpleForm
+                                editable="false"
+                                layout="ResponsiveGridLayout"
+                                columnsXL="5"
+                                columnsL="3"
+                                columnsM="6"
+                                singleContainerFullSize="false"
+                            >
+                                <forms:content>
+                                    <core:Title text="" />
+                                    <m:Label text="{i18n>SalesOrganization}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/SalesOrganization}"
+                                    />
+
+                                    <m:Label
+                                        text="{i18n>DistributionChannel}"
+                                    />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/DistributionChannel}"
+                                    />
+                                    <m:Label text="{i18n>LabOrOffice}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/LabOrOffice}"
+                                    />
+
+                                    <m:Label text="{i18n>ProductHierarchy}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/ProductHierarchy}"
+                                    />
+                                    <core:Title text="" />
+                                    <m:Label text="{i18n>Plant}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/Plant}"
+                                    />
+
+                                    <m:Label text="{i18n>ValidOn}" />
+                                    <m:Text
+                                        text="{ path: 'zhmm0016>/ObjectPage/ValidOn', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'yyyy/MM/dd' }}"
+                                    />
+                                    <m:Label text="{i18n>BaseUnit}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/BaseUnit}"
+                                    />
+
+                                    <m:Label text="{i18n>LanguageKey}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/LanguageKey}"
+                                    />
+                                    <core:Title text="" />
+                                    <m:Label text="{i18n>LanguageKey}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/LanguageKey}"
+                                    />
+
+                                    <m:Label text="{i18n>MaterialType}" />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/MaterialType}"
+                                    />
+                                    <m:Label
+                                        text="{i18n>MaterialDescription}"
+                                    />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/MaterialDescription}"
+                                    />
+                                    <m:Text
+                                        text="{zhmm0016>/ObjectPage/MaterialDescription_EN}"
+                                    />
+                                </forms:content>
+                            </forms:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <forms:SimpleForm
+                                editable="false"
+                                layout="ResponsiveGridLayout"
+                                columnsXL="5"
+                                columnsL="3"
+                                columnsM="6"
+                                singleContainerFullSize="false"
+                            >
+                                <core:Title text="" />
+                                <m:Label text="{i18n>OrderStartDate}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/OrderStartDate}"
+                                />
+                                <m:Label text="{i18n>OrderStopDate}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/OrderStopDate}"
+                                />
+                                <m:Label text="{i18n>SalesAreaLimit}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/SalesAreaLimit}"
+                                />
+
+                                <m:Label text="{i18n>SalesUnit}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/SalesUnit}"
+                                />
+                                <core:Title text="" />
+                                <m:Label text="{i18n>TotalPrice}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/TotalPrice_JPY} {zhmm0016>/ObjectPage/Currency}"
+                                />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/TotalPrice_USD} {zhmm0016>/ObjectPage/Currency2}"
+                                />
+                                <m:Label text="{i18n>DeliveryUnit}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/DeliveryUnit}"
+                                />
+
+                                <m:Label text="{i18n>CommissionGroup}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/CommissionGroup}"
+                                />
+                                <core:Title text="" />
+                                <m:Label text="{i18n>OrderInstCtlType}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/OrderInstCtlTypeDescr}"
+                                />
+
+                                <m:Label text="{i18n>Tokuchu}" />
+                                <m:Text text="{zhmm0016>/ObjectPage/Tokuchu}" />
+                                <m:Label text="{i18n>SoldToLimit}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/SoldToLimit}"
+                                />
+                                <m:Label text="{i18n>ProcurementType}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/ProcurementTypeText}"
+                                />
+                            </forms:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <forms:SimpleForm
+                                editable="false"
+                                layout="ResponsiveGridLayout"
+                                columnsXL="5"
+                                columnsL="3"
+                                columnsM="6"
+                                singleContainerFullSize="false"
+                            >
+                                <core:Title text="" />
+                                <m:Label text="{i18n>BaseLeadTimeByManufg}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/BaseLeadTimeByManufg}"
+                                />
+                                <m:Label text="{i18n>BaseLeadTimeByProct}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/BaseLeadTimeByProct}"
+                                />
+                                <core:Title text="" />
+                                <m:Label text="{i18n>CountryOrOrigin}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/Country_or_Region}"
+                                />
+
+                                <m:Label text="{i18n>HSCodeImport}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/HSCodeImport}"
+                                />
+                                <core:Title text="" />
+                                <m:Label text="{i18n>HSCodeExport}" />
+                                <m:Text
+                                    text="{zhmm0016>/ObjectPage/HSCodeExport}"
+                                />
+                            </forms:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <m:Table items="{zhmm0016>/oObjectPage_TableData}">
+                                <m:columns>
+                                    <m:Column>
+                                        <m:Label text="{i18n>LV_GRP}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>SPEC_CODE}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>SPEC_DESC1}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>PRICE_Y2}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>CURR_Y2}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>PRICE_Y3}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>CURR_Y3}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>OrderStartDate}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>OrderStopDate}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>AddLT}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>Tokuchu}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>SPEC_DESC2}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>SPEC_DESC3}" />
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Label text="{i18n>SPEC_DESC4}" />
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem>
+                                        <m:cells>
+                                            <m:Text text="{zhmm0016>LV_GRP}" />
+                                            <m:Text
+                                                text="{zhmm0016>SPEC_CODE}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>SPEC_DESC1}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>PRICE_Y2}"
+                                            />
+                                            <m:Text text="{zhmm0016>CURR_Y2}" />
+                                            <m:Text
+                                                text="{zhmm0016>PRICE_Y3}"
+                                            />
+                                            <m:Text text="{zhmm0016>CURR_Y3}" />
+                                            <m:Text
+                                                text="{zhmm0016>OrderStartDate}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>OrderStartDate}"
+                                            />
+                                            <m:Text text="{zhmm0016>AddLT}" />
+                                            <m:Text text="{zhmm0016>Tokuchu}" />
+                                            <m:Text
+                                                text="{zhmm0016>SPEC_DESC2}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>SPEC_DESC3}"
+                                            />
+                                            <m:Text
+                                                text="{zhmm0016>SPEC_DESC4}"
+                                            />
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+</mvc:View>

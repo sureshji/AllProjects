@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		noDataText="No Product Version found"
+		title="Select Product Version"
+		search=".onSearch"
+		confirm=".onValueHelpDialogClose"
+		cancel=".onValueHelpDialogClose"
+		showClearButton="true"
+		items="{
+			path: '/HMkalSet'}">
+		<StandardListItem
+			selected="{selected}"
+			title="{Verid}"
+			description="{Werks}_{Matnr}_{Text1}"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>

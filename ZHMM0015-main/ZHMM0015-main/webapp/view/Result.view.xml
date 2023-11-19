@@ -1,0 +1,62 @@
+<mvc:View
+    controllerName="com.yokogawa.zhmm0015.controller.Result"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    height="100%"
+>
+    <Page>
+        <content>
+            <!-- <Toast id="demoToast" duration="1000"></Toast> -->
+            <Table id="Tab"
+				mode="SingleSelect"
+				selectionChange="handleSelectionChange"
+				items="{
+					path: '/ZHMM0015'              					
+				 }" >
+                
+                <columns>
+                    <Column>
+                        <Text text="{i18n>RecordClassification}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MaterialNumber}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MaterialType}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageId}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageNumber}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageType}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageText}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ZHMM0015>/RecordClassification}" />
+
+                            <Text text="{ZHMM0015>/MateialNumber}" />
+
+                            <Text text="{ZHMM0015>/MaterialType}" />
+
+                            <Text text="{ZHMM0015>/MessageId}" />
+
+                            <Text text="{ZHMM0015>/MessageNumber}" />
+
+                            <Text text="{ZHMM0015>/MessageType}" />
+
+                            <Text text="{ZHMM0015>/MessageText}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

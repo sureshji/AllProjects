@@ -1,0 +1,68 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/sap/(.*)$",
+      "target": "/sap/$1",
+      "destination": "s4apdevds1-120-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/v2/(.*)$",
+      "target": "/v2/$1",
+      "destination": "cap-zhs402-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^/test-resources/(.*)$",
+      "target": "/test-resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^/dm/api/v1/(.*)$",
+      "target": "/dm/api/v1/$1",
+      "destination": "bt002-prs001",
+      "authenticationType": "none",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/qm/api/v1/(.*)$",
+      "target": "/qm/api/v1/$1",
+      "destination": "bt002-prs001",
+      "authenticationType": "none",
+      "csrfProtection": false
+    },
+    {
+        "source": "^/dest-adsrestapi/(.*)$",
+        "target": "$1",
+        "destination": "dest-adsrestapi",
+        "authenticationType": "xsuaa",
+        "csrfProtection" : false,
+        "scope": ["$XSAPPNAME.call"]
+    },
+    {
+      "source": "^/Users/(.*)$",
+      "target": "/Users/$1",
+      "destination": "bt003-uaa",
+      "authenticationType": "none",
+      "csrfProtection": false
+
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+<mvc:View
+    controllerName="com.yokogawa.zhmm0012.controller.MaterialCodeProductionLTRef"
+    class="sapUiSizeCompact"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartMultiInput="sap.ui.comp.smartmultiinput"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core"
+>
+
+
+
+    <Page
+        id="page"
+        title="{i18n>title}"
+        titleAlignment="Center">
+        <!-- <content> -->
+            <smartForm:SmartForm
+                id="idSmartForm"
+                editable="true" validationMode="Async">
+                <smartForm:layout>
+                    <smartForm:Layout
+                        id="_IDGenLayout1"
+                        emptySpanM="3"
+                        emptySpanL="3"/>
+                </smartForm:layout>
+                <smartForm:Group id="_IDGenGroup1">
+                    <smartForm:GroupElement id="_IDGenGroupElement1" label="{i18n>plant}"  >
+
+                    <smartMultiInput:SmartMultiInput id="InputfieldPlant" enabled="true" contextEditable="true" editable="true"  value = '{Plant}' >
+                  
+				</smartMultiInput:SmartMultiInput>
+                    </smartForm:GroupElement>
+
+                    <smartForm:GroupElement id="_IDGenGroupElement2" label ="{i18n>model}">
+                        <!-- <Label
+                            id="_IDGenLabel2"
+                            labelFor="_IDGenComboBox1"
+                            text="{i18n>model}"/> -->
+                        <!--Input
+                            id="_IDGenComboBox1"
+                            value="{LocalSuffixParametersModel>/model}">
+                        </Input-->
+                        <ComboBox
+                            id="_IDGenComboBox1"
+                            value="{LocalSuffixParametersModel>/model}"
+                            items="{/ZCDSEHPPC0020}" selectionChange="onModelSelection">
+                            <core:Item
+                                id="_IDGenItem5"
+                                key="{MODEL}"
+                                text="{MODEL}"/>
+                        </ComboBox>
+                    </smartForm:GroupElement>
+                </smartForm:Group>
+                <smartForm:Group id="_IDGenGroup2">
+                    
+                </smartForm:Group>
+            </smartForm:SmartForm>
+
+            <Table
+                id="_IDGenTable1"
+                inset="false"
+                items="{
+                    path: 'LocalSuffixParametersModel>/suffix'
+                }">
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1">
+                        <content>
+                            <Title
+                                id="_IDGenTitle1"
+                                text='Specification'/>
+                            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                            <ComboBox
+                                id="_IDGenSelect1"
+                                enabled="{LocalSuffixParametersModel>/isGlobalOperatorEnabled}"
+                                class="sapUiTinyMarginEnd"
+                                selectedKey="{LocalSuffixParametersModel>/globalOperator}"
+                                change="onOperatorChange">                                
+                                
+                                <core:Item
+                                    id="_IDGenItem1"
+                                    key="AND"
+                                    text="{i18n>and}"/>
+                                <core:Item
+                                    id="_IDGenItem2"
+                                    key="OR"
+                                    text="{i18n>or}"/>
+                                    
+                            </ComboBox>
+                            <ToolbarSeparator id="_IDGenToolbarSeparator1" />
+                            <Button
+                                id="_IDGenButton1"
+                                text="{i18n>add}"
+                                type="Emphasized"
+                                press="onSuffixConditionAdd"
+                                />
+                            <Button
+                                id="_IDGenButton2"
+                                text="{i18n>remove}"
+                                type="Emphasized"
+                                press="onSuffixConditionRemove"
+                                />
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="_IDGenColumn1">
+                        <Text
+                            id="_IDGenText1"
+                            text="{i18n>suffixLevel}"/>
+                    </Column>
+                    <Column id="_IDGenColumn2">
+                        <Text
+                            id="_IDGenText2"
+                            text="{i18n>suffixValue}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1">
+                        <cells>
+                            <!--Input
+                                id="_IDGenInput1"
+                                value="{LocalSuffixParametersModel>suffixLevel}"
+                                width="50%"
+                                valueState="None"
+                                placeholder="Enter Suffix Level/Option Group"/-->
+                            <!-- <Select
+                                id="_IDGenInput1"
+                                selectedKey="{LocalSuffixParametersModel>suffixLevel}"
+                                items="{path:'/ZTBHT0032', filters : [{ path: 'MODEL', operator: 'EQ',value1 : 'A1109EF'}]}">
+                                <core:Item id="_IDGenItem6"
+                                    key="{SUFFIXLEVEL}"
+                                    text="{SUFFIXLEVEL}"/>
+                            </Select> -->
+
+                            <ComboBox id="_IDGenInput1" items="{path:'oModelSelect>/results'}"
+                            selectedKey="{LocalSuffixParametersModel>suffixLevel}" >
+                              <core:Item
+                                    key="{oModelSelect>SUFFIXLEVEL}"
+                                    text="{oModelSelect>SUFFIXLEVEL}"/>
+                            </ComboBox>
+                        
+                            <HBox id="_IDGenHBox1">
+                                <ComboBox
+                                    id="_IDGenSelect2"
+                                    class="sapUiTinyMarginEnd"
+                                    selectedKey="{LocalSuffixParametersModel>operation}">
+                                    <core:Item
+                                        id="_IDGenItem3"
+                                        key="EQUAL"
+                                        text="{i18n>equalTo}"/>
+                                    <core:Item
+                                        id="_IDGenItem4"
+                                        key="NOTEQUAL"
+                                        text="{i18n>notEqualTo}"/>
+                                </ComboBox>
+                                <!--Input
+                                    id="_IDGenInput2"
+                                    value="{LocalSuffixParametersModel>suffixValue}"
+                                    width="15rem"
+                                    valueState="None"
+                                    placeholder="Enter Suffix Level/Option Group"/-->
+                                <!-- <ComboBox
+                                id="_IDGenInput2"
+                                value="{LocalSuffixParametersModel>suffixValue}"
+                                valueState="None"
+                                items="{/ZCDSEHPPC0022}">
+                                <core:Item id="_IDGenItem7"
+                                    key="{SUFFIXVALUE}"
+                                    text="{SUFFIXVALUE}"/>
+                            </ComboBox> -->
+                            <ComboBox id="_IDGenInput2" items="{path:'oModelSelect>/results'}"
+                            selectedKey="{LocalSuffixParametersModel>suffixValue}">
+                              <core:Item
+                                    key="{oModelSelect>SUFFIXVALUE}"
+                                    text="{oModelSelect>SUFFIXVALUE}"/>
+                            </ComboBox>
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+            <Button
+                id="_IDGenButton3"
+                text="{i18n>go}"
+                press="onGo"
+                type="Emphasized"
+                class="sapUiTinyMarginBeginEnd"/>
+            <Button
+                id="_IDGenButton4"
+                text="{i18n>clear}"
+                press="onCancel"
+                type="Emphasized"/>
+            <smartTable:SmartTable
+                id="materialCodeTable"
+                entitySet="ZCDSEHPPC0019"
+                header="{i18n>output}"
+                initiallyVisibleFields="Plant,MaterialCode,MSCode,ReplenishmentLeadtime"
+                showRowCount="true"
+                enableAutoBinding="true"
+                tableType="Table"
+                enableAutoColumnWidth="true">
+                <table:Table
+                    id="innerUi5Table"
+                    selectionMode="None"/>
+            </smartTable:SmartTable>
+        <!-- </content> -->
+    </Page>
+</mvc:View>

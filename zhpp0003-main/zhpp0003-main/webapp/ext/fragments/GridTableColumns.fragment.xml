@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns="sap.m">
+    <table:Column minWidth="86" id="trafficColumn">
+        <Label id="trafficLable" text="{i18n>trafic_light}"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;trafic_light&quot;, &quot;columnIndex&quot;: &quot;0&quot;}"/>
+        </table:customData>
+        <table:template>
+            <core:Icon  size="1rem" id="iconTraffic" src="sap-icon://circle-task-2" color="{= ${message} === 'X' ? '#02bd02' : ( ${message} === '' ? '#9fa0a1' : '#bb0000' )}"/>
+        </table:template>       
+    </table:Column>
+</core:FragmentDefinition>

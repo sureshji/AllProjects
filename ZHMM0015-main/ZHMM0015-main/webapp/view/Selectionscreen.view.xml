@@ -1,0 +1,167 @@
+<mvc:View
+    controllerName="com.yokogawa.zhmm0015.controller.Selectionscreen"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
+    <Page>
+        <content>
+            <l:VerticalLayout
+                class="sapUiContentPadding"
+                width="100%"
+            >
+                <l:content>
+                    <HBox>
+                        <Button
+                            text="{i18n>ExecuteButton}"
+                            press=".onPressOfExecute"
+                        >
+                            <layoutData>
+                                <FlexItemData growFactor="1" />
+                            </layoutData>
+                        </Button>
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <items>
+                            <Select
+                                class="sapUiSmallMarginBegin"
+                                selectedKey="{zhmm0015>/selected}"
+                                items="{
+								path: 'zhmm0015>/items'
+							}"
+                            >
+                                <core:Item
+                                    key="{zhmm0015>key}"
+                                    text="{zhmm0015>text}"
+                                />
+                            </Select>
+                        </items>
+                    </HBox>
+                    <l:HorizontalLayout>
+                        <Label
+                            text="{i18n>StartDate}"
+                            labelFor="StartDate"
+                            class="sapUiSmallMarginTop"
+                            required="true"
+                        />
+                        <DatePicker
+                            id="StartDate"
+                            width="150px"
+                            class="sapUiSmallMarginBeginEnd"
+                            change="handleChange"
+                            enabled="{=${zhmm0015>/selected} === 'RecoveryMode'}"
+                        />
+                        <Label
+                            text="{i18n>StartTime}"
+                            labelFor="StartTime"
+                            class="sapUiSmallMarginTop"
+                            required="true"
+                        />
+                        <TimePicker
+                            id="StartTime"
+                            width="150px"
+                            class="sapUiSmallMarginBeginEnd"
+                         
+                            enabled="{=${zhmm0015>/selected} === 'RecoveryMode'}"
+                        />
+                        <Label
+                            text="{i18n>EndDate}"
+                            labelFor="EndDate"
+                            class="sapUiSmallMarginTop"
+                            required="true"
+                        />
+                        <DatePicker
+                            id="EndDate"
+                            width="150px"
+                            class="sapUiSmallMarginBeginEnd"
+                            change="handleChange"
+                            value = "{zhmm0015>/enddate}"
+                            enabled="{=${zhmm0015>/selected} === 'RecoveryMode'}"
+                        />
+                        <Label
+                            text="{i18n>EndTime}"
+                            labelFor="EndTime"
+                            class="sapUiSmallMarginTop"
+                            required="true"
+                        />
+                        <TimePicker
+                            id="EndTime"
+                            width="150px"
+                            class="sapUiSmallMarginBeginEnd"
+                            value = "{zhmm0015>/endtime}"
+                            enabled="{=${zhmm0015>/selected} === 'RecoveryMode'}"
+                        />
+                    </l:HorizontalLayout>
+                </l:content>
+                <Label
+                    text="Material Number"
+                    width="100%"
+                    labelFor="MaterialNumber"
+                />
+                <MultiInput
+                    width="40%"
+                    id="MaterialNumber"
+                    showSuggestion="false"
+                    showValueHelp="false"
+                    enabled="{=${zhmm0015>/selected} === 'RecoveryMode'}" >
+                    <core:Item
+                        key="{key}"
+                        text="{name}"
+                    />
+                </MultiInput>
+            </l:VerticalLayout>
+
+             <Table
+              mode="MultiSelect"
+				items="{
+					path: 'zhmm0015>/tableItems'              					
+				 }" >
+                
+                <columns>
+                    <Column>
+                        <Text text="{i18n>RecordClassification}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MaterialNumber}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MaterialType}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageId}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageNumber}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageType}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>MessageText}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{zhmm0015>RecordClassification}" />
+
+                            <Text text="{zhmm0015>MaterialNumber}" />
+
+                            <Text text="{zhmm0015>MaterialType}" />
+
+                            <Text text="{zhmm0015>MessageId}" />
+
+                            <Text text="{zhmm0015>MessageNumber}" />
+
+                            <Text text="{zhmm0015>MessageType}" />
+
+                            <Text text="{zhmm0015>MessageText}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+
+    </Page>
+</mvc:View>

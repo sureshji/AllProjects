@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<TableSelectDialog
+		id="myDialog"
+		noDataText="No Order Found"
+		title="Select Order"
+		search="handleSearch"
+		confirm="handleClose"
+		cancel="handleClose"
+		items="{
+			path : '/ZCDSEHPPC0006',
+			sorter : {
+				path : 'prod_order_created',
+				descending : false
+			}
+		}">
+		<ColumnListItem vAlign="Middle" id="clif11">
+			<cells>
+				<ObjectIdentifier title="{prod_order_created}" id="oif11"/>
+                <Text text="{plant}"  id="tf111"/>
+                <Text text="{material}" wrapping="false" id="tf121"/>
+                <Text text="{order_type}" wrapping="false" id="tf131"/>
+			</cells>
+		</ColumnListItem>
+        <columns>
+            <Column width="11rem" id="cf11">
+				<header>
+				    <Text text="Production Order" id="lf111"/>
+                </header>
+			</Column>
+			 <Column width="11rem" id="cf251">
+				<header>
+				    <Text text="Plant" id="lf251"/>
+                </header>
+			</Column>
+            <Column width="11rem" id="cf121">
+				<header>
+					<Text text="Material" id="lf121"/>
+				</header>
+			</Column>
+            <Column width="11rem" id="cf131">
+				<header>
+					<Text text="Order Type" id="lf131"/>
+			    </header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,212 @@
+{
+    "_version": "1.37.0",
+    "sap.app": {
+        "id": "com.yokogawa.zhps0005",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:lrop",
+            "version": "1.9.4",
+            "toolsId": "dc809350-d5c1-4792-a75f-40d450fd34d2"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata4/sap/zsrvbhps00012/srvd/sap/zsrvhps0006/0001/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "4.0"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "com-yokogawa-zhps0005-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "zProjectOrderStatusList",
+                    "action": "display",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.113.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.fe.templates": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.yokogawa.zhps0005.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "routes": [
+                {
+                    "pattern": ":?query:",
+                    "name": "ZCDSEHPSC0009List",
+                    "target": "ZCDSEHPSC0009List"
+                },
+                {
+                    "pattern": "ZCDSEHPSC0009({key}):?query:",
+                    "name": "ZCDSEHPSC0009ObjectPage",
+                    "target": "ZCDSEHPSC0009ObjectPage"
+                }
+            ],
+            "targets": {
+                "ZCDSEHPSC0009List": {
+                    "type": "Component",
+                    "id": "ZCDSEHPSC0009List",
+                    "name": "sap.fe.templates.ListReport",
+                    "options": {
+                        "settings": {
+                            "entitySet": "ZCDSEHPSC0009",
+                            "views": {
+                                "paths": [
+                                    {
+                                        "key": "tab1",
+                                        "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#GeneralHSP"
+                                    },
+                                    {
+                                        "key": "tab2",
+                                        "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#GeneralSP"
+                                    }
+                                ],
+                                "showCounts": true
+                            },
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.LineItem#GeneralP": {
+                                    "tableSettings": {
+                                        "type": "GridTable"
+                                    }
+                                },
+                                "@com.sap.vocabularies.UI.v1.LineItem#GeneralHP": {
+                                    "tableSettings": {
+                                        "type": "GridTable"
+                                    }
+                                },
+                                "@com.sap.vocabularies.UI.v1.SelectionFields": {
+                                    "filterFields": {
+                                        "GIComplete": {
+                                            "label": "{i18n>generalSelection}",
+                                            "property": "GIComplete",
+                                            "template": "com.yokogawa.zhps0005.ext.fragments.CustomFilters",
+                                            "required": false,
+                                            "position": {
+                                                "placement": "Before",
+                                                "anchor": "CompanyCode"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "variantManagement": "Page",
+                            "navigation": {
+                                "ZCDSEHPSC0009": {
+                                    "detail": {
+                                        "route": "ZCDSEHPSC0009ObjectPage"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "ZCDSEHPSC0009ObjectPage": {
+                    "type": "Component",
+                    "id": "ZCDSEHPSC0009ObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "editableHeaderContent": false,
+                            "entitySet": "ZCDSEHPSC0009"
+                        }
+                    }
+                }
+            }
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.fe.templates.ListReport.ListReportController": {
+                        "controllerName": "com.yokogawa.zhps0005.ext.controller.CustomController"
+                    }
+                }
+            }
+        }
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "transactional"
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "comyokogawazhps0005"
+    }
+}

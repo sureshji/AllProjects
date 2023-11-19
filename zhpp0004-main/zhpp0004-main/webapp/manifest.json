@@ -1,0 +1,234 @@
+{
+    "_version": "1.33.0",
+    "sap.app": {
+        "id": "com.yokogawa.zhpp0004",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:lrop",
+            "version": "1.8.2",
+            "toolsId": "e0e79a11-b493-4cd9-8d47-0dc473b82123"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/ZSRVBHPP0002/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "ZSRVBHPP0002_VAN",
+                        "annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "ZSRVBHPP0002_VAN": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZSRVBHPP0002_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/ZSRVBHPP0002_VAN.xml"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "com-yokogawa-zhpp0004-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "ZAssignSerialNumber",
+                    "action": "update",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.90.7",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.f": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.suite.ui.generic.template": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.yokogawa.zhpp0004.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "config": {},
+            "routes": [],
+            "targets": {}
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "controllerName": "com.yokogawa.zhpp0004.ext.controller.ListReportExt",
+                        "sap.ui.generic.app": {
+                            "ZCDSEHPPC0007": {
+                                "EntitySet": "ZCDSEHPPC0007",
+                                "Actions": {
+                                    "idExtendBut": {
+                                        "id": "idExtendButButton",
+                                        "text": "Save",
+                                        "press": "onPressExtend",
+                                        "requiresSelection": false,
+                                        "visible": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "sap.ui.viewExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "SmartFilterBarControlConfigurationExtension|ZCDSEHPPC0007": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.yokogawa.zhpp0004.ext.fragments.customFilterFragment",
+                            "type": "XML"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sap.ui.generic.app": {
+        "_version": "1.3.0",
+        "settings": {
+            "forceGlobalRefresh": false,
+            "objectPageHeaderType": "Dynamic",
+            "considerAnalyticalParameters": true,
+            "showDraftToggle": false
+        },
+        "pages": {
+            "ListReport|ZCDSEHPPC0007": {
+                "entitySet": "ZCDSEHPPC0007",
+                "component": {
+                    "name": "sap.suite.ui.generic.template.ListReport",
+                    "list": true,
+                    "settings": {
+                        "condensedTableLayout": true,
+                        "smartVariantManagement": false,
+                        "quickVariantSelectionX": {
+                            "showCounts": false,
+                            "variants": {
+                                "0": {
+                                    "key": "1",
+                                    "entitySet": "ZCDSEHPPC0007",
+                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#PlannedOrder",
+                                    "tableSettings": {
+                                        "type": "GridTable",
+                                        "multiSelect": true,
+                                        "selectAll": true,
+                                        "selectionLimit": 200
+                                    }
+                                },
+                                "1": {
+                                    "key": "2",
+                                    "entitySet": "ZCDSEHPPC0008",
+                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SalesOrder",
+                                    "tableSettings": {
+                                        "type": "GridTable",
+                                        "multiSelect": true,
+                                        "selectAll": true,
+                                        "selectionLimit": 200
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "pages": {
+                    "ObjectPage|ZCDSEHPPC0007": {
+                        "entitySet": "ZCDSEHPPC0007",
+                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                        "component": {
+                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                        }
+                    },
+                    "ObjectPage|ZCDSEHPPC0008": {
+                        "entitySet": "ZCDSEHPPC0008",
+                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                        "component": {
+                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "transactional"
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "com-yokogawa-zhpp0004"
+    }
+}

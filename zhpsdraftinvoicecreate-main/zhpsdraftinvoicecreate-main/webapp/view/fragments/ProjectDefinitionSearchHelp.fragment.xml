@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+	xmlns="sap.ui.comp.valuehelpdialog"
+	xmlns:m="sap.m"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:core="sap.ui.core">
+	<ValueHelpDialog id="_IDGenValueHelpDialog1"
+		title="{i18n>ProjectDefination}"
+		ok=".onValueHelpOkPressProject"
+		cancel=".onValueHelpCancelPressProject"
+		supportRanges="false"
+		key="projectId"
+        supportMultiselect="false"
+		descriptionKey="ProjectDesc">
+		<filterBar>
+			<fb:FilterBar id="_IDGenFilterBar1" advancedMode="true" search=".onFilterBarSearchProject" isRunningInValueHelpDialog="true">
+				<fb:filterGroupItems>
+				<fb:FilterGroupItem id="_IDGenFilterGroupItem1"
+						groupName="__$INTERNAL$"
+						name="vbukr"
+						label="{i18n>CompanyCode}"
+						visibleInFilterBar="false">
+						<fb:control>
+							<m:Input id="_IDGenInput1" name="vbukr" />
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="_IDGenFilterGroupItem2"
+						groupName="__$INTERNAL$"
+						name="projectId"
+						label="{i18n>ProjectDefination}"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input id="_IDGenInput2" name="projectId" />
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="_IDGenFilterGroupItem3"
+						groupName="__$INTERNAL$"
+						name="ProjectDesc"
+						label="{i18n>ProjectDescription}"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input id="_IDGenInput3" name="ProjectDesc" />
+						</fb:control>
+					</fb:FilterGroupItem>
+					
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

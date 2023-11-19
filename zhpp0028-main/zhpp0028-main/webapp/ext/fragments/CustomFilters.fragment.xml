@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="TargetOutput"
+    label="Target Output"
+    visibleInAdvancedArea="true" mandatory="mandatory">
+    <smartfilterbar:customControl>
+        <ComboBox id="TargetOutput">
+        <core:Item key="F" text="Finished Product"/>
+        <core:Item key="B" text="Parts (In- house Prod/B Type B)"/>
+        <core:Item key="A" text="Parts (B Type A)"/>
+    </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="Issue_Type"
+    label="Issue Type"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl>
+        <ComboBox id="Issue_Type">
+        <core:Item key="F" text="First Issue"/>
+        <core:Item key="R" text="Reissue"/>
+    </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="TargetSheet"
+    label="Target of Output Sheet"
+    visibleInAdvancedArea="true">
+    <smartfilterbar:customControl>
+        <MultiComboBox id="TargetSheet">
+        <core:Item key="1" text="Production Order Mainline"/>
+        <core:Item key="2" text="Production Order Subline"/>
+        <core:Item key="3" text="Child Parts List"/>
+        <core:Item key="4" text="Process Record Sheet"/>
+        <core:Item key="5" text="Production Order Sheet"/>
+        <core:Item key="6" text="B Type Production Order"/>
+    </MultiComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>

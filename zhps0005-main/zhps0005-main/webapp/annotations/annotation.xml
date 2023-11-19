@@ -1,0 +1,699 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata4/sap/zsrvbhps00012/srvd/sap/zsrvhps0006/0001/$metadata">
+        <edmx:Include Namespace="com.sap.gateway.srvd.zsrvhps0006.v0001" Alias="SAP__self"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>GIComplete</PropertyPath>
+                        <PropertyPath>CompanyCode</PropertyPath>
+                        <PropertyPath>ProjectDef</PropertyPath>
+                        <PropertyPath>ProjectDesc</PropertyPath>
+                        <PropertyPath>ProjectManager</PropertyPath>
+                        <PropertyPath>LineManager</PropertyPath>
+                        <PropertyPath>AccountManager</PropertyPath>
+                        <PropertyPath>ConChecker</PropertyPath>
+                        <PropertyPath>Int_SO</PropertyPath>
+                        <PropertyPath>PRNo</PropertyPath>
+                        <PropertyPath>PONo</PropertyPath>
+                        <PropertyPath>SVO</PropertyPath>
+                        <PropertyPath>Production_Order</PropertyPath>
+                        <PropertyPath>deliveryorder</PropertyPath>
+                        <PropertyPath>linkagenumber</PropertyPath>
+                        <PropertyPath>status_description</PropertyPath>
+                        <PropertyPath>soldtoparty</PropertyPath>
+                        <PropertyPath>soldtoparty2</PropertyPath>
+                        <PropertyPath>enduser</PropertyPath>
+                        <PropertyPath>MRPController</PropertyPath>
+                        <PropertyPath>ms_code</PropertyPath>
+                        <PropertyPath>WBSElementId</PropertyPath>
+                        <PropertyPath>RequirementDate</PropertyPath>
+                        <PropertyPath>CommitDelDate</PropertyPath>
+                        <PropertyPath>PlannedProdSDate</PropertyPath>
+                        <PropertyPath>ShipPt</PropertyPath>
+                        <PropertyPath>ActualProdSDate</PropertyPath>
+                        <PropertyPath>PlannedProdCDate</PropertyPath>
+                        <PropertyPath>ActualProdCDate</PropertyPath>
+                        <PropertyPath>PlannedShipRDate</PropertyPath>
+                        <PropertyPath>ActShipRDate</PropertyPath>
+                        <PropertyPath>PlannedShipDate</PropertyPath>
+                        <PropertyPath>ActualShipDate</PropertyPath>
+                        <PropertyPath>AWC1</PropertyPath>
+                        <PropertyPath>AWC2</PropertyPath>
+                        <PropertyPath>AWC3</PropertyPath>
+                        <PropertyPath>AWC4</PropertyPath>
+                        <PropertyPath>AWC5</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="{@i18n>projectOrderStatusRecord}"/>
+                            <PropertyValue Property="ID" String="GeneralData"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="GeneralData1"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneralData1"/>
+                                        <Annotation Term="UI.PartOfPreview" Bool="true"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="GeneralData1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>companyCode}"/>
+                                    <PropertyValue Property="Value" Path="CompanyCode"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>projectDefinition}"/>
+                                    <PropertyValue Property="Value" Path="ProjectDef"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>projectDescription}"/>
+                                    <PropertyValue Property="Value" Path="ProjectDesc"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>statusCategory}"/>
+                                    <PropertyValue Property="Value" Path="status_category"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>statusDescription}"/>
+                                    <PropertyValue Property="Value" Path="status_description"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>closedProject}"/>
+                                    <PropertyValue Property="Value" Path="ClosedProject"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>plant}"/>
+                                    <PropertyValue Property="Value" Path="Plant"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>projectManager}"/>
+                                    <PropertyValue Property="Value" Path="ProjectManager"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>projectManagerName}"/>
+                                    <PropertyValue Property="Value" Path="ProjectManagerName"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>lineManager}"/>
+                                    <PropertyValue Property="Value" Path="LineManager"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>lineManagerName}"/>
+                                    <PropertyValue Property="Value" Path="LineManagerName"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>accountManager}"/>
+                                    <PropertyValue Property="Value" Path="AccountManager"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>accountManagerName}"/>
+                                    <PropertyValue Property="Value" Path="AccountManagerName"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>contentsChecker}"/>
+                                    <PropertyValue Property="Value" Path="ConChecker"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>contentsCheckerName}"/>
+                                    <PropertyValue Property="Value" Path="ConCheckerName"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>soldtoParty}"/>
+                                    <PropertyValue Property="Value" Path="soldtoparty"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>soldtoPartyName}"/>
+                                    <PropertyValue Property="Value" Path="soldtopartyname"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>soldtoParty2}"/>
+                                    <PropertyValue Property="Value" Path="soldtoparty2"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>soldtoParty2Name}"/>
+                                    <PropertyValue Property="Value" Path="soldtoparty2name"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>salesPerson}"/>
+                                    <PropertyValue Property="Value" Path="salesperson"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>salesPersonName}"/>
+                                    <PropertyValue Property="Value" Path="salespersonname"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>endUser}"/>
+                                    <PropertyValue Property="Value" Path="enduser"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>endUserName}"/>
+                                    <PropertyValue Property="Value" Path="endusername"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>customerReferenceNumber}"/>
+                                    <PropertyValue Property="Value" Path="Customerrefno"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>wbsElementId}"/>
+                                    <PropertyValue Property="Value" Path="WBSElementId"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>intsoNo}"/>
+                                    <PropertyValue Property="Value" Path="Int_SO"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>intsoItem}"/>
+                                    <PropertyValue Property="Value" Path="Int_SO_LineItem"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>quantity}"/>
+                                    <PropertyValue Property="Value" Path="quantity"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>unit}"/>
+                                    <PropertyValue Property="Value" Path="unit"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>requirementDate}"/>
+                                    <PropertyValue Property="Value" Path="RequirementDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>leadTime}"/>
+                                    <PropertyValue Property="Value" Path="LeadTime"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>deadline}"/>
+                                    <PropertyValue Property="Value" Path="Deadline"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>material}"/>
+                                    <PropertyValue Property="Value" Path="material"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>msCode}"/>
+                                    <PropertyValue Property="Value" Path="ms_code"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>description}"/>
+                                    <PropertyValue Property="Value" Path="description"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>awc1}"/>
+                                    <PropertyValue Property="Value" Path="AWC1"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>awc2}"/>
+                                    <PropertyValue Property="Value" Path="AWC2"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>awc3}"/>
+                                    <PropertyValue Property="Value" Path="AWC3"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>awc4}"/>
+                                    <PropertyValue Property="Value" Path="AWC4"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>awc5}"/>
+                                    <PropertyValue Property="Value" Path="AWC5"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>combinedMscodeIndicator}"/>
+                                    <PropertyValue Property="Value" Path="comb_ind"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>combinedMscodeControlNo}"/>
+                                    <PropertyValue Property="Value" Path="comb_no"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>tokuchuNoSell}"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_sell"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>tokuchuNoForPrice}"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_sell_p"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>tokuchuNoPur}"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_pur"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>tokuchuNoForPrice1}"/>
+                                    <PropertyValue Property="Value" Path="tokuchu_no_pur_p"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>qicDeliveryStyle}"/>
+                                    <PropertyValue Property="Value" Path="qic_del"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>systemModel}"/>
+                                    <PropertyValue Property="Value" Path="sys_model"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>documentItemNumber}"/>
+                                    <PropertyValue Property="Value" Path="doc_item_no"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>storageLocation}"/>
+                                    <PropertyValue Property="Value" Path="StorageLoc"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>storageLocationname}"/>
+                                    <PropertyValue Property="Value" Path="StorageLocName"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>linkageNumber}"/>
+                                    <PropertyValue Property="Value" Path="linkagenumber"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>materialGroup}"/>
+                                    <PropertyValue Property="Value" Path="matgrp"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>productHierarchy}"/>
+                                    <PropertyValue Property="Value" Path="Prodhierarchy"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>prNo}"/>
+                                    <PropertyValue Property="Value" Path="PRNo"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>prItemNo}"/>
+                                    <PropertyValue Property="Value" Path="PRItemNo"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>prBlock}"/>
+                                    <PropertyValue Property="Value" Path="PRBlock"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>commitmentDeliveryDate}"/>
+                                    <PropertyValue Property="Value" Path="CommitDelDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>poNo}"/>
+                                    <PropertyValue Property="Value" Path="PONo"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>poItemNo}"/>
+                                    <PropertyValue Property="Value" Path="POItemNo"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>vendor}"/>
+                                    <PropertyValue Property="Value" Path="Vendor"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>vendorName}"/>
+                                    <PropertyValue Property="Value" Path="VendorName"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>productionOrder}"/>
+                                    <PropertyValue Property="Value" Path="Production_Order"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>productionOrderType}"/>
+                                    <PropertyValue Property="Value" Path="ProdOrderType"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>plannedShippingReadyDate}"/>
+                                    <PropertyValue Property="Value" Path="PlannedShipRDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>actualShippingReadyDate}"/>
+                                    <PropertyValue Property="Value" Path="ActShipRDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>shippingReadyDelay}"/>
+                                    <PropertyValue Property="Value" Path="ShipDelay"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>plannedProductionStartDate}"/>
+                                    <PropertyValue Property="Value" Path="PlannedProdSDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>actualProductionStartDate}"/>
+                                    <PropertyValue Property="Value" Path="ActualProdSDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>plannedProductionCompletionDate}"/>
+                                    <PropertyValue Property="Value" Path="PlannedProdCDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>actualProductionCompletionDate}"/>
+                                    <PropertyValue Property="Value" Path="ActualProdCDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>productionStartDelay}"/>
+                                    <PropertyValue Property="Value" Path="ProdSDelay"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>productionCompletionDelay}"/>
+                                    <PropertyValue Property="Value" Path="ProdCDelay"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>deliveryOrder}"/>
+                                    <PropertyValue Property="Value" Path="deliveryorder"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>deliveryItem}"/>
+                                    <PropertyValue Property="Value" Path="deliveryitem"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>shippedQty}"/>
+                                    <PropertyValue Property="Value" Path="shippedqty"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>shippingPoint}"/>
+                                    <PropertyValue Property="Value" Path="ShipPt"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>shippingPointText}"/>
+                                    <PropertyValue Property="Value" Path="ShipPtText"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>shippingCondition}"/>
+                                    <PropertyValue Property="Value" Path="ShippingCond"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>incoterms1}"/>
+                                    <PropertyValue Property="Value" Path="inco1"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>incoterms2}"/>
+                                    <PropertyValue Property="Value" Path="inco2"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>shiptoPartyName}"/>
+                                    <PropertyValue Property="Value" Path="shiptopartyname"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>forwarding}"/>
+                                    <PropertyValue Property="Value" Path="forwarding"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>forwardingName}"/>
+                                    <PropertyValue Property="Value" Path="forwardingname"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>consignee}"/>
+                                    <PropertyValue Property="Value" Path="consignee"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>consigneeName}"/>
+                                    <PropertyValue Property="Value" Path="consigneename"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>doCreatedOn}"/>
+                                    <PropertyValue Property="Value" Path="DOCreated"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>doChangedOn}"/>
+                                    <PropertyValue Property="Value" Path="DOChanged"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>plannedShippingDate}"/>
+                                    <PropertyValue Property="Value" Path="PlannedShipDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>actualShippingDate}"/>
+                                    <PropertyValue Property="Value" Path="ActualShipDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>shippingDateDelay}"/>
+                                    <PropertyValue Property="Value" Path="ShipDateDelay"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>plannedGoodsIssueDate}"/>
+                                    <PropertyValue Property="Value" Path="PlannedGIDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>actualGoodsIssueDate}"/>
+                                    <PropertyValue Property="Value" Path="ActGIDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>goodsIssueDateDelay}"/>
+                                    <PropertyValue Property="Value" Path="GIDateDelay"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>overallDelay}"/>
+                                    <PropertyValue Property="Value" Path="OverallDelay"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>mrpController}"/>
+                                    <PropertyValue Property="Value" Path="MRPController"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>mrpControllerName}"/>
+                                    <PropertyValue Property="Value" Path="MRPControllerName"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>svo}"/>
+                                    <PropertyValue Property="Value" Path="SVO"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>layoutForLinkageNumber}"/>
+                                    <PropertyValue Property="Value" Path="layout"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="{@i18n>projectOrderStatusList}"/>
+                        <PropertyValue Property="TypeNamePlural" String="{@i18n>projectOrderStatusList}"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/GIComplete">
+                <Annotation Term="Common.Label" String="{@i18n>gicomplete}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/CompanyCode">
+                <Annotation Term="Common.Label" String="{@i18n>companyCode}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProjectDef">
+                <Annotation Term="Common.Label" String="{@i18n>projectDefinition}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProjectDesc">
+                <Annotation Term="Common.Label" String="{@i18n>projectDescription}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ProjectManager">
+                <Annotation Term="Common.Label" String="{@i18n>projectManager}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/LineManager">
+                <Annotation Term="Common.Label" String="{@i18n>lineManager}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AccountManager">
+                <Annotation Term="Common.Label" String="{@i18n>accountManager}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ConChecker">
+                <Annotation Term="Common.Label" String="{@i18n>contentsChecker}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Int_SO">
+                <Annotation Term="Common.Label" String="{@i18n>intsoNo}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PRNo">
+                <Annotation Term="Common.Label" String="{@i18n>prNo}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PONo">
+                <Annotation Term="Common.Label" String="{@i18n>poNo}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/SVO">
+                <Annotation Term="Common.Label" String="{@i18n>svo}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/Production_Order">
+                <Annotation Term="Common.Label" String="{@i18n>productionOrder}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/deliveryorder">
+                <Annotation Term="Common.Label" String="{@i18n>deliveryOrder}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/linkagenumber">
+                <Annotation Term="Common.Label" String="{@i18n>linkageNumber}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/status_description">
+                <Annotation Term="Common.Label" String="{@i18n>statusDescription}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/soldtoparty">
+                <Annotation Term="Common.Label" String="{@i18n>soldtoParty}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/soldtoparty2">
+                <Annotation Term="Common.Label" String="{@i18n>soldtoParty2}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/enduser">
+                <Annotation Term="Common.Label" String="{@i18n>endUser}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/MRPController">
+                <Annotation Term="Common.Label" String="{@i18n>mrpController}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ms_code">
+                <Annotation Term="Common.Label" String="{@i18n>msCode}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/WBSElementId">
+                <Annotation Term="Common.Label" String="{@i18n>wbsElementId}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/RequirementDate">
+                <Annotation Term="Common.Label" String="{@i18n>requirementDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/CommitDelDate">
+                <Annotation Term="Common.Label" String="{@i18n>commitmentDeliveryDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedProdSDate">
+                <Annotation Term="Common.Label" String="{@i18n>plannedProductionStartDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ShipPt">
+                <Annotation Term="Common.Label" String="{@i18n>shippingPoint}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActualProdSDate">
+                <Annotation Term="Common.Label" String="{@i18n>actualProductionStartDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedProdCDate">
+                <Annotation Term="Common.Label" String="{@i18n>plannedProductionCompletionDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActualProdCDate">
+                <Annotation Term="Common.Label" String="{@i18n>actualProductionCompletionDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedShipRDate">
+                <Annotation Term="Common.Label" String="{@i18n>plannedShippingReadyDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActShipRDate">
+                <Annotation Term="Common.Label" String="{@i18n>actualShippingReadyDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/PlannedShipDate">
+                <Annotation Term="Common.Label" String="{@i18n>plannedShippingDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/ActualShipDate">
+                <Annotation Term="Common.Label" String="{@i18n>actualShippingDate}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC1">
+                <Annotation Term="Common.Label" String="{@i18n>awc1}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC2">
+                <Annotation Term="Common.Label" String="{@i18n>awc2}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC3">
+                <Annotation Term="Common.Label" String="{@i18n>awc3}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC4">
+                <Annotation Term="Common.Label" String="{@i18n>awc4}"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZCDSEHPSC0009Type/AWC5">
+                <Annotation Term="Common.Label" String="{@i18n>awc5}"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

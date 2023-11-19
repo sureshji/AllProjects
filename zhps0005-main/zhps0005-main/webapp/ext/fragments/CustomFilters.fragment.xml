@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+	xmlns="sap.m"  
+	xmlns:core="sap.ui.core" 
+> 
+	<MultiComboBox selectionFinish=".extension.com.yokogawa.zhps0005.ext.controller.CustomController.onGeneralSelect"    
+	id="multiComboGeneralSelection">
+		<core:Item
+			id="coreItemIncGLCom"
+			key="0"
+			text="{i18n>InclGLComp}"
+		/> 
+		 <core:Item
+			id="coreItemCLSD"
+			key="1"
+			text="{i18n>InclCLSD}"
+		/>
+		<core:Item
+			id="coreItemIncDocItem"
+			key="2"
+			text="{i18n>InclDocItemNo}"
+		/>
+	</MultiComboBox> 
+</core:FragmentDefinition>
+

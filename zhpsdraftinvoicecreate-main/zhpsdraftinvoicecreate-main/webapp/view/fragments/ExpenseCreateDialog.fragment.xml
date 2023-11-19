@@ -1,0 +1,67 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:smartField="sap.ui.comp.smartfield" xmlns:core="sap.ui.core" xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    <Dialog id="InvoiceExpenseDialog" title="{i18n>AddExpense}">
+        <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+            <f:SimpleForm id="_IDGenSimpleForm1"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="12"
+                labelSpanL="12"
+                labelSpanM="12"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="2"
+                singleContainerFullSize="false"
+                class="customSimpleFromNoTitle"
+            >
+                <f:content>
+                    <core:Title id="_IDGenTitle1" text="" class="customTitleHidden" />
+                    <Label id="_IDGenLabel1" text="{i18n>CostElement}" required="true" />
+                    <Input id="idCostElement" value="" />
+                    <Label id="_IDGenLabel2" text="{i18n>Note}" required="true" />
+                    <Input id="idNote" value="" />
+
+                    <Label id="_IDGenLabel3" text="{i18n>ItemText}" required="true" />
+                    <Input id="idItemText" value="" />
+
+                    <Label id="_IDGenLabel4" text="{i18n>Amount}" />
+                    <Input id="idAmount" type="Number" value="" />
+
+                    <Label id="_IDGenLbel4" text="{i18n>Currency}" />
+                    <Input id="idCurr" type="Text" value="" />
+
+                    <Label id="_IDGenLbl4" text="{i18n>MarkUp}" />
+                    <Input id="idMarkUp" type="Text" value="" />
+
+                    <core:Title id="_IDGenTitle2" text="" class="customTitleHidden" />
+                    <Label id="_IDGenLabel5" text="{i18n>CalcType}"/>
+                    <Select id="idCalcType" width="100%" selectedKey="" change="onChangeCalcTypeValueHelp">
+                        <items>
+                            <core:Item id="_IDGenItem5" text="" key="0" />
+                            <core:Item id="_IDGenItem1" text="No mark-up" key="1" />
+                            <core:Item id="_IDGenItem2" text="+%" key="2" />
+                            <core:Item id="_IDGenItem3" text="+Amount" key="3" />
+                            <core:Item id="_IDGenItem4" text="Amount" key="4" />
+                        </items>
+                    </Select>
+                    <Label id="_IDGenLabel6" text="{i18n>Extended}" />
+                    <Input id="idExtended" type="Number" value="" change="onChangeExtendValueHelp" />
+
+                    <Label id="_IDGenLabel7" text="{i18n>BillingAmount}" />
+                    <Input id="idBillingAmount" value="" enabled="false" />
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+        <beginButton>
+            <Button id="_IDGenButton1" text="{i18n>Save}" press="onAddExpenseDialog" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton2" text="{i18n>Cancel}" press="onCloseExpenseDialog" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

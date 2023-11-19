@@ -1,0 +1,37 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<TableSelectDialog
+		id="myDialog"
+		noDataText="No Material Found"
+		title="Select Material"
+		search="handleSearch"
+		confirm="handleClose"
+		cancel="handleClose"
+		items="{
+			path : '/Mat0mSet',
+			sorter : {
+				path : 'Matnr',
+				descending : false
+			}
+		}">
+		<ColumnListItem vAlign="Middle" id="clif116">
+			<cells>
+				<ObjectIdentifier title="{Matnr}" id="oif16"/>
+                <Text text="{Maktg}"  id="tf116"/>
+			</cells>
+		</ColumnListItem>
+        <columns>
+            <Column width="11rem" id="cf16">
+				<header>
+				    <Text text="Material" id="lf116"/>
+                </header>
+			</Column>
+			 <Column width="11rem" id="cf256">
+				<header>
+				    <Text text="Description" id="lf256"/>
+                </header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

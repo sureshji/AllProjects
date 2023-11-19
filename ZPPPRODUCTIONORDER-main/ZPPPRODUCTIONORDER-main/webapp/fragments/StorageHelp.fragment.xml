@@ -1,0 +1,37 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<TableSelectDialog
+		id="myDialog"
+		noDataText="No Storage Location Found"
+		title="Select Storage"
+		search="handleSearch"
+		confirm="handleClose"
+		cancel="handleClose"
+		items="{
+			path : '/HT001lLgortSet',
+			sorter : {
+				path : 'Lgort',
+				descending : false
+			}
+		}">
+		<ColumnListItem vAlign="Middle" id="clif117">
+			<cells>
+				<ObjectIdentifier title="{Lgort}" id="oif17"/>
+                <Text text="{Lgobe}"  id="tf117"/>
+			</cells>
+		</ColumnListItem>
+        <columns>
+            <Column width="11rem" id="cf17">
+				<header>
+				    <Text text="Storage Location" id="lf117"/>
+                </header>
+			</Column>
+			 <Column width="11rem" id="cf257">
+				<header>
+				    <Text text="Description" id="lf257"/>
+                </header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,29 @@
+{
+    "xsappname": "zzzppproductionorder",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+      {
+          "name": "$XSAPPNAME.call",
+          "description": "Call ADS RestAPI"
+      }
+    ],
+    "role-templates": [
+      {
+          "name": "adsprint", 
+          "description": "adsprint",
+          "scope-references": [
+              "$XSAPPNAME.call"
+          ]
+      }
+    ],
+    "role-collections": [
+      {
+        "name": "adsprintColl",
+        "description": "Role Collection to call ADS Rest API",
+        "role-template-references": [
+          "$XSAPPNAME.adsprint"
+        ]
+      }
+    ]
+  }

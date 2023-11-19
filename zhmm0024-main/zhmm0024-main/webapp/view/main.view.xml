@@ -1,0 +1,222 @@
+<mvc:View controllerName="com.yokogawa.zhmm0024.com.yokogawa.zhmm0024.controller.main" xmlns:f="sap.ui.layout.form" 
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:unified="sap.ui.unified" xmlns:ui="sap.ui.table">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+        <content>
+            <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+            <f:Form id="FormChangeColumn_threeGroups"
+                editable="true">
+                <!-- <f:title>
+                    <core:Title id="_IDGenTitle1" text="{i18n>title}" />
+                </f:title> -->
+                <f:layout>
+                    <f:ColumnLayout id="_IDGenColumnLayout"
+                        columnsM="2"
+                        columnsL="3"
+                        columnsXL="3"
+                    />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="_IDGenFormContainer" title="">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenFormElement" label="{i18n>mode}" >
+                                <f:fields>
+                                    <ComboBox id="_IDGenComboBox1" selectionChange="onModeChange">
+				                            <core:Item id="_IDGenItem1" key="01" text="Normal" />
+                                            <core:Item id="_IDGenItem2" key="02" text="Recovery" />
+			                        </ComboBox>
+                                  </f:fields>
+                            </f:FormElement>
+                            </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer id="_IDGenForm" title="">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenFormElement2" label="{i18n>list}">
+                                <f:fields>
+                                    <MultiComboBox enabled="{viewModel>/recoveryMode}" id="_IDGenComboBox2" selectionChange="onSelect">
+				                            <core:Item id="_IDGenItem3" key="R" text="Model (RSP)" />
+                                            <core:Item id="_IDGenItem4" key="S" text="Specification (RSP)" />
+                                            <core:Item id="_IDGenItem5" key="T" text="Transfer Factor" />
+                                            <core:Item id="_IDGenItem6" key="M" text="Discount for Reps. (Material)" />
+                                            <core:Item id="_IDGenItem7" key="B" text="Discount for Reps. (BUPFPGPL)" />
+			                        </MultiComboBox>
+                                  </f:fields>
+                            </f:FormElement>
+                            </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer id="_IDGenForm3" title="">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenFormElement3">
+                                <f:fields>
+                                    <Text id="_IDGenText1"/>
+                                  </f:fields>
+                            </f:FormElement>
+                            </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+            <f:Form id="FormChangeColumn_threeGroups234"
+                editable="true">
+                <!-- <f:title>
+                    <core:Title id="_IDGenTitle1" text="{i18n>title}" />
+                </f:title> -->
+                <f:layout>
+                    <f:ColumnLayout id="_IDGenColumnLayout1"
+                        columnsM="2"
+                        columnsL="3"
+                        columnsXL="3"
+                    />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="_IDGenFormContainer1" title="">
+                        <f:formElements>
+                            <!-- <f:FormElement id="_IDGenFormElement2" label="{i18n>mode}">
+                                <f:fields>
+                                    <ComboBox>
+				                            <core:Item key="01" text="Normal" />
+                                            <core:Item key="02" text="Recovery" />
+			                        </ComboBox>
+                                  </f:fields>
+                            </f:FormElement> -->
+                             <f:FormElement id="_IDGenFormElement12" label="{i18n>sDate}">
+                                <f:fields>
+                                    <DatePicker enabled="{viewModel>/recoveryMode}" id="DP1" placeholder="Enter Start Date" change="onChangeSDate" class="sapUiSmallMarginBottom"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenFormElement13" label="{i18n>eTime}">
+                                <f:fields>
+                                    <TimePicker enabled="{viewModel>/recoveryMode}" id="TP2" change="handleChangeTP2"
+                                        value="{
+                                            'path':'/timePickers/TP3/value',
+                                            'type': 'sap.ui.model.type.Time',
+                                            'formatOptions': {
+                                                    'pattern': 'hh:mm:ss a'
+                                            }
+                                        }"
+                                        maskMode="{= ${/maskMode/state} ? 'On' : 'Off'}"
+                                        placeholder="Enter End Time" />
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer id="_IDGenFormContainer2" title="">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenFormElement21" label="{i18n>sTime}">
+                                <f:fields>
+                                    <TimePicker enabled="{viewModel>/recoveryMode}" id="TP1" change="handleChangeTP1"
+                                        value="{
+                                            'path':'/timePickers/TP3/value',
+                                            'type': 'sap.ui.model.type.Time',
+                                            'formatOptions': {
+                                                    'pattern': 'hh:mm:ss a'
+                                            }
+                                        }"
+                                        maskMode="{= ${/maskMode/state} ? 'On' : 'Off'}"
+                                        placeholder="Enter Start Time" class="sapUiSmallMarginBottom"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenFormElement22" label="{i18n>mat}">
+                                <f:fields>
+                                    <Input enabled="{viewModel>/material}" id="_IDGenInput1" placeholder="Enter Material" change="onChangeMat"/>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer id="_IDGenFormContainer3" title="">
+                        <f:formElements>
+                            <f:FormElement id="_IDGenFormElement31" label="{i18n>eDate}">
+                                <f:fields>
+                                    <DatePicker enabled="{viewModel>/recoveryMode}" id="DP2" placeholder="Enter End Date" change="onChangeDate2" class="sapUiSmallMarginBottom"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="_IDGenFormElement32" label="{i18n>BUP}">
+                                <f:fields>
+                                    <Input enabled="{viewModel>/BUPFPGPL}" id="_IDGenInput2" placeholder="Enter BUPFPGPL" change="onChangeBUPF"/>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+	</VBox>
+    <VBox id="_IDGenVBox2" >
+        <ui:Table id="_IDGenTable1"
+                visible="false"
+				rows="{viewModel>/outputTable}"
+				selectionMode="None"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<ui:extension>
+					<OverflowToolbar id="_IDGenOverflowToolbar1" style="Clear">
+						<Title id="title" text="Condition Master"/>
+					</OverflowToolbar>
+				</ui:extension>
+				<ui:columns>
+                 <ui:Column id="_IDGenColumn0" width="5rem">
+						<Label id="_IDGenLabel0" text="Index" />
+						<ui:template>
+							<Text id="_IDGenText0" text="{viewModel>row}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column id="_IDGenColumn1" width="5rem">
+						<Label id="_IDGenLabel1" text="Select" />
+						<ui:template>
+							<Text id="_IDGenText2" text="{viewModel>select1}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+                    <ui:Column id="_IDGenColumn2" width="8rem">
+						<Label id="_IDGenLabel2" text="Table name" />
+						<ui:template>
+							<Text id="_IDGenText3" text="{viewModel>table}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+                    <ui:Column id="_IDGenColumn3" width="8rem">
+						<Label id="_IDGenLabel3" text="PMK code" />
+						<ui:template>
+							<Text id="_IDGenText4" text="{viewModel>pmkCode}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+                    <ui:Column id="_IDGenColumn4" width="15rem">
+						<Label id="_IDGenLabel4" text="PMK code desc" />
+						<ui:template>
+							<Text id="_IDGenText5" text="{viewModel>pmkDesc}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+                    <ui:Column id="_IDGenColumn5" width="8rem">
+						<Label id="_IDGenLabel5" text="Material code" />
+						<ui:template>
+							<Text id="_IDGenText6" text="{viewModel>material}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+                    <ui:Column id="_IDGenColumn6" width="15rem">
+						<Label id="_IDGenLabel6" text="Mat Desc" />
+						<ui:template>
+							<Text id="_IDGenText7" text="{viewModel>matDesc}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+                    <ui:Column id="_IDGenColumn7" width="8rem">
+						<Label id="_IDGenLabel7" text="Message type" />
+						<ui:template>
+							<Text id="_IDGenText8" text="{viewModel>success}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+                    <ui:Column id="_IDGenColumn8" width="40rem">
+						<Label id="_IDGenLabel8" text="Result" />
+						<ui:template>
+							<Text id="_IDGenText9" text="{viewModel>message}" tooltip="{viewModel>message}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+				</ui:columns>
+			</ui:Table>
+        
+		</VBox>
+        </content>
+        <footer>
+			<Toolbar id="_IDGenToolbar1">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"></ToolbarSpacer>
+            <Button press="onPressExecute" id="idExecute" text="{i18n>execute}"/>
+			</Toolbar>
+		</footer>
+    </Page>
+</mvc:View>
+

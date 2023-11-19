@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="ApproverDetailsExecuteDialogIdInFragment" title="{i18n>InputData}">
+        <buttons>
+            <Button id="onApproverOnExecuteIdInFragment" text="{i18n>Approve}" press="onApproverOnExecuteFromPopUp"/>
+            <Button id="onApproverOnExecuteCancelIdInFragment" text="{i18n>Cancel}" press="onCancelOnExecuteFromPopUp"/>
+        </buttons>
+        <content>
+            <Label id="LabelforonApproverOnExecuteIdInFragment" labelFor= "onApproverOnExecuteInputID" text="{i18n>onApproverOnExecuteInput}"></Label>
+            <Input id="onApproverOnExecuteInputID" value="{'path': 'currentUserModel>/ApproverDetails'}" />
+
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title="Sales Organization"
+		items="{oModel>/SalesOrganizationData}"
+		search=".onSalesOrganizationValueHelpDialogSearch"
+		confirm=".onSalesOrganizationValueHelpDialogClose"
+		cancel=".onSalesOrganizationValueHelpDialogClose">
+		<StandardListItem
+			title="{oModel>SalesOrganization}"
+			description="{oModel>SalesOrganization_Text}" />
+	</SelectDialog>
+</core:FragmentDefinition>

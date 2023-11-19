@@ -1,0 +1,227 @@
+{
+    "_version": "1.37.0",
+    "sap.app": {
+        "id": "com.yokogawa.zhmm0015",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.10.4",
+            "toolsId": "9e270394-9a36-4d34-aee6-f0fd9c596e55"
+        },
+        "dataSources": {
+            "btp-service": {
+                "uri": "/v2/zapibps0024/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "vb31": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0051_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "vb32": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0052_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "vb33": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0059_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "vb34": {
+                "uri": "/sap/opu/odata/sap/ZBQIF0078_001_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "s4-service": {
+                "uri": "/sap/opu/odata/sap/ZSRVBHMM0017/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "com-yokogawa-zhmm0015-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "MaterialBasicData",
+                    "action": "manage",
+                    "title": "{{appTitle}}",
+                    "subTitle": "",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.96.12",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.yokogawa.zhmm0015.i18n.i18n"
+                }
+            },
+            "vb31": {
+                "dataSource": "vb31",
+                "preload": true,
+                "settings": {}
+            },
+            "vb32": {
+                "dataSource": "vb32",
+                "preload": true,
+                "settings": {}
+            },
+            "vb33": {
+                "dataSource": "vb33",
+                "preload": true,
+                "settings": {}
+            },
+            "vb34": {
+                "dataSource": "vb34",
+                "preload": true,
+                "settings": {}
+            },
+            "s4": {
+                "dataSource": "s4-service",
+                "preload": true,
+                "settings": {}
+            },
+            "": {
+                "dataSource": "btp-service",
+                "preload": true,
+                "settings": {}
+            },
+            "zhmm0015": {
+                "type": "sap.ui.model.json.JSONModel"
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "com.yokogawa.zhmm0015.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteSelectionscreen",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetSelectionscreen"
+                    ]
+                },
+                {
+                    "name": "RouteResult",
+                    "pattern": "Result/",
+                    "target": [
+                        "TargetResult"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetSelectionscreen": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Selectionscreen",
+                    "viewName": "Selectionscreen"
+                },
+                "TargetResult": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Result",
+                    "viewName": "Result"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.yokogawa.zhmm0015.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "comyokogawazhmm0015"
+    }
+}

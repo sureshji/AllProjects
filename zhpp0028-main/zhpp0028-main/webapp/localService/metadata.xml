@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZAPIBPS0022" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ZCDSEHPPC0028" EntityType="ZAPIBPS0022.ZCDSEHPPC0028" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Print Production Order Report"/>
+                <EntitySet Name="ZCDSEHPPC0024" EntityType="ZAPIBPS0022.ZCDSEHPPC0024" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Print Production Order Report"/>
+                <EntitySet Name="I_PlantStdVH" EntityType="ZAPIBPS0022.I_PlantStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Plant"/>
+                <EntitySet Name="I_Language" EntityType="ZAPIBPS0022.I_Language" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Language"/>
+                <EntitySet Name="I_MRPControllerVH" EntityType="ZAPIBPS0022.I_MRPControllerVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="MRP Controller Value Help"/>
+                <EntitySet Name="I_MaterialStdVH" EntityType="ZAPIBPS0022.I_MaterialStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Material"/>
+                <EntitySet Name="I_ProductionOrderStdVH" EntityType="ZAPIBPS0022.I_ProductionOrderStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Production Order"/>
+                <EntitySet Name="I_OrderTypeVH" EntityType="ZAPIBPS0022.I_OrderTypeVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Order Type"/>
+                <EntitySet Name="I_SalesDocumentItemStdVH" EntityType="ZAPIBPS0022.I_SalesDocumentItemStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Sales Document Item"/>
+                <EntitySet Name="I_SalesDocumentStdVH" EntityType="ZAPIBPS0022.I_SalesDocumentStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Sales Document"/>
+                <EntitySet Name="I_WorkCenterStdVH" EntityType="ZAPIBPS0022.I_WorkCenterStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Work Center"/>
+                <EntitySet Name="ProductionSupervisorVH" EntityType="ZAPIBPS0022.ProductionSupervisorVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Value Help for Production Supervisor"/>
+                <EntitySet Name="WBSElementVH" EntityType="ZAPIBPS0022.WBSElementVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Value help for WBS"/>
+                <EntitySet Name="LinkageNoVH" EntityType="ZAPIBPS0022.LinkageNoVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Value Help for Linkage Number"/>
+                <EntitySet Name="ChildPartListCombined" EntityType="ZAPIBPS0022.ChildPartListCombined" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="COMPOSITE for Prodcution Order Child Part list Form"/>
+                <EntitySet Name="ProcessRecordSheetCombined" EntityType="ZAPIBPS0022.ProcessRecordSheetCombined" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="COMPOSITE View for Process Record Sheet"/>
+                <EntitySet Name="ProductionOrderSheetCombined" EntityType="ZAPIBPS0022.ProductionOrderSheetCombined" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Process Record Sheet Form API"/>
+                <EntitySet Name="PrinterConfiguration" EntityType="ZAPIBPS0022.PrinterConfiguration"/>
+            </EntityContainer>
+            <EntityType Name="ZCDSEHPPC0028" sap:content-version="1" sap:label="Print Production Order Report">
+                <Key>
+                    <PropertyRef Name="Plant"/>
+                    <PropertyRef Name="Prod_OrdType"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="Prod_OrdType" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Production Order Type" sap:quickinfo="Order Type"/>
+                <Property Name="Work_Center" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Work Center"/>
+                <Property Name="MRP_Cont" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="MRP Controller" sap:quickinfo="MRP controller for the order"/>
+                <Property Name="Prod_Super" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Production Supervisor"/>
+                <Property Name="Linkage_Number" Type="Edm.String" MaxLength="16" sap:label="Linkage Number"/>
+                <Property Name="Sales_Doc" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Sales Document"/>
+                <Property Name="Sales_Doc_Item" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:label="Sales Document Item"/>
+                <Property Name="WBS_Ele" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="WBS Element"/>
+                <Property Name="Prod_Ord" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Production Order" sap:quickinfo="Order Number"/>
+                <Property Name="Start_Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Scheduled start date" sap:quickinfo="Scheduled start"/>
+                <Property Name="Finish_Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Scheduled finish date" sap:quickinfo="Scheduled finish"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material Number" sap:quickinfo="Material Number for Order"/>
+                <Property Name="Posting_Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Posting date for modification" sap:quickinfo="Posting Date in the Document"/>
+                <Property Name="Lang" Type="Edm.String" MaxLength="2" sap:label="Language key" sap:quickinfo="Language Key"/>
+                <Property Name="Target_Output" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Target Output" sap:quickinfo="Single-Character Flag"/>
+                <Property Name="Total_Records" Type="Edm.Byte" sap:label="Total Records"/>
+                <Property Name="Printable" Type="Edm.Byte" sap:label="Printable"/>
+                <Property Name="Unprintable" Type="Edm.Byte" sap:label="UnPrintable"/>
+                <Property Name="Material_Type" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Material Type" sap:quickinfo="Material type"/>
+                <Property Name="Serial" Type="Edm.String" MaxLength="18" sap:label="Serial"/>
+                <Property Name="Serial_Sign" Type="Edm.String" MaxLength="6" sap:label="Serial Sign"/>
+                <Property Name="Num_Issue" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Numbering issue" sap:quickinfo="Serial Number Profile"/>
+                <Property Name="Qty" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="Unit" sap:label="Quantity" sap:quickinfo="Total Order Quantity"/>
+                <Property Name="Unit" Type="Edm.String" MaxLength="3" sap:label="Unit" sap:quickinfo="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="Proj_Def" Type="Edm.String" MaxLength="24" sap:label="Project Definition"/>
+                <Property Name="Mscode" Type="Edm.String" MaxLength="80" sap:label="MS Code"/>
+                <Property Name="Cntrl_No" Type="Edm.String" MaxLength="70" sap:label="Combined MS code Control No" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Cntrl_Ind" Type="Edm.String" MaxLength="70" sap:label="Combined MS Code Indicator" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Inquiry_Id" Type="Edm.String" MaxLength="70" sap:label="Inquiry ID" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Message" Type="Edm.String" MaxLength="255" sap:label="Message"/>
+                <Property Name="Planner_Group" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Planner Group" sap:quickinfo="Responsible Planner Group or Department"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHPPC0024" sap:content-version="1" sap:label="Print Production Order Report">
+                <Key>
+                    <PropertyRef Name="Plant"/>
+                    <PropertyRef Name="Prod_OrdType"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="Prod_OrdType" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Production Order Type" sap:quickinfo="Order Type"/>
+                <Property Name="Work_Center" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Work Center"/>
+                <Property Name="MRP_Cont" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="MRP Controller" sap:quickinfo="MRP controller for the order"/>
+                <Property Name="Prod_Super" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Production Supervisor"/>
+                <Property Name="Linkage_Number" Type="Edm.String" MaxLength="16" sap:label="Linkage Number"/>
+                <Property Name="Sales_Doc" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Sales Document"/>
+                <Property Name="Sales_Doc_Item" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:label="Sales Document Item"/>
+                <Property Name="WBS_Ele" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="WBS Element"/>
+                <Property Name="Prod_Ord" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Production Order" sap:quickinfo="Order Number"/>
+                <Property Name="Start_Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Scheduled start date" sap:quickinfo="Scheduled start"/>
+                <Property Name="Finish_Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Scheduled finish date" sap:quickinfo="Scheduled finish"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material Number" sap:quickinfo="Material Number for Order"/>
+                <Property Name="Posting_Date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Posting date for modification" sap:quickinfo="Posting Date in the Document"/>
+                <Property Name="Lang" Type="Edm.String" MaxLength="2" sap:label="Language key" sap:quickinfo="Language Key"/>
+                <Property Name="Target_Output" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Target Output" sap:quickinfo="Single-Character Flag"/>
+                <Property Name="Total_Records" Type="Edm.Byte" sap:label="Total Records"/>
+                <Property Name="Printable" Type="Edm.Byte" sap:label="Printable"/>
+                <Property Name="Unprintable" Type="Edm.Byte" sap:label="UnPrintable"/>
+                <Property Name="Material_Type" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Material Type" sap:quickinfo="Material type"/>
+                <Property Name="Serial" Type="Edm.String" MaxLength="18" sap:label="Serial"/>
+                <Property Name="Serial_Sign" Type="Edm.String" MaxLength="6" sap:label="Serial Sign"/>
+                <Property Name="Num_Issue" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Numbering issue" sap:quickinfo="Serial Number Profile"/>
+                <Property Name="Qty" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="Unit" sap:label="Quantity" sap:quickinfo="Total Order Quantity"/>
+                <Property Name="Unit" Type="Edm.String" MaxLength="3" sap:label="Unit" sap:quickinfo="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="Proj_Def" Type="Edm.String" MaxLength="24" sap:label="Project Definition"/>
+                <Property Name="Mscode" Type="Edm.String" MaxLength="80" sap:label="MS Code"/>
+                <Property Name="Cntrl_No" Type="Edm.String" MaxLength="70" sap:label="Combined MS code Control No" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Cntrl_Ind" Type="Edm.String" MaxLength="70" sap:label="Combined MS Code Indicator" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Inquiry_Id" Type="Edm.String" MaxLength="70" sap:label="Inquiry ID" sap:quickinfo="Characteristic Value"/>
+                <Property Name="Message" Type="Edm.String" MaxLength="255" sap:label="Message"/>
+                <Property Name="Planner_Group" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Planner Group" sap:quickinfo="Responsible Planner Group or Department"/>
+                <Property Name="IssueType" Type="Edm.String" MaxLength="1"/>
+                <Property Name="STATUS" Type="Edm.String" MaxLength="13"/>
+                <Property Name="ZPRINT" Type="Edm.String" MaxLength="1"/>
+            </EntityType>
+            <EntityType Name="I_PlantStdVH" sap:content-version="1" sap:label="Plant">
+                <Key>
+                    <PropertyRef Name="Plant"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:text="PlantName" sap:label="Plant"/>
+                <Property Name="PlantName" Type="Edm.String" MaxLength="30" sap:label="Plant Name"/>
+            </EntityType>
+            <EntityType Name="I_Language" sap:content-version="1" sap:label="Language">
+                <Key>
+                    <PropertyRef Name="Language"/>
+                </Key>
+                <Property Name="Language" Type="Edm.String" MaxLength="2" Nullable="false" sap:text="Language_Text" sap:label="Language Key"/>
+                <Property Name="Language_Text" Type="Edm.String" MaxLength="16" sap:label="Name" sap:quickinfo="Name of Language" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="LanguageISOCode" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Language Code" sap:quickinfo="2-Character SAP Language Code"/>
+            </EntityType>
+            <EntityType Name="I_MRPControllerVH" sap:content-version="1" sap:label="MRP Controller Value Help">
+                <Key>
+                    <PropertyRef Name="Plant"/>
+                    <PropertyRef Name="MRPController"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="MRPController" Type="Edm.String" MaxLength="3" Nullable="false" sap:display-format="UpperCase" sap:text="MRPControllerName" sap:label="MRP Controller"/>
+                <Property Name="MRPControllerName" Type="Edm.String" MaxLength="18" sap:label="MRP Controller Name"/>
+                <Property Name="MRPControllerPhoneNumber" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="MRP Controller Phone" sap:quickinfo="MRP Controller's Phone Number"/>
+            </EntityType>
+            <EntityType Name="I_MaterialStdVH" sap:content-version="1" sap:label="Material">
+                <Key>
+                    <PropertyRef Name="Material"/>
+                </Key>
+                <Property Name="Material" Type="Edm.String" MaxLength="40" Nullable="false" sap:display-format="UpperCase" sap:text="Material_Text" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="Material_Text" Type="Edm.String" MaxLength="40" sap:label="Material Description" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_ProductionOrderStdVH" sap:content-version="1" sap:label="Production Order">
+                <Key>
+                    <PropertyRef Name="ProductionOrder"/>
+                </Key>
+                <Property Name="ProductionOrder" Type="Edm.String" MaxLength="12" Nullable="false" sap:display-format="UpperCase" sap:text="OrderDescription" sap:label="Manufacturing Order" sap:quickinfo="Manufacturing Order ID"/>
+                <Property Name="OrderDescription" Type="Edm.String" MaxLength="40" sap:label="Order Text" sap:quickinfo="Manufacturing Order Text"/>
+            </EntityType>
+            <EntityType Name="I_OrderTypeVH" sap:content-version="1" sap:label="Order Type">
+                <Key>
+                    <PropertyRef Name="OrderType"/>
+                </Key>
+                <Property Name="OrderType" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:text="OrderType_Text" sap:label="Order Type"/>
+                <Property Name="OrderType_Text" Type="Edm.String" MaxLength="40" sap:label="Order Type Name" sap:quickinfo="Name of an Order Type" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="OrderCategory" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Order Category"/>
+            </EntityType>
+            <EntityType Name="I_SalesDocumentItemStdVH" sap:content-version="1" sap:label="Sales Document Item">
+                <Key>
+                    <PropertyRef Name="SalesDocument"/>
+                    <PropertyRef Name="SalesDocumentItem"/>
+                </Key>
+                <Property Name="SalesDocument" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Sales document" sap:quickinfo="Sales Document"/>
+                <Property Name="SalesDocumentItem" Type="Edm.String" MaxLength="6" Nullable="false" sap:display-format="NonNegative" sap:text="SalesDocumentItemText" sap:label="Sales Document Item"/>
+                <Property Name="SalesDocumentItemText" Type="Edm.String" MaxLength="40" sap:label="Item Description" sap:quickinfo="Short text for sales order item"/>
+            </EntityType>
+            <EntityType Name="I_SalesDocumentStdVH" sap:content-version="1" sap:label="Sales Document">
+                <Key>
+                    <PropertyRef Name="SalesDocument"/>
+                </Key>
+                <Property Name="SalesDocument" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Sales document" sap:quickinfo="Sales Document"/>
+            </EntityType>
+            <EntityType Name="I_WorkCenterStdVH" sap:content-version="1" sap:label="Work Center">
+                <Key>
+                    <PropertyRef Name="WorkCenterInternalID"/>
+                    <PropertyRef Name="WorkCenterTypeCode"/>
+                </Key>
+                <Property Name="WorkCenterInternalID" Type="Edm.String" MaxLength="8" Nullable="false" sap:display-format="NonNegative" sap:text="WorkCenterInternalID_Text" sap:label="Object ID" sap:quickinfo="Object ID of the resource"/>
+                <Property Name="WorkCenterTypeCode" Type="Edm.String" MaxLength="2" Nullable="false" sap:display-format="UpperCase" sap:label="Object Type" sap:quickinfo="Object types of the CIM resource"/>
+                <Property Name="WorkCenterInternalID_Text" Type="Edm.String" MaxLength="40" sap:label="Work Center Text" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="ProductionSupervisorVH" sap:content-version="1" sap:label="Value Help for Production Supervisor">
+                <Key>
+                    <PropertyRef Name="Plant"/>
+                    <PropertyRef Name="ProdSup"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="ProdSup" Type="Edm.String" MaxLength="3" Nullable="false" sap:display-format="UpperCase" sap:label="Production Supervisor"/>
+                <Property Name="ProdSupName" Type="Edm.String" MaxLength="30" sap:label="Production Supervisor Name"/>
+            </EntityType>
+            <EntityType Name="WBSElementVH" sap:content-version="1" sap:label="Value help for WBS">
+                <Key>
+                    <PropertyRef Name="wbsElementExt"/>
+                </Key>
+                <Property Name="wbsElementExt" Type="Edm.String" MaxLength="24" Nullable="false"/>
+                <Property Name="wsElementDesc" Type="Edm.String" MaxLength="40" sap:label="Description" sap:quickinfo="PS: Short description (1st text line)"/>
+                <Property Name="projectId" Type="Edm.String" MaxLength="24"/>
+                <Property Name="ProjectDesc" Type="Edm.String" MaxLength="40" sap:label="Description" sap:quickinfo="PS: Short description (1st text line)"/>
+                <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company code" sap:quickinfo="Company code for the project"/>
+                <Property Name="levelInHierarchy" Type="Edm.Byte" sap:label="Level" sap:quickinfo="Level in Project Hierarchy"/>
+                <Property Name="vbukr" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company code" sap:quickinfo="Company code for the project"/>
+            </EntityType>
+            <EntityType Name="LinkageNoVH" sap:content-version="1" sap:label="Value Help for Linkage Number">
+                <Key>
+                    <PropertyRef Name="SalesOrder"/>
+                    <PropertyRef Name="SalesItem"/>
+                </Key>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Sales Order" sap:quickinfo="Sales Document"/>
+                <Property Name="SalesItem" Type="Edm.String" MaxLength="6" Nullable="false" sap:display-format="NonNegative" sap:label="Sales Order Item" sap:quickinfo="Sales Document Item"/>
+                <Property Name="LinkageNumber" Type="Edm.String" MaxLength="16" sap:label="Linkage Number"/>
+            </EntityType>
+            <EntityType Name="ChildPartListCombined" sap:content-version="1" sap:label="COMPOSITE for Prodcution Order Child Part list Form">
+                <Key>
+                    <PropertyRef Name="ProductionOrderNo"/>
+                </Key>
+                <Property Name="ProductionOrderNo" Type="Edm.String" MaxLength="12" Nullable="false" sap:display-format="UpperCase" sap:label="Manufacturing Order" sap:quickinfo="Manufacturing Order ID"/>
+                <Property Name="Reservation" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label="Reservation" sap:quickinfo="Number of reservation/dependent requirements"/>
+                <Property Name="MaterialNumber" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="BOO Material" sap:quickinfo="Bill of Operations Material"/>
+                <Property Name="MaterialDescriptionH" Type="Edm.String" MaxLength="40" sap:label="Material Description"/>
+                <Property Name="OrderQty" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="PBEBD262AB87EBDF64C721EAC45119F9A" sap:label="Total Quantity" sap:quickinfo="Manufacturing Order Planned Total Quantity"/>
+                <Property Name="BaseUnitMeasure" Type="Edm.String" MaxLength="3" sap:label="Production Unit" sap:quickinfo="Production Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="StartDate" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Character Field with Length 10" sap:heading=""/>
+                <Property Name="EndDate" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Character Field with Length 10" sap:heading=""/>
+                <Property Name="StorageLocation" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Storage Location"/>
+                <Property Name="Reprint" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Print Status"/>
+                <Property Name="IssueDate" Type="Edm.String" MaxLength="8"/>
+            </EntityType>
+            <EntityType Name="ProcessRecordSheetCombined" sap:content-version="1" sap:label="COMPOSITE View for Process Record Sheet">
+                <Key>
+                    <PropertyRef Name="OrderNumber"/>
+                </Key>
+                <Property Name="OrderNumber" Type="Edm.String" MaxLength="12" Nullable="false" sap:display-format="UpperCase" sap:label="Manufacturing Order" sap:quickinfo="Manufacturing Order ID"/>
+                <Property Name="title" Type="Edm.String" MaxLength="24"/>
+                <Property Name="ProductionVersion" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Production Version" sap:value-list="standard"/>
+                <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Work Center" sap:value-list="standard"/>
+                <Property Name="MaterialDescription" Type="Edm.String" MaxLength="40" sap:label="Material Description"/>
+                <Property Name="TransProd" Type="Edm.String" MaxLength="25" sap:label="Unloading Point"/>
+                <Property Name="Model" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Ivtryprod" Type="Edm.String" MaxLength="25" sap:label="Unloading Point"/>
+                <Property Name="TRWorkCenter" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Work Center"/>
+                <Property Name="StorageLocation" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Storage Location"/>
+                <Property Name="StorageBin" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="PartsNo" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number for Order" sap:value-list="standard"/>
+                <Property Name="Store" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Storage Location"/>
+                <Property Name="MfgOrderPlannedTotalQty" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="ProductionUnit" sap:label="Total Quantity" sap:quickinfo="Manufacturing Order Planned Total Quantity"/>
+                <Property Name="ProductionUnit" Type="Edm.String" MaxLength="3" sap:label="Production Unit" sap:quickinfo="Production Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="MfgOrderScheduledStartDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="MfgOrderScheduledEndDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="PrintD" Type="Edm.String" MaxLength="8"/>
+                <Property Name="RePrint" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Scanner" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Manufacturing Order" sap:quickinfo="Manufacturing Order ID"/>
+                <Property Name="Note" Type="Edm.String" sap:label="Long Text"/>
+                <Property Name="memo1" Type="Edm.String" MaxLength="40" sap:label="Memo"/>
+                <Property Name="memo2" Type="Edm.String" MaxLength="40" sap:label="Memo"/>
+                <Property Name="memo3" Type="Edm.String" MaxLength="40" sap:label="Memo"/>
+                <Property Name="memo4" Type="Edm.String" MaxLength="40" sap:label="Memo"/>
+                <Property Name="ReportId" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative"/>
+            </EntityType>
+            <EntityType Name="ProductionOrderSheetCombined" sap:content-version="1" sap:label="Process Record Sheet Form API">
+                <Key>
+                    <PropertyRef Name="OrderNumber"/>
+                </Key>
+                <Property Name="OrderNumber" Type="Edm.String" MaxLength="12" Nullable="false" sap:display-format="UpperCase" sap:label="Manufacturing Order" sap:quickinfo="Manufacturing Order ID"/>
+                <Property Name="title2" Type="Edm.String" MaxLength="37"/>
+                <Property Name="title" Type="Edm.String" MaxLength="32"/>
+                <Property Name="PrssType" Type="Edm.String" MaxLength="8"/>
+                <Property Name="MfgOrderScheduledStartDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="MfgOrderScheduledStartDateUF" Type="Edm.String" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MfgOrderScheduledEndDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="MfgOrderScheduledEndDateUF" Type="Edm.String" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StorageLocation" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Storage Location"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number for Order" sap:value-list="standard"/>
+                <Property Name="MfgOrderPlannedTotalQty" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="ProductionUnit" sap:label="Total Quantity" sap:quickinfo="Manufacturing Order Planned Total Quantity"/>
+                <Property Name="ProductionUnit" Type="Edm.String" MaxLength="3" sap:label="Production Unit" sap:quickinfo="Production Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Work Center" sap:value-list="standard"/>
+                <Property Name="MaterialDescription" Type="Edm.String" MaxLength="40" sap:label="Material Description"/>
+                <Property Name="PartsNo" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number for Order"/>
+                <Property Name="InvRecAddress" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Storage Location"/>
+                <Property Name="TransProd" Type="Edm.String" MaxLength="25" sap:label="Unloading Point"/>
+                <Property Name="BuildingLocation" Type="Edm.String" MaxLength="42"/>
+                <Property Name="rwcd" Type="Edm.String" MaxLength="1"/>
+                <Property Name="EntryQty" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="EntryUnit" sap:label="Quantity in Unit of Entry"/>
+                <Property Name="EntryUnit" Type="Edm.String" MaxLength="3" sap:label="Unit of Entry" sap:quickinfo="Unit of entry" sap:semantics="unit-of-measure"/>
+                <Property Name="TotalReqQty" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="EntryUnit2" sap:label="Quantity in Unit of Entry"/>
+                <Property Name="EntryUnit2" Type="Edm.String" MaxLength="3" sap:label="Unit of Entry" sap:quickinfo="Unit of entry" sap:semantics="unit-of-measure"/>
+                <Property Name="StorageBin" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="MtlLocation" Type="Edm.String" MaxLength="42"/>
+                <Property Name="MtlPartsShelfNo" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="Ivtryprod" Type="Edm.String" MaxLength="25" sap:label="Unloading Point"/>
+                <Property Name="MatExplanation" Type="Edm.String" MaxLength="40" sap:label="BOM Description"/>
+                <Property Name="Finish" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label="Confirmation" sap:quickinfo="Completion confirmation number for the operation"/>
+                <Property Name="PrintDate" Type="Edm.String" MaxLength="20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RePrint" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Machine" Type="Edm.Decimal" Scale="3" Precision="9" sap:unit="Unit4"/>
+                <Property Name="Unit5" Type="Edm.String" MaxLength="3" sap:label="Standard Value Unit" sap:quickinfo="Unit of Measurement of Standard Value" sap:semantics="unit-of-measure"/>
+                <Property Name="Labour" Type="Edm.Decimal" Scale="3" Precision="9" sap:unit="Unit5"/>
+                <Property Name="Unit4" Type="Edm.String" MaxLength="3" sap:label="Standard Value Unit" sap:quickinfo="Unit of Measurement of Standard Value" sap:semantics="unit-of-measure"/>
+                <Property Name="SetUp" Type="Edm.Decimal" Scale="3" Precision="9" sap:unit="Unit3"/>
+                <Property Name="Unit3" Type="Edm.String" MaxLength="3" sap:label="Standard Value Unit" sap:quickinfo="Unit of Measurement of Standard Value" sap:semantics="unit-of-measure"/>
+                <Property Name="memo1" Type="Edm.String" MaxLength="40" sap:label="Memo"/>
+                <Property Name="memo2" Type="Edm.String" MaxLength="40" sap:label="Memo"/>
+                <Property Name="memo3" Type="Edm.String" MaxLength="40" sap:label="Memo"/>
+                <Property Name="TRWorkCenter" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Work Center"/>
+                <Property Name="ReportId" Type="Edm.String" MaxLength="9"/>
+                <Property Name="Scanner" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label="Confirmation" sap:quickinfo="Completion confirmation number for the operation"/>
+                <Property Name="Note" Type="Edm.String" sap:label="Long Text"/>
+            </EntityType>
+            <EntityType Name="PrinterConfiguration">
+                <Key>
+                    <PropertyRef Name="REPORTID"/>
+                    <PropertyRef Name="KEY1"/>
+                    <PropertyRef Name="KEY2"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="REPORTID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="KEY1" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="KEY2" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="PRINTERID" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="Print Production Order"/>
+                        <PropertyValue Property="TypeNamePlural" String="Print Production Order"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Plant"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Plant"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Plant</PropertyPath>
+                        <PropertyPath>Prod_OrdType</PropertyPath>
+                        <PropertyPath>Work_Center</PropertyPath>
+                        <PropertyPath>MRP_Cont</PropertyPath>
+                        <PropertyPath>Linkage_Number</PropertyPath>
+                        <PropertyPath>Sales_Doc</PropertyPath>
+                        <PropertyPath>Sales_Doc_Item</PropertyPath>
+                        <PropertyPath>WBS_Ele</PropertyPath>
+                        <PropertyPath>Prod_Ord</PropertyPath>
+                        <PropertyPath>Start_Date</PropertyPath>
+                        <PropertyPath>Finish_Date</PropertyPath>
+                        <PropertyPath>Material</PropertyPath>
+                        <PropertyPath>Posting_Date</PropertyPath>
+                        <PropertyPath>Lang</PropertyPath>
+                        <PropertyPath>Prod_Super</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prod_OrdType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Work_Center"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MRP_Cont"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prod_Super"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Linkage_Number"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Sales_Doc"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Sales_Doc_Item"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="WBS_Ele"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Prod_Ord"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Start_Date"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Finish_Date"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Posting_Date"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Lang"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Target_Output"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Total_Records"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Printable"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Unprintable"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material_Type"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Serial"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Serial_Sign"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Num_Issue"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Qty"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Unit"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Proj_Def"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Mscode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Cntrl_No"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Cntrl_Ind"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Inquiry_Id"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Message"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Planner_Group"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ZPRINT"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Plant" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Plant"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_PlantStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Plant"/>
+                                    <PropertyValue Property="ValueListProperty" String="Plant"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PlantName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Prod_OrdType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Order Type"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_OrderTypeVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Prod_OrdType"/>
+                                    <PropertyValue Property="ValueListProperty" String="OrderType"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OrderType_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Work_Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Work Center"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_WorkCenterStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Work_Center"/>
+                                    <PropertyValue Property="ValueListProperty" String="WorkCenterInternalID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="WorkCenterInternalID_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/MRP_Cont" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="MRP Controller"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_MRPControllerVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="MRP_Cont"/>
+                                    <PropertyValue Property="ValueListProperty" String="MRPController"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="MRPControllerName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Prod_Super" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Production Supervisor"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ProductionSupervisorVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Prod_Super"/>
+                                    <PropertyValue Property="ValueListProperty" String="ProdSup"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProdSupName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Linkage_Number" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Linkage Number"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="LinkageNoVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Linkage_Number"/>
+                                    <PropertyValue Property="ValueListProperty" String="LinkageNumber"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="LinkageNumber"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Sales_Doc" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Sales Document"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_SalesDocumentStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Sales_Doc"/>
+                                    <PropertyValue Property="ValueListProperty" String="SalesDocument"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SalesDocument"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Sales_Doc_Item" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Sales Document Item"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_SalesDocumentItemStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Sales_Doc_Item"/>
+                                    <PropertyValue Property="ValueListProperty" String="SalesDocumentItem"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SalesDocumentItemText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/WBS_Ele" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="WBS Element"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="WBSElementVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="WBS_Ele"/>
+                                    <PropertyValue Property="ValueListProperty" String="wbsElementExt"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="wsElementDesc"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Prod_Ord" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Production Order"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_ProductionOrderStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Prod_Ord"/>
+                                    <PropertyValue Property="ValueListProperty" String="ProductionOrder"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OrderDescription"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Material" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Material"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_MaterialStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Material"/>
+                                    <PropertyValue Property="ValueListProperty" String="Material"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Material_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/Lang" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Language"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_Language"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Lang"/>
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/IssueType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Issue Type"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/STATUS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Status"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.ZCDSEHPPC0024/ZPRINT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Print Status"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/createdAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/createdBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/modifiedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/modifiedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/REPORTID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Report ID"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/KEY1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Key1"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/KEY2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Key2"/>
+            </Annotations>
+            <Annotations Target="ZAPIBPS0022.PrinterConfiguration/PRINTERID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Printer Id"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

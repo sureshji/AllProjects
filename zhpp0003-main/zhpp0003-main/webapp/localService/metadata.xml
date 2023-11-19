@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCAPIH0018" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ZTHBT0030" EntityType="ZCAPIH0018.ZTHBT0030"/>
+                <EntitySet Name="ZTHBT0006" EntityType="ZCAPIH0018.ZTHBT0006"/>
+                <EntitySet Name="ZCDSEHPPB0085C" EntityType="ZCAPIH0018.ZCDSEHPPB0085C" sap:searchable="true" sap:label="Customentity for kanban print"/>
+                <EntitySet Name="ZCDSEHPPB0085" EntityType="ZCAPIH0018.ZCDSEHPPB0085" sap:searchable="true" sap:label="Customentity for kanban print"/>
+                <EntitySet Name="I_MaterialStdVH" EntityType="ZCAPIH0018.I_MaterialStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Material"/>
+                <EntitySet Name="I_PlantStdVH" EntityType="ZCAPIH0018.I_PlantStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Plant"/>
+                <EntitySet Name="I_StorageLocationStdVH" EntityType="ZCAPIH0018.I_StorageLocationStdVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Storage Location"/>
+                <EntitySet Name="ZCDSEHPPB0035" EntityType="ZCAPIH0018.ZCDSEHPPB0035" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="serach help for kanbanid"/>
+                <EntitySet Name="ZCDSEHPPB0036" EntityType="ZCAPIH0018.ZCDSEHPPB0036" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="serach help for supp area"/>
+                <EntitySet Name="I_Language" EntityType="ZCAPIH0018.I_Language" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:label="Language"/>
+                <EntitySet Name="ZCDSEHPPB0068" EntityType="ZCAPIH0018.ZCDSEHPPB0068" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="custom entity for Kanban"/>
+                <EntitySet Name="ZCDSEHPPB0069" EntityType="ZCAPIH0018.ZCDSEHPPB0069" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Custom entity for part list kanban"/>
+                <EntitySet Name="ZCDSEBPPB0058" EntityType="ZCAPIH0018.ZCDSEBPPB0058"/>
+            </EntityContainer>
+            <EntityType Name="ZTHBT0030">
+                <Key>
+                    <PropertyRef Name="PKNUM"/>
+                    <PropertyRef Name="PKKEY"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="PKNUM" Type="Edm.String" MaxLength="7" Nullable="false"/>
+                <Property Name="PKKEY" Type="Edm.Int16" Nullable="false"/>
+                <Property Name="REVNR" Type="Edm.Int16"/>
+                <Property Name="PDATS" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="PZEIT" Type="Edm.Time"/>
+                <Property Name="PRVNR" Type="Edm.Int16"/>
+            </EntityType>
+            <EntityType Name="ZTHBT0006">
+                <Key>
+                    <PropertyRef Name="E_PARTS_NO"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="E_PARTS_NO" Type="Edm.String" MaxLength="40" Nullable="false"/>
+                <Property Name="E_PARTS_N" Type="Edm.String" MaxLength="40"/>
+                <Property Name="PARTS_TYPE" Type="Edm.String" MaxLength="4"/>
+                <Property Name="RCMND_CLASS" Type="Edm.String" MaxLength="2"/>
+                <Property Name="MOUNT_TYPE" Type="Edm.String" MaxLength="6"/>
+                <Property Name="SAFETY_SIGN" Type="Edm.String" MaxLength="1"/>
+                <Property Name="ANTIEXPLODE_SIGN" Type="Edm.String" MaxLength="1"/>
+                <Property Name="RADIO_SIGN" Type="Edm.String" MaxLength="1"/>
+                <Property Name="USE_NON_COMPLAINT" Type="Edm.String" MaxLength="1"/>
+                <Property Name="EMC_SIGN" Type="Edm.String" MaxLength="1"/>
+                <Property Name="PED_SIGN" Type="Edm.String" MaxLength="1"/>
+                <Property Name="PARTS_UNIT" Type="Edm.String" MaxLength="3"/>
+                <Property Name="CLASS3_NAME" Type="Edm.String" MaxLength="3"/>
+                <Property Name="PRODUCT_TYPE" Type="Edm.String" MaxLength="1"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHPPB0085C" sap:content-version="1" sap:label="Customentity for kanban print">
+                <Property Name="material" Type="Edm.String" MaxLength="40" Nullable="false" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number" sap:value-list="standard"/>
+                <Property Name="kanbanid" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="NonNegative" sap:label="Kanban ID" sap:quickinfo="Kanban Identification Number" sap:value-list="standard"/>
+                <Property Name="kanbannum" Type="Edm.String" MaxLength="7" Nullable="false" sap:display-format="UpperCase" sap:label="Control Cycle"/>
+                <Property Name="selectflag" Type="Edm.String" MaxLength="2" Nullable="false" sap:display-format="UpperCase" sap:label="Component of the Version Number" sap:heading=""/>
+                <Property Name="rep_strategy" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Stock Transfer" sap:quickinfo="Control Cycle Replenishment Strategy for Stock Transfer"/>
+                <Property Name="plt_issfrm" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Issuing Plant" sap:quickinfo="Issuing Plant in Kanban Processing"/>
+                <Property Name="sloc_issfrm" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Receiving stor. loc." sap:quickinfo="Receiving/issuing storage location"/>
+                <Property Name="sloc_binfrm" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="quantity" Type="Edm.Decimal" Scale="3" Precision="13" Nullable="false"/>
+                <Property Name="unit" Type="Edm.String" MaxLength="3" Nullable="false" sap:label="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="plant_issto" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant" sap:value-list="standard"/>
+                <Property Name="sloc_issto" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Storage location" sap:value-list="standard"/>
+                <Property Name="supp_areaissto" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Prodn Supply Area" sap:quickinfo="Production Supply Area" sap:value-list="standard"/>
+                <Property Name="status" Type="Edm.String" MaxLength="1" Nullable="false" sap:display-format="UpperCase" sap:label="Kanban Status"/>
+                <Property Name="boxtyp_cod" Type="Edm.String" MaxLength="40" Nullable="false" sap:label="Material Description"/>
+                <Property Name="boxtyp_text" Type="Edm.String" MaxLength="40" Nullable="false" sap:label="Material Description"/>
+                <Property Name="language" Type="Edm.String" MaxLength="2" Nullable="false" sap:label="Language Key" sap:value-list="standard"/>
+                <Property Name="trafic_light" Type="Edm.String" MaxLength="1" Nullable="false" sap:display-format="UpperCase" sap:label="Single-Character Flag" sap:heading=""/>
+                <Property Name="message" Type="Edm.String" MaxLength="452" Nullable="false" sap:label="Text" sap:quickinfo="Text (452 characters)"/>
+                <Property Name="Printhist" Type="Edm.String" MaxLength="19" Nullable="false" sap:display-format="UpperCase" sap:label="Print History" sap:quickinfo="19 Characters"/>
+                <Property Name="Printmed" Type="Edm.String" MaxLength="19" Nullable="false" sap:display-format="UpperCase" sap:label="Print Media" sap:quickinfo="19 Characters"/>
+                <Property Name="Process_flag" Type="Edm.String" MaxLength="30" Nullable="false" sap:display-format="UpperCase" sap:label="Process flag" sap:quickinfo="30 Characters"/>
+                <Property Name="issue_flag" Type="Edm.String" MaxLength="30" Nullable="false" sap:display-format="UpperCase" sap:label="Issue flag" sap:quickinfo="30 Characters"/>
+                <Property Name="Kanban_type" Type="Edm.String" MaxLength="30" Nullable="false" sap:display-format="UpperCase" sap:label="Kanban type" sap:quickinfo="30 Characters"/>
+                <Property Name="printdt" Type="Edm.DateTime" sap:display-format="Date"/>
+                <Property Name="printtm" Type="Edm.Time"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHPPB0085" sap:content-version="1" sap:label="Customentity for kanban print">
+                <Key>
+                    <PropertyRef Name="material"/>
+                    <PropertyRef Name="kanbanid"/>
+                    <PropertyRef Name="kanbannum"/>
+                    <PropertyRef Name="selectflag"/>
+                    <PropertyRef Name="rep_strategy"/>
+                    <PropertyRef Name="plt_issfrm"/>
+                    <PropertyRef Name="sloc_issfrm"/>
+                    <PropertyRef Name="sloc_binfrm"/>
+                    <PropertyRef Name="quantity"/>
+                    <PropertyRef Name="unit"/>
+                    <PropertyRef Name="plant_issto"/>
+                    <PropertyRef Name="sloc_issto"/>
+                    <PropertyRef Name="supp_areaissto"/>
+                    <PropertyRef Name="status"/>
+                    <PropertyRef Name="printdt"/>
+                    <PropertyRef Name="printtm"/>
+                    <PropertyRef Name="boxtyp_cod"/>
+                    <PropertyRef Name="boxtyp_text"/>
+                    <PropertyRef Name="language"/>
+                    <PropertyRef Name="trafic_light"/>
+                    <PropertyRef Name="message"/>
+                    <PropertyRef Name="Printhist"/>
+                    <PropertyRef Name="Printmed"/>
+                    <PropertyRef Name="Process_flag"/>
+                    <PropertyRef Name="issue_flag"/>
+                    <PropertyRef Name="Kanban_type"/>
+                </Key>
+                <Property Name="material" Type="Edm.String" MaxLength="40" Nullable="false" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number" sap:value-list="standard"/>
+                <Property Name="kanbanid" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="NonNegative" sap:label="Kanban ID" sap:quickinfo="Kanban Identification Number" sap:value-list="standard"/>
+                <Property Name="kanbannum" Type="Edm.String" MaxLength="7" Nullable="false" sap:display-format="UpperCase" sap:label="Control Cycle"/>
+                <Property Name="selectflag" Type="Edm.String" MaxLength="2" Nullable="false" sap:display-format="UpperCase" sap:label="Component of the Version Number" sap:heading=""/>
+                <Property Name="rep_strategy" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Stock Transfer" sap:quickinfo="Control Cycle Replenishment Strategy for Stock Transfer"/>
+                <Property Name="plt_issfrm" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Issuing Plant" sap:quickinfo="Issuing Plant in Kanban Processing"/>
+                <Property Name="sloc_issfrm" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Receiving stor. loc." sap:quickinfo="Receiving/issuing storage location"/>
+                <Property Name="sloc_binfrm" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="quantity" Type="Edm.Decimal" Scale="3" Precision="13" Nullable="false"/>
+                <Property Name="unit" Type="Edm.String" MaxLength="3" Nullable="false" sap:label="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="plant_issto" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant" sap:value-list="standard"/>
+                <Property Name="sloc_issto" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Storage location" sap:value-list="standard"/>
+                <Property Name="supp_areaissto" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Prodn Supply Area" sap:quickinfo="Production Supply Area" sap:value-list="standard"/>
+                <Property Name="status" Type="Edm.String" MaxLength="1" Nullable="false" sap:display-format="UpperCase" sap:label="Kanban Status"/>
+                <Property Name="printdt" Type="Edm.DateTime" Nullable="false" sap:display-format="Date" sap:label="Local Date" sap:quickinfo="ABAP System Field: Local Date of Current User"/>
+                <Property Name="printtm" Type="Edm.Time" Nullable="false" sap:label="Local Time" sap:quickinfo="ABAP System Field: Local Time of Current User"/>
+                <Property Name="boxtyp_cod" Type="Edm.String" MaxLength="40" Nullable="false" sap:label="Material Description"/>
+                <Property Name="boxtyp_text" Type="Edm.String" MaxLength="40" Nullable="false" sap:label="Material Description"/>
+                <Property Name="language" Type="Edm.String" MaxLength="2" Nullable="false" sap:label="Language Key" sap:value-list="standard"/>
+                <Property Name="trafic_light" Type="Edm.String" MaxLength="1" Nullable="false" sap:display-format="UpperCase" sap:label="Single-Character Flag" sap:heading=""/>
+                <Property Name="message" Type="Edm.String" MaxLength="452" Nullable="false" sap:label="Text" sap:quickinfo="Text (452 characters)"/>
+                <Property Name="Printhist" Type="Edm.String" MaxLength="19" Nullable="false" sap:display-format="UpperCase" sap:label="Print History" sap:quickinfo="19 Characters"/>
+                <Property Name="Printmed" Type="Edm.String" MaxLength="19" Nullable="false" sap:display-format="UpperCase" sap:label="Print Media" sap:quickinfo="19 Characters"/>
+                <Property Name="Process_flag" Type="Edm.String" MaxLength="30" Nullable="false" sap:display-format="UpperCase" sap:label="Process flag" sap:quickinfo="30 Characters"/>
+                <Property Name="issue_flag" Type="Edm.String" MaxLength="30" Nullable="false" sap:display-format="UpperCase" sap:label="Issue flag" sap:quickinfo="30 Characters"/>
+                <Property Name="Kanban_type" Type="Edm.String" MaxLength="30" Nullable="false" sap:display-format="UpperCase" sap:label="Kanban type" sap:quickinfo="30 Characters"/>
+            </EntityType>
+            <EntityType Name="I_MaterialStdVH" sap:content-version="1" sap:label="Material" sap:value-list="true">
+                <Key>
+                    <PropertyRef Name="Material"/>
+                </Key>
+                <Property Name="Material" Type="Edm.String" MaxLength="40" Nullable="false" sap:display-format="UpperCase" sap:text="Material_Text" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="Material_Text" Type="Edm.String" MaxLength="40" sap:label="Material Description" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_PlantStdVH" sap:content-version="1" sap:label="Plant" sap:value-list="true">
+                <Key>
+                    <PropertyRef Name="Plant"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:text="PlantName" sap:label="Plant"/>
+                <Property Name="PlantName" Type="Edm.String" MaxLength="30" sap:label="Plant Name"/>
+            </EntityType>
+            <EntityType Name="I_StorageLocationStdVH" sap:content-version="1" sap:label="Storage Location" sap:value-list="true">
+                <Key>
+                    <PropertyRef Name="Plant"/>
+                    <PropertyRef Name="StorageLocation"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant" sap:value-list="standard"/>
+                <Property Name="StorageLocation" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:text="StorageLocationName" sap:label="Storage location"/>
+                <Property Name="StorageLocationName" Type="Edm.String" MaxLength="16" sap:label="Storage Loc. Name" sap:quickinfo="Storage Location Name"/>
+                <Property Name="ConfigDeprecationCode" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Validity" sap:quickinfo="Value Help: Flag Deprecated Entries"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHPPB0035" sap:content-version="1" sap:label="serach help for kanbanid" sap:value-list="true">
+                <Key>
+                    <PropertyRef Name="kanbanid"/>
+                </Key>
+                <Property Name="kanbanid" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="NonNegative" sap:label="Kanban ID" sap:quickinfo="Kanban Identification Number"/>
+                <Property Name="ControlCycle" Type="Edm.String" MaxLength="7" sap:display-format="UpperCase" sap:label="Control Cycle"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHPPB0036" sap:content-version="1" sap:label="serach help for supp area" sap:value-list="true">
+                <Key>
+                    <PropertyRef Name="plant"/>
+                    <PropertyRef Name="SupplyArea"/>
+                </Key>
+                <Property Name="plant" Type="Edm.String" MaxLength="4" Nullable="false" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="SupplyArea" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="UpperCase" sap:label="Prodn Supply Area" sap:quickinfo="Production Supply Area"/>
+            </EntityType>
+            <EntityType Name="I_Language" sap:content-version="1" sap:label="Language" sap:value-list="true">
+                <Key>
+                    <PropertyRef Name="Language"/>
+                </Key>
+                <Property Name="Language" Type="Edm.String" MaxLength="2" Nullable="false" sap:text="Language_Text" sap:label="Language Key"/>
+                <Property Name="Language_Text" Type="Edm.String" MaxLength="16" sap:label="Name" sap:quickinfo="Name of Language" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="LanguageISOCode" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Language Code" sap:quickinfo="2-Character SAP Language Code"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHPPB0068" sap:content-version="1" sap:label="custom entity for Kanban">
+                <Key>
+                    <PropertyRef Name="kanbanid"/>
+                </Key>
+                <Property Name="kanbanid" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="NonNegative" sap:label="Kanban ID" sap:quickinfo="Kanban Identification Number"/>
+                <Property Name="language" Type="Edm.String" MaxLength="2" sap:label="Language Key"/>
+                <Property Name="plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant"/>
+                <Property Name="materialnumber" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="materialdescription" Type="Edm.String" MaxLength="40" sap:label="Material Description"/>
+                <Property Name="rawmaterial" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Component" sap:quickinfo="BOM component"/>
+                <Property Name="cyclestoringposition" Type="Edm.String" MaxLength="25" sap:label="Storing Position"/>
+                <Property Name="materialstoragebin" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="qrcodefirst" Type="Edm.String" MaxLength="6" sap:label="Proxy Data Element (Generated)" sap:heading=""/>
+                <Property Name="qrcodesecond" Type="Edm.String" MaxLength="6" sap:label="Proxy Data Element (Generated)" sap:heading=""/>
+                <Property Name="unit" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Reserve" sap:quickinfo="Character field of length 6"/>
+                <Property Name="ZEIWN" Type="Edm.String" MaxLength="3" sap:label="Min. Queue Time Unit" sap:quickinfo="Unit for the Minimum Queue Time" sap:semantics="unit-of-measure"/>
+                <Property Name="sumoflt" Type="Edm.Decimal" Scale="3" Precision="9" sap:unit="ZEIWN" sap:label="Standard Queue Time"/>
+                <Property Name="quantity" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="baseunitofmeasure" sap:label="Container Quantity"/>
+                <Property Name="boxtype" Type="Edm.String" MaxLength="40" sap:label="Material Description"/>
+                <Property Name="numberofkanban" Type="Edm.String" MaxLength="15" sap:display-format="UpperCase" sap:label="Char15" sap:quickinfo="Char 15"/>
+                <Property Name="areastoragelocation" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Storage location"/>
+                <Property Name="areastoringposition" Type="Edm.String" MaxLength="25" sap:label="Storing Position"/>
+                <Property Name="areastoragebin" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="contmatdescr" Type="Edm.String" MaxLength="40" sap:label="Material Description"/>
+                <Property Name="stglocdescr" Type="Edm.String" MaxLength="16" sap:label="Description" sap:quickinfo="Description of Storage Location"/>
+                <Property Name="process" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+                <Property Name="printdate" Type="Edm.DateTime" sap:display-format="Date" sap:label="Current Date" sap:quickinfo="ABAP system field: Current date of application server"/>
+                <Property Name="notes" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+                <Property Name="reportid" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Report ID"/>
+                <Property Name="scan1_2" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+                <Property Name="scannumber" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Reserve" sap:quickinfo="Character field of length 6"/>
+                <Property Name="baseunitofmeasure" Type="Edm.String" MaxLength="3" sap:label="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="behmg" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="baseunitofmeasure" sap:label="Container Quantity"/>
+                <Property Name="pkstu" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="In-House Production" sap:quickinfo="Control Cycle Replenishment Strategy for In-House Production"/>
+                <Property Name="elpro" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Issue Stor. Location" sap:quickinfo="Proposed Issue Storage Location for Components"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHPPB0069" sap:content-version="1" sap:label="Custom entity for part list kanban">
+                <Key>
+                    <PropertyRef Name="kanbanid"/>
+                </Key>
+                <Property Name="kanbanid" Type="Edm.String" MaxLength="10" Nullable="false" sap:display-format="NonNegative" sap:label="Kanban ID" sap:quickinfo="Kanban Identification Number"/>
+                <Property Name="language" Type="Edm.String" MaxLength="2" sap:label="Language Key"/>
+                <Property Name="revnr" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Revision number"/>
+                <Property Name="storage_locto" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Storage location"/>
+                <Property Name="storage_locfrom" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Receiving stor. loc." sap:quickinfo="Receiving/issuing storage location"/>
+                <Property Name="Supp_Area_iss" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="Quantityunit" Type="Edm.String" MaxLength="3" sap:label="Unit of issue" sap:semantics="unit-of-measure"/>
+                <Property Name="meins" Type="Edm.String" MaxLength="3" sap:label="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="Kanbanqun" Type="Edm.Decimal" Scale="3" Precision="13" sap:unit="meins" sap:label="Container Quantity"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="Boxtype" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Not used" sap:quickinfo="Three-digit character field for IDocs"/>
+                <Property Name="Materialdesc" Type="Edm.String" MaxLength="40" sap:label="Material Description"/>
+                <Property Name="QRkanbannum" Type="Edm.String" MaxLength="13" sap:display-format="UpperCase" sap:label="char13" sap:quickinfo="Character field 13 digits"/>
+                <Property Name="qrcodesecond" Type="Edm.String" MaxLength="14" sap:label="KANBAN QR Code" sap:quickinfo="KANBAN QR Code Second"/>
+                <Property Name="Storagebiniss" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Storage Bin"/>
+                <Property Name="address" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+                <Property Name="Note" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Field" sap:quickinfo="User field for cluster PC (national)"/>
+                <Property Name="n_x" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="R/2 table"/>
+                <Property Name="s_date" Type="Edm.DateTime" sap:display-format="Date" sap:label="Local Date" sap:quickinfo="ABAP System Field: Local Date of Current User"/>
+                <Property Name="s_time" Type="Edm.Time" sap:label="Local Time" sap:quickinfo="ABAP System Field: Local Time of Current User"/>
+                <Property Name="Companycode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code"/>
+                <Property Name="scan1_2" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Character Field with Length 10" sap:heading=""/>
+                <Property Name="batchflag" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Single-Character Flag" sap:heading=""/>
+                <Property Name="MaterialQR" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+                <Property Name="adrnum" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Address"/>
+                <Property Name="Reportid" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="3-Byte field" sap:heading=""/>
+                <Property Name="storage_loc_step12" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Reserve" sap:quickinfo="Character field of length 6"/>
+                <Property Name="Supp_Area_iss_step12" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Character Field with Length 10" sap:heading=""/>
+                <Property Name="buildingcode" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+                <Property Name="DataNo" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:label="Control Cycle Item" sap:quickinfo="Kanban Control Cycle Item"/>
+                <Property Name="TotalNo" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:label="No. of Kanbans" sap:quickinfo="Number of Kanban Containers"/>
+                <Property Name="Plantabb" Type="Edm.String" MaxLength="30" sap:label="Name 1" sap:quickinfo="Name"/>
+                <Property Name="Bulkinfo" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+                <Property Name="Storetext" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="30 Characters" sap:heading=""/>
+                <Property Name="preprocess10" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Character Field with Length 10" sap:heading=""/>
+                <Property Name="preprocess20" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Character Field with Length 10" sap:heading=""/>
+                <Property Name="description" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Char" sap:quickinfo="Character field of length 40"/>
+            </EntityType>
+            <EntityType Name="ZCDSEBPPB0058">
+                <Key>
+                    <PropertyRef Name="REPORTID"/>
+                    <PropertyRef Name="KEY1"/>
+                    <PropertyRef Name="KEY2"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="REPORTID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="KEY1" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="KEY2" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="PRINTERID" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/createdAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/createdBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/modifiedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/modifiedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/PKNUM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Control Cycle"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/PKKEY" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Kanban Identification Number"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/REVNR" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Revision number"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/PDATS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Toku Parts Delivery Date"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/PZEIT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Printed Local Time"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0030/PRVNR" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Revision number which is regular printed"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/createdAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/createdBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/modifiedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/modifiedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/E_PARTS_NO" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Material Number"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/E_PARTS_N" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Parts Name"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/PARTS_TYPE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Parts Type"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/RCMND_CLASS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Rcmnd Class"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/MOUNT_TYPE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Mount Type"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/SAFETY_SIGN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Safety Sign"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/ANTIEXPLODE_SIGN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Antiexplode Sign"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/RADIO_SIGN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Radio Sign"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/USE_NON_COMPLAINT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Use non complaint product Sign"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/EMC_SIGN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Emc Sign"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/PED_SIGN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Ped Sign"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/PARTS_UNIT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Parts Unit"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/CLASS3_NAME" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Class Name"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZTHBT0006/PRODUCT_TYPE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Product Type"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085C/printdt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Print Date"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085C/printtm" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Print Time"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.UpdateHidden" Bool="false"/>
+                <Annotation Term="UI.DeleteHidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.EntityContainer/ZCDSEHPPB0085" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.SearchRestrictions">
+                    <Record Type="Capabilities.SearchRestrictionsType">
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record Type="Capabilities.FilterRestrictionsType">
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record Type="Capabilities.FilterExpressionRestrictionType">
+                                    <PropertyValue Property="Property" PropertyPath="plt_issfrm"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record Type="Capabilities.FilterExpressionRestrictionType">
+                                    <PropertyValue Property="Property" PropertyPath="plant_issto"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.UpdateHidden" Bool="false"/>
+                <Annotation Term="UI.DeleteHidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/material" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Material"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_MaterialStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="material"/>
+                                    <PropertyValue Property="ValueListProperty" String="Material"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Material_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/kanbanid" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Kanban ID"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZCDSEHPPB0035"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="kanbanid"/>
+                                    <PropertyValue Property="ValueListProperty" String="kanbanid"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ControlCycle"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/plt_issfrm" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Plant Issued From"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_PlantStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="plt_issfrm"/>
+                                    <PropertyValue Property="ValueListProperty" String="Plant"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PlantName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/sloc_issfrm" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Storage Location From"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_StorageLocationStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="sloc_issfrm"/>
+                                    <PropertyValue Property="ValueListProperty" String="StorageLocation"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="StorageLocationName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Plant"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/plant_issto" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Plant Issued To"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_PlantStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="plant_issto"/>
+                                    <PropertyValue Property="ValueListProperty" String="Plant"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PlantName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/sloc_issto" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Storage Location To"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_StorageLocationStdVH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="sloc_issto"/>
+                                    <PropertyValue Property="ValueListProperty" String="StorageLocation"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="StorageLocationName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/supp_areaissto" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Supply Area"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZCDSEHPPB0036"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="supp_areaissto"/>
+                                    <PropertyValue Property="ValueListProperty" String="SupplyArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="plant"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085/language" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Language"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="I_Language"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="language"/>
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="LanguageISOCode"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>PRINTERID</PropertyPath>
+                        <PropertyPath>KEY1</PropertyPath>
+                        <PropertyPath>KEY2</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionPresentationVariant">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
+                                    <Collection>
+                                        <Record Type="UI.SelectOptionType">
+                                            <PropertyValue Property="ID" String="Default"/>
+                                            <PropertyValue Property="PropertyName" PropertyPath="REPORTID"/>
+                                            <PropertyValue Property="Ranges">
+                                                <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="9"/>
+                                                    </Record>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="10"/>
+                                                    </Record>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="11"/>
+                                                    </Record>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="12"/>
+                                                    </Record>
+                                                </Collection>
+                                            </PropertyValue>
+                                        </Record>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="PresentationVariant">
+                            <Record Type="UI.PresentationVariantType">
+                                <PropertyValue Property="Visualizations">
+                                    <Collection>
+                                        <AnnotationPath>@UI.LineItem</AnnotationPath>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.EntityContainer/ZCDSEBPPB0058" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.SelectionPresentationVariant">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
+                                    <Collection>
+                                        <Record Type="UI.SelectOptionType">
+                                            <PropertyValue Property="ID" String="Default"/>
+                                            <PropertyValue Property="PropertyName" PropertyPath="REPORTID"/>
+                                            <PropertyValue Property="Ranges">
+                                                <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="9"/>
+                                                    </Record>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="10"/>
+                                                    </Record>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="11"/>
+                                                    </Record>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" Int="12"/>
+                                                    </Record>
+                                                </Collection>
+                                            </PropertyValue>
+                                        </Record>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="PresentationVariant">
+                            <Record Type="UI.PresentationVariantType">
+                                <PropertyValue Property="Visualizations">
+                                    <Collection>
+                                        <AnnotationPath>@UI.LineItem</AnnotationPath>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record Type="Capabilities.FilterRestrictionsType">
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record Type="Capabilities.FilterExpressionRestrictionType">
+                                    <PropertyValue Property="Property" PropertyPath="PRINTERID"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/createdAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/createdBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/modifiedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/modifiedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/REPORTID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Report ID"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/KEY1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Key1"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/KEY2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Key2"/>
+            </Annotations>
+            <Annotations Target="ZCAPIH0018.ZCDSEBPPB0058/PRINTERID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Printers"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="SelectionVariantQualifier" String="Default"/>
+                        <PropertyValue Property="CollectionPath" String="ZCDSEBPPB0058"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PRINTERID"/>
+                                    <PropertyValue Property="ValueListProperty" String="PRINTERID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterIn">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="REPORTID"/>
+                                    <PropertyValue Property="ValueListProperty" String="REPORTID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="REPORTID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="KEY1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="KEY2"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,48 @@
+specVersion: "2.6"
+metadata:
+  name: com.yokogawa.zhpp0003
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: false
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+        backend:
+          - path: /v2/ZCAPIH0018/
+            url: https://global-dev-001-space-001-zhs402-srv.cfapps.jp20.hana.ondemand.com
+            destination: cap-zhs402-api
+          - path: /sap/opu/odata/sap/ZSRVBHCM0001
+            url: http://s4apdevds1:44300
+            client: "120"
+            destination: s4003-ap-https
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
+      configuration:
+        mountPath: /
+        services:
+          - urlPath: /v2/ZCAPIH0018
+            metadataPath: ./webapp/localService/metadata.xml
+            mockdataPath: ./webapp/localService/data
+            generateMockData: true
+        annotations: []
+        service:
+          - urlPath: /v2/ZCAPIH0018
+            generateMockData: true
+            metadataXmlPath: ./webapp/localService/metadata.xml
+            mockdataRootPath: ./webapp/localService/data
+          - urlPath: /v2/ZCAPIH0018/
+            metadataXmlPath: ./webapp/localService/metadata.xml
+            mockdataRootPath: ./webapp/localService/mockdata
+            generateMockData: true

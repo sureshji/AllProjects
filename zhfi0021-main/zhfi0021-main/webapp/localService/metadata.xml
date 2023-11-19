@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+        <edmx:Include Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://s4apdevds1:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_zsrvehfi0009" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="ZCDSEHCMC0002Type" sap:label="Company Code Authorization" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="CompanyCodeName" sap:label="Company Code"/>
+                <Property Name="CompanyCodeName" Type="Edm.String" MaxLength="25" sap:label="Company Name" sap:quickinfo="Name of Company Code or Company"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHFIB0022Type" sap:label="Value help for Business place" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="bukrs"/>
+                    <PropertyRef Name="branch"/>
+                    <PropertyRef Name="bupla_type"/>
+                </Key>
+                <Property Name="bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code"/>
+                <Property Name="branch" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Business Place"/>
+                <Property Name="bupla_type" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:label="Type Code" sap:quickinfo="Globalization Service: Code of Business Place Type"/>
+                <Property Name="name" Type="Edm.String" MaxLength="30" sap:label="Name 1" sap:quickinfo="Name"/>
+            </EntityType>
+            <EntityType Name="ZCDSEHFIC0014Type" sap:label="Consumption view for Vat data download" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="FIELD1"/>
+                    <PropertyRef Name="FIELD2"/>
+                    <PropertyRef Name="FIELD3"/>
+                    <PropertyRef Name="FIELD4"/>
+                    <PropertyRef Name="FIELD5"/>
+                    <PropertyRef Name="FIELD6"/>
+                    <PropertyRef Name="seq"/>
+                </Key>
+                <Property Name="FIELD1" Type="Edm.String" Nullable="false" MaxLength="11" sap:label="Field47"/>
+                <Property Name="FIELD2" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Field2"/>
+                <Property Name="FIELD3" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Field3"/>
+                <Property Name="FIELD4" Type="Edm.String" Nullable="false" MaxLength="4" sap:required-in-filter="true" sap:label="Company code" sap:value-list="standard"/>
+                <Property Name="FIELD5" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Field5"/>
+                <Property Name="FIELD6" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Field6"/>
+                <Property Name="seq" Type="Edm.String" Nullable="false" MaxLength="5" sap:display-format="NonNegative"/>
+                <Property Name="FIELD7" Type="Edm.String" MaxLength="12" sap:label="Field7"/>
+                <Property Name="FIELD8" Type="Edm.String" MaxLength="25" sap:label="Field8"/>
+                <Property Name="FIELD9" Type="Edm.String" MaxLength="23" sap:label="Field9"/>
+                <Property Name="FIELD10" Type="Edm.String" MaxLength="23" sap:label="Field10"/>
+                <Property Name="FIELD11" Type="Edm.String" MaxLength="36" sap:label="Field11"/>
+                <Property Name="FIELD12" Type="Edm.String" MaxLength="50" sap:label="Field12"/>
+                <Property Name="FIELD13" Type="Edm.String" MaxLength="36" sap:label="Field13"/>
+                <Property Name="FIELD14" Type="Edm.String" MaxLength="36" sap:label="Field14"/>
+                <Property Name="FIELD15" Type="Edm.String" MaxLength="40" sap:label="Field15"/>
+                <Property Name="FIELD16" Type="Edm.String" MaxLength="71" sap:label="Field16"/>
+                <Property Name="FIELD17" Type="Edm.String" MaxLength="41" sap:label="Field17"/>
+                <Property Name="FIELD18" Type="Edm.String" MaxLength="41" sap:label="Field18"/>
+                <Property Name="FIELD19" Type="Edm.String" MaxLength="151" sap:label="Field19"/>
+                <Property Name="FIELD20" Type="Edm.String" MaxLength="41" sap:label="Field20"/>
+                <Property Name="FIELD21" Type="Edm.String" MaxLength="60" sap:label="Field21"/>
+                <Property Name="FIELD22" Type="Edm.String" MaxLength="36" sap:label="Field22"/>
+                <Property Name="FIELD23" Type="Edm.String" MaxLength="71" sap:label="Field23"/>
+                <Property Name="FIELD24" Type="Edm.String" MaxLength="200" sap:label="Field24"/>
+                <Property Name="FIELD25" Type="Edm.String" MaxLength="200" sap:label="Field25"/>
+                <Property Name="FIELD26" Type="Edm.String" MaxLength="100" sap:label="Field26"/>
+                <Property Name="FIELD27" Type="Edm.String" MaxLength="41" sap:label="Field27"/>
+                <Property Name="FIELD28" Type="Edm.String" MaxLength="41" sap:label="Field28"/>
+                <Property Name="FIELD29" Type="Edm.String" MaxLength="151" sap:label="Field29"/>
+                <Property Name="FIELD30" Type="Edm.String" MaxLength="41" sap:label="Field30"/>
+                <Property Name="FIELD31" Type="Edm.String" MaxLength="100" sap:label="Field31"/>
+                <Property Name="FIELD32" Type="Edm.String" MaxLength="241" sap:label="Field32"/>
+                <Property Name="FIELD33" Type="Edm.String" MaxLength="71" sap:label="Field33"/>
+                <Property Name="FIELD34" Type="Edm.String" MaxLength="36" sap:label="Field34"/>
+                <Property Name="FIELD35" Type="Edm.String" MaxLength="71" sap:label="Field35"/>
+                <Property Name="FIELD36" Type="Edm.String" MaxLength="36" sap:label="Field36"/>
+                <Property Name="FIELD37" Type="Edm.String" MaxLength="151" sap:label="Field37"/>
+                <Property Name="FIELD38" Type="Edm.String" MaxLength="41" sap:label="Field38"/>
+                <Property Name="FIELD39" Type="Edm.String" MaxLength="41" sap:label="Field39"/>
+                <Property Name="FIELD40" Type="Edm.String" MaxLength="41" sap:label="Field40"/>
+                <Property Name="FIELD41" Type="Edm.String" MaxLength="51" sap:label="Field41"/>
+                <Property Name="FIELD42" Type="Edm.String" MaxLength="36" sap:label="Field42"/>
+                <Property Name="FIELD43" Type="Edm.String" MaxLength="71" sap:label="Field43"/>
+                <Property Name="FIELD44" Type="Edm.String" MaxLength="100" sap:label="Field44"/>
+                <Property Name="FIELD45" Type="Edm.String" MaxLength="4" sap:label="Field45"/>
+                <Property Name="FIELD46" Type="Edm.String" MaxLength="151" sap:label="Field46"/>
+                <Property Name="FIELD47" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Field47" sap:quickinfo="RSRSCAN1: Search String/Search Pattern"/>
+                <Property Name="FIELD48" Type="Edm.String" MaxLength="23" sap:label="Field48"/>
+                <Property Name="FIELD49" Type="Edm.String" MaxLength="23" sap:label="Field49"/>
+                <Property Name="FIELD50" Type="Edm.String" MaxLength="23" sap:label="Field50"/>
+                <Property Name="FIELD51" Type="Edm.String" MaxLength="10" sap:label="Field51"/>
+                <Property Name="FIELD52" Type="Edm.String" MaxLength="10" sap:label="Field52"/>
+                <Property Name="FIELD53" Type="Edm.String" MaxLength="16" sap:label="Field53"/>
+                <Property Name="FIELD54" Type="Edm.String" MaxLength="8" sap:label="Field54"/>
+                <Property Name="FIELD55" Type="Edm.String" MaxLength="40" sap:label="Field55"/>
+                <Property Name="FIELD56" Type="Edm.String" MaxLength="20" sap:label="Field56"/>
+                <Property Name="FIELD57" Type="Edm.String" MaxLength="20" sap:label="Field57"/>
+                <Property Name="FIELD58" Type="Edm.String" MaxLength="6" sap:label="Field58"/>
+                <Property Name="FIELD59" Type="Edm.String" MaxLength="151" sap:label="Field59"/>
+                <Property Name="FIELD60" Type="Edm.String" MaxLength="151" sap:label="Field60"/>
+                <Property Name="FIELD61" Type="Edm.String" MaxLength="25" sap:label="Field61"/>
+                <Property Name="FIELD62" Type="Edm.String" MaxLength="5" sap:label="Field62"/>
+                <Property Name="FIELD63" Type="Edm.String" MaxLength="5" sap:label="Field63"/>
+                <Property Name="FIELD64" Type="Edm.String" MaxLength="5" sap:label="Field64"/>
+                <Property Name="FIELD65" Type="Edm.String" MaxLength="41" sap:label="Field65"/>
+                <Property Name="FIELD66" Type="Edm.String" MaxLength="31" sap:label="Field66"/>
+                <Property Name="FIELD67" Type="Edm.String" MaxLength="21" sap:label="Field67"/>
+                <Property Name="FIELD68" Type="Edm.String" MaxLength="41" sap:label="Field68"/>
+                <Property Name="FIELD69" Type="Edm.String" MaxLength="8" sap:label="Field69"/>
+                <Property Name="FIELD70" Type="Edm.String" MaxLength="25" sap:label="Field70"/>
+                <Property Name="FIELD71" Type="Edm.String" MaxLength="50" sap:label="Field71"/>
+                <Property Name="FIELD72" Type="Edm.String" MaxLength="16" sap:label="Field72"/>
+                <Property Name="FIELD73" Type="Edm.String" MaxLength="2" sap:label="Field73"/>
+                <Property Name="FIELD74" Type="Edm.String" MaxLength="16" sap:label="Field74"/>
+                <Property Name="FIELD75" Type="Edm.String" MaxLength="16" sap:label="Field75"/>
+                <Property Name="FIELD76" Type="Edm.String" MaxLength="8" sap:label="Field76"/>
+                <Property Name="FIELD77" Type="Edm.String" MaxLength="12" sap:label="Field77"/>
+                <Property Name="FIELD78" Type="Edm.String" MaxLength="12" sap:label="Field78"/>
+                <Property Name="FIELD79" Type="Edm.String" MaxLength="12" sap:label="Field79"/>
+                <Property Name="FIELD80" Type="Edm.String" MaxLength="12" sap:label="Field80"/>
+                <Property Name="FIELD81" Type="Edm.String" MaxLength="12" sap:label="Field81"/>
+                <Property Name="FIELD82" Type="Edm.String" MaxLength="18" sap:label="Field82"/>
+                <Property Name="FIELD83" Type="Edm.String" MaxLength="24" sap:label="Field83"/>
+                <Property Name="FIELD84" Type="Edm.String" MaxLength="24" sap:label="Field84"/>
+                <Property Name="FIELD85" Type="Edm.String" MaxLength="24" sap:label="Field85"/>
+                <Property Name="FIELD86" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:required-in-filter="true" sap:label="Document Date"/>
+                <Property Name="FIELD87" Type="Edm.String" MaxLength="4" sap:label="Business Place" sap:value-list="standard"/>
+                <Property Name="message" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="SAP__Currency" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CurrencyCode"/>
+                </Key>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:semantics="currency-code"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Short text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Byte" Nullable="false" sap:label="Decimals"/>
+            </EntityType>
+            <EntityType Name="SAP__UnitOfMeasure" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UnitCode"/>
+                </Key>
+                <Property Name="UnitCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Internal UoM" sap:semantics="unit-of-measure"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
+                <Property Name="ExternalCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Commercial"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="UoM Text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Int16" sap:label="Decimal Places"/>
+            </EntityType>
+            <EntityContainer Name="cds_zsrvehfi0009_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZCDSEHCMC0002" EntityType="cds_zsrvehfi0009.ZCDSEHCMC0002Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCDSEHFIB0022" EntityType="cds_zsrvehfi0009.ZCDSEHFIB0022Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZCDSEHFIC0014" EntityType="cds_zsrvehfi0009.ZCDSEHFIC0014Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+                <EntitySet Name="SAP__Currencies" EntityType="cds_zsrvehfi0009.SAP__Currency" sap:content-version="1"/>
+                <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_zsrvehfi0009.SAP__UnitOfMeasure" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations Target="cds_zsrvehfi0009.ZCDSEHFIC0014Type/FIELD4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Company code"/>
+                        <PropertyValue Property="CollectionPath" String="ZCDSEHCMC0002"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FIELD4"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCodeName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.ZCDSEHFIC0014Type/FIELD87" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Business Place"/>
+                        <PropertyValue Property="CollectionPath" String="ZCDSEHFIB0022"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FIELD4"/>
+                                    <PropertyValue Property="ValueListProperty" String="bukrs"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FIELD87"/>
+                                    <PropertyValue Property="ValueListProperty" String="branch"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="bupla_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.cds_zsrvehfi0009_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.cds_zsrvehfi0009_Entities/ZCDSEHFIC0014" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="RequiredProperties">
+                            <Collection>
+                                <PropertyPath>FIELD4</PropertyPath>
+                                <PropertyPath>FIELD86</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequiresFilter" Bool="true"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.cds_zsrvehfi0009_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.CurrencyCodes">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__Currencies"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.SAP__Currency/CurrencyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.SAP__UnitOfMeasure/UnitCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+                <Annotation Term="SAP__CodeList.ExternalCode" Path="ExternalCode"/>
+            </Annotations>
+            <Annotations Target="cds_zsrvehfi0009.SAP__UnitOfMeasure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.AlternateKeys">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="Key">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="Name" Path="ExternalCode"/>
+                                        <PropertyValue Property="Alias" String="ExternalCode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://s4apdevds1:44300/sap/opu/odata/sap/ZSRVBHFI0008/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://s4apdevds1:44300/sap/opu/odata/sap/ZSRVBHFI0008/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

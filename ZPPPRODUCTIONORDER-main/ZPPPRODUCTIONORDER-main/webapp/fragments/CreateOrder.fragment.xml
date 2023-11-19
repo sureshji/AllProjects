@@ -1,0 +1,211 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns:sap.ui.layout="sap.ui.layout" xmlns:semantic="sap.m.semantic" xmlns:unified="sap.ui.unified" xmlns="sap.m">
+    <Dialog draggable="true" resizable="true" title="Create Production Order" contentWidth="850px" id="dialogId">
+        <content>
+            <VBox class="sapUiSmallMargin" id='vboxId'>
+                <f:Form id="FormChange354" editable="true">
+                    <f:title>
+                        <core:Title text="{i18n>partOrderData}" id="titleId" />
+                    </f:title>
+                    <f:layout>
+                        <f:ResponsiveGridLayout id="rglId" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer id="fcId">
+                            <f:formElements>
+                                <f:FormElement id="fe1Id">
+                                    <RadioButtonGroup id="rbg9" columns="2" selectedIndex="{oModelPartOrd>/ProdOrderMode}" class="sapUiMediumMarginBottom" select="onSelect">
+                                        <RadioButton id="RB2-11" text="{i18n>master}" />
+                                        <RadioButton id="RB2-21" text="{i18n>text}" class="sapUiLargeMarginBegin" />
+                                    </RadioButtonGroup>
+                                </f:FormElement>
+                                <f:FormElement label="{i18n>plant}" id="fe2Id">
+                                    <f:fields>
+                                        <Input id="idPlant" required="true" width="30%" value="{oModelPartOrd>/Plant}" editable="{oModelUI>/formEditable}" showValueHelp="true" valueHelpRequest="onValueHelp1" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe3Id" label="{i18n>material}" visible="{oModelUI>/master}">
+                                    <f:fields>
+                                        <Input id="idMat1" required="true" width="70%" value="{oModelPartOrd>/Material}" editable="{oModelUI>/formEditable}" showValueHelp="true" valueHelpRequest="onValueHelp1" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe4Id" label="{i18n>materialDescriprion}" visible="{oModelUI>/text}">
+                                    <f:fields>
+                                        <Input id="idMatTxt1" width="80%"  value="{oModelPartOrd>/MaterialDescription}" editable="{oModelUI>/formEditable}" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe5Id" label="{i18n>productionVersion}" visible="{oModelUI>/master}">
+                                    <f:fields>
+                                        <Input id="idPV" width="25%" required="true" value="{oModelPartOrd>/Version}" editable="{oModelUI>/formEditable}" showValueHelp="true" valueHelpRequest="onValueHelp" liveChange="onProductVersionChange"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe6Id" label="{i18n>quantity}">
+                                    <f:fields>
+                                        <Input id="idQuantity" width="30%" required="true" value="{oModelPartOrd>/Quantity}" editable="{oModelUI>/formEditable}" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe20Id" label="{i18n>Language}">
+                                    <f:fields>
+                                        <!-- <Input id="idLanguage" width="30%" required="true" value="{oModelPartOrd>/Language}" editable="{oModelUI>/formEditable}" /> -->
+                                        <ComboBox id="ComboProcessId" required="true" width="30%" editable="{oModelUI>/formEditable}" selectedKey="{oModelPartOrd>/Language}">
+                                            <core:Item key="E" text="English" id="ci1" />
+                                            <core:Item key="J" text="Japanese" id="ci2" />
+                                            <core:Item key="P" text="Portuguese" id="ci3" />
+                                            <core:Item key="R" text="Russian" id="ci4" />
+                                            <core:Item key="1" text="Chinese" id="ci5" />
+                                            <core:Item key="3" text="Korean" id="ci6" />
+                                        </ComboBox>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe7Id" label="{i18n>orderFinishDate}">
+                                    <f:fields>
+                                        <DatePicker id="dpId" value="{ path: 'oModelPartOrd>/OrderFinishDate', type: 'sap.ui.model.type.DateTime'}"  editable="{oModelUI>/formEditable}" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe8Id" label="{i18n>storageLocation}">
+                                    <f:fields>
+                                        <Input id="idSloc" width="40%" required="true" value="{oModelPartOrd>/StorageLocation}" editable="{oModelUI>/formEditable}" showValueHelp="true" valueHelpRequest="onValueHelp1" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe9Id" label="{i18n>note}">
+                                    <f:fields>
+                                        <Input id="idNote" width="100%" value="{oModelPartOrd>/Note}" editable="{oModelUI>/formEditable}" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe10Id" label="{i18n>workCenter}" visible="{oModelUI>/text}">
+                                    <f:fields>
+                                        <Input id="idWC" width="40%" required="true" value="{oModelPartOrd>/Workcenter}" editable="{oModelUI>/formEditable}" showValueHelp="true" valueHelpRequest="onValueHelp1"/>
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+
+                <f:Form id="FormIO" editable="{oModelUI>/formEditable}">
+                    <f:title>
+                        <core:Title id="title2Id" text="{i18n>issueOptions}" />
+                    </f:title>
+                    <f:layout>
+                        <f:ResponsiveGridLayout id="rgl2Id" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer id="fc2Id">
+                            <f:formElements>
+                                <f:FormElement id="fe11Id">
+                                    <f:fields>
+                                        <CheckBox id="chbcpl" text="{i18n>childPartList}" selected="{oModelIO>/childPart}" editable="{oModelUI>/formEditable}" width="100%"/>
+                                        <CheckBox id="chbprs" text="{i18n>ProcessRecordSheet}" selected="{oModelIO>/processRecordSheet}" editable="{oModelUI>/processRecordSheetEditable}" width="100%"/>
+                                        <CheckBox id="chbpos" text="{i18n>ProductionOrderSheet}" selected="{oModelIO>/productionOrderSheet}" editable="{oModelUI>/formEditable}" width="100%"/>
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+                <f:Form id="FormOO" editable="{oModelUI>/formEditable}">
+                    <f:title>
+                        <core:Title id="titleooId" text="{i18n>OutputOptions}" />
+                    </f:title>
+                    <f:layout>
+                        <f:ResponsiveGridLayout id="rgl4Id" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer id="fc4Id">
+                            <f:formElements>
+                                <f:FormElement id="fe12Id">
+                                    <f:fields>
+                                        <RadioButtonGroup id="rbgtio1" columns="4" selectedIndex="{oModelIO>/oOSelected}" class="sapUiMediumMarginBottom" editable="{oModelUI>/formEditable}">
+                                            <RadioButton id="none" text="{i18n>none}" />
+                                            <RadioButton id="papi" text="{i18n>paperImmediately}" />
+                                            <RadioButton id="pdfi" text="{i18n>pDFImmediately}" />
+                                            <RadioButton id="opf" text="{i18n>outputFile}" />
+                                        </RadioButtonGroup>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe33Id">
+                                    <f:fields>
+                                        <RadioButtonGroup id="rbgtps1" columns="2" class="sapUiMediumMarginBottom" selectedIndex="{oModelIO>/pOSelected}" editable="{oModelUI>/formEditable}" visible="{= ${oModelIO>/oOSelected} === 1}">
+                                            <RadioButton id="rbdp" text="{i18n>defaultPrinter}" width="auto" />
+                                            <RadioButton id="rbsp" text="{i18n>specifyPrinter}" width="auto" />
+                                        </RadioButtonGroup>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe34Id">
+                                    <f:fields>
+                                        <Input id="idPrinter" value="{oModelIO>/printer}" editable="{oModelUI>/formEditable}" showValueHelp="true" valueHelpRequest="onValueHelpPrinter" visible="{= ${oModelIO>/pOSelected} === 1}" width="30%" />
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+
+                <f:Form id="FormTP" editable="{oModelUI>/formEditable}">
+                    <f:title>
+                        <core:Title id="title3Id" text="{i18n>transferOptions}" />
+                    </f:title>
+                    <f:layout>
+                        <f:ResponsiveGridLayout id="rgl3Id" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer id="fc3Id">
+                            <f:formElements>
+                                <f:FormElement id="fe13Id">
+                                    <f:fields>
+                                        <RadioButtonGroup id="rbgto1" columns="4" selectedIndex="{oModelPartOrd>/ToSelected}" class="sapUiMediumMarginBottom" select="onSelectTO" editable="{oModelUI>/formEditable}">
+                                            <RadioButton id="rbgnone" text="{i18n>none}" />
+                                            <RadioButton id="rbgot" text="{i18n>orderTransfer}" />
+                                            <RadioButton id="rbgcc" text="{i18n>costCenterTransfer}" />
+                                            <RadioButton id="rbgst" text="{i18n>storeTransfer}" />
+                                        </RadioButtonGroup>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe14Id">
+                                    <RadioButtonGroup id="idRbgToStore" columns="5" selectedIndex="{oModelTO>/tOSelected}" visible="{oModelTO>/tORBG}" class="sapUiMediumMarginBottom" select="onSelectTOField">
+                                        <RadioButton id="idRbgPO" text="{i18n>productionOrder}" visible="{oModelTO>/ot}" />
+                                        <RadioButton id="idRbgLN" text="{i18n>linkageNumber}" visible="{oModelTO>/ot}" />
+                                        <RadioButton id="idRbgStore" text="{i18n>store}" visible="{oModelTO>/st}" />
+                                        <RadioButton id="idRbgcct" text="{i18n>costCenterTransfer}" visible="{oModelTO>/st}" />
+                                    </RadioButtonGroup>
+                                </f:FormElement>
+                                <f:FormElement id="fe35Id">
+                                    <CheckBox id="idRbgCC" text="{i18n>costCenter}" visible="{= ${oModelTO>/cct} === true}" selected="{oModelTO>/cc}"/>
+                                    <CheckBox id="idRbgGL" text="{i18n>gLAccount}" visible="{oModelTO>/cct}" selected="{oModelTO>/gl}"/>
+                                </f:FormElement >
+                                <f:FormElement id="fe15Id" label="{i18n>productionOrder}" visible="{oModelTO>/po}">
+                                    <f:fields>
+                                        <Input id="idPO" width="40%" value="{oModelPartOrd>/Prodorder}" showValueHelp="true" valueHelpRequest="onValueHelp1"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe16Id" label="{i18n>linkageNumber}" visible="{oModelTO>/linkage}">
+                                    <f:fields>
+                                        <Input id="idLinkNo" width="40%" value="{oModelPartOrd>/Linknumber}" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe17Id" label="{i18n>costCenter}" visible="{oModelTO>/cc}">
+                                    <f:fields>
+                                        <Input id="idCCNo" width="40%" value="{oModelPartOrd>/Costcenter}" showValueHelp="true" valueHelpRequest="onValueHelp1"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe18Id" label="{i18n>gLAccount}" visible="{oModelTO>/gl}">
+                                    <f:fields>
+                                        <Input id="idGlAc" width="40%" value="{oModelPartOrd>/Glaccnt}" showValueHelp="true" valueHelpRequest="onValueHelp1"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe19Id" label="{i18n>store}" visible="{oModelTO>/store}">
+                                    <f:fields>
+                                        <Input id="idStoreNo" width="40%" value="{oModelPartOrd>/Store}" showValueHelp="true" valueHelpRequest="onValueHelp1"/>
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+            </VBox>
+            <FlexBox id="fb1Id" height="100px" alignItems="Start" justifyContent="End">
+                <Button id="bt1" text="{i18n>save}" type="Accept" width="200px" class="sapUiSmallMargin" enabled="{oModelUI>/formEditable}" press='onOrderSave' />
+                <Button id="bt2" text="{i18n>close}" type="Accept" width="200px" class="sapUiSmallMargin" enabled="{oModelUI>/formEditable}" press='onOrderCancel' />
+            </FlexBox>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

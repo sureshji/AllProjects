@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZAPIBPS0030" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ZBQIF0051_001" EntityType="ZAPIBPS0030.ZBQIF0051_001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Model Detailed Information" sap:semantics="aggregate"/>
+                <EntitySet Name="ZBQIF0059_001" EntityType="ZAPIBPS0030.ZBQIF0059_001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Parts Basic Information" sap:semantics="aggregate"/>
+                <EntitySet Name="ZBQIF0078_001" EntityType="ZAPIBPS0030.ZBQIF0078_001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="TDMA004_Model Detailed Information" sap:semantics="aggregate"/>
+                <EntitySet Name="ZBQIF0080_001" EntityType="ZAPIBPS0030.ZBQIF0080_001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Information for the Model Price" sap:semantics="aggregate"/>
+                <EntitySet Name="ZBQIF0100_001" EntityType="ZAPIBPS0030.ZBQIF0100_001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Suffix Code Price Information" sap:semantics="aggregate"/>
+                <EntitySet Name="ZBQIF0169_001" EntityType="ZAPIBPS0030.ZBQIF0169_001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="Option Code Price Information (After Expansion)" sap:semantics="aggregate"/>
+                <EntitySet Name="ZBQIF0183_001" EntityType="ZAPIBPS0030.ZBQIF0183_001" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:label="QIC Price Information for the model" sap:semantics="aggregate"/>
+            </EntityContainer>
+            <EntityType Name="ZBQIF0051_001" sap:content-version="1" sap:label="Model Detailed Information" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:label="Total/Subtotal" sap:sortable="false"/>
+                <Property Name="A4ZCPIF0051COMMISSION_G" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="commission_group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ZIOCH3139" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Timestamp (BW regist" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051CONFIG_FLG" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:label="config_flg" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051COST_ZERO_AL" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:label="cost_zero_allow_flg" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051EXT_MATERIAL" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="ext_material_group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051ITEM_CATEGOR" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:label="item_category_group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051MATERIAL_GRO" Type="Edm.String" MaxLength="9" sap:aggregation-role="dimension" sap:label="material_group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051MATERIAL_TYP" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:label="material_type" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051ORDER_RELEAS" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="order_release_date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051ORDER_STOP_D" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="order_stop_date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051PMK_CODE" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="pmk_code" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051RENEWAL_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="renewal_date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051SECURITY_EXP" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="security_export_control" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051STATISTICS_0" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="statistics_class_pf" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051STATISTICS_1" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="statistics_class_bu" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051STATISTICS_C" Type="Edm.String" MaxLength="8" sap:aggregation-role="dimension" sap:label="statistics_class_pgpl" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0051SUPERVISE_MO" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="supervise_model" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+            </EntityType>
+            <EntityType Name="ZBQIF0059_001" sap:content-version="1" sap:label="Parts Basic Information" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:label="Total/Subtotal" sap:sortable="false"/>
+                <Property Name="A4ZCPIF0059INSTRUMENT_M" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="instrument_model" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0059PARTS_NO" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="parts_no" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0059RENEWAL_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="renewal_date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0059SALES_UNIT_S" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="sales_unit_symbol" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0059SALE_PMK_COD" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="sale_pmk_code" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ZIOCH3139" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Timestamp (BW regist" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABFYNR" Type="Edm.Decimal" Scale="3" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9F9UEV7IABFYNR_F" sap:updatable="false" sap:label="delivery_unit" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABFYNR_F" Type="Edm.String" MaxLength="60" sap:label="delivery_unit (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABGHMF" Type="Edm.Decimal" Scale="0" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9F9UEV7IABGHMF_F" sap:updatable="false" sap:label="denominator" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABGHMF_F" Type="Edm.String" MaxLength="60" sap:label="denominator (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABGNXZ" Type="Edm.Decimal" Scale="0" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9F9UEV7IABGNXZ_F" sap:updatable="false" sap:label="molecule" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABGNXZ_F" Type="Edm.String" MaxLength="60" sap:label="molecule (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABGU9J" Type="Edm.Decimal" Scale="0" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9F9UEV7IABGU9J_F" sap:updatable="false" sap:label="sales_unit" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABGU9J_F" Type="Edm.String" MaxLength="60" sap:label="sales_unit (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABH0L3" Type="Edm.Decimal" Scale="0" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9F9UEV7IABH0L3_F" sap:updatable="false" sap:label="sales_unit_quantity" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9F9UEV7IABH0L3_F" Type="Edm.String" MaxLength="60" sap:label="sales_unit_quantity (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZBQIF0078_001" sap:content-version="1" sap:label="TDMA004_Model Detailed Information" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:label="Total/Subtotal" sap:sortable="false"/>
+                <Property Name="ZIOCH3139" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Timestamp (BW regist" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078OUTPUT_FLAG" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:label="Output Flag" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078SUPERVISE_MO" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="supervise_model" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078LANG_TYPE" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="lang_type" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078DATE_FROM" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="date_from" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078DATE_TO" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="date_to" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078MODEL_NAME" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="model_name" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078MODEL_DESCRI" Type="Edm.String" MaxLength="400" sap:aggregation-role="dimension" sap:label="model_description" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0078RENEWAL_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="renewal_date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+            </EntityType>
+            <EntityType Name="ZBQIF0080_001" sap:content-version="1" sap:label="Information for the Model Price" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:label="Total/Subtotal" sap:sortable="false"/>
+                <Property Name="A4ZCPIF0080CURRENCY_COD" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="currency_cod" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0080DATE_FROM" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="date_from" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0080DATE_TO" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="date_to" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0080PRICING_GROU" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="pricing_group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0080RENEWAL_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="renewal_date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0080SUPERVISE_MO" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="Supervise_Model" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0080UOM" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="uom" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ZIOCH3139" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Timestamp (BW regist" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0080OUTPUT_FLAG" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:label="Output Flag" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A00A9WDUEY7H9FAHL96LUGW37C" Type="Edm.Decimal" Scale="3" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9FAHL96LUGW37C_F" sap:updatable="false" sap:label="price" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9FAHL96LUGW37C_F" Type="Edm.String" MaxLength="60" sap:label="price (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZBQIF0100_001" sap:content-version="1" sap:label="Suffix Code Price Information" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:label="Total/Subtotal" sap:sortable="false"/>
+                <Property Name="A4ZCPIF0100CURRENCY_COD" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100DATE_FROM" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Effective date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100DATE_TO" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Effective end date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100MODEL" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="Model" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100PRICING_GROU" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="Pricing group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100RENEWAL_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Renewal date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100SUFFIX_ID" Type="Edm.String" MaxLength="6" sap:aggregation-role="dimension" sap:label="Suffix code" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100SUFFIX_LEVEL" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="Suffix level" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100UOM" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="Price unit" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ZIOCH3139" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Timestamp (BW regist" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0100OUTPUT_FLAG" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:label="output_flag" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A00A9WDUEY7H9FC6J5N7Z1F7EG" Type="Edm.Decimal" Scale="2" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9FC6J5N7Z1F7EG_F" sap:updatable="false" sap:label="Price" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9FC6J5N7Z1F7EG_F" Type="Edm.String" MaxLength="60" sap:label="Price (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZBQIF0169_001" sap:content-version="1" sap:label="Option Code Price Information (After Expansion)" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:label="Total/Subtotal" sap:sortable="false"/>
+                <Property Name="A4ZCPIF0169CURRENCY_COD" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169DATE_FROM" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Effective date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169DATE_TO" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Effective end date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169MODEL" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="Model" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169OPTION_GROUP" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="Option group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169OPTION_ID" Type="Edm.String" MaxLength="16" sap:aggregation-role="dimension" sap:label="Option code" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169PRICING_GROU" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="Pricing group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169RENEWAL_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Renewal date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0169UOM" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="Price unit" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ZIOCH3139" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Timestamp (BW regist" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A00A9WDUEY7H9FAHPG0DEGMLVC" Type="Edm.Decimal" Scale="2" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9FAHPG0DEGMLVC_F" sap:updatable="false" sap:label="Price" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9FAHPG0DEGMLVC_F" Type="Edm.String" MaxLength="60" sap:label="Price (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZBQIF0183_001" sap:content-version="1" sap:label="QIC Price Information for the model" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:label="Total/Subtotal" sap:sortable="false"/>
+                <Property Name="A0INFOPROV" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:label="InfoProvider" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A0REQTSN" Type="Edm.String" MaxLength="35" sap:aggregation-role="dimension" sap:label="Request TSN" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183CHARACTERIST" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Characteristic value" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183CHARACTERI_0" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:label="Characteristic type" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183CURRENCY_COD" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183DATE_FROM" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Effective date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183DATE_TO" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Effective end date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183ENTRY_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Entry date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183ENTRY_USER_I" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Entry user id" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183ENTRY_USER_N" Type="Edm.String" MaxLength="81" sap:aggregation-role="dimension" sap:label="Entry user name g" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183ENTY_USER_NA" Type="Edm.String" MaxLength="81" sap:aggregation-role="dimension" sap:label="Entry user name l" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183OUTPUT_FLAG" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:label="Output flag" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183PRICING_GROU" Type="Edm.String" MaxLength="2" sap:aggregation-role="dimension" sap:label="Pricing group" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183REMEWAL_USER" Type="Edm.String" MaxLength="81" sap:aggregation-role="dimension" sap:label="Renewal user name g" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183RENEWAL_DATE" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Renewal date" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183RENEWAL_USER" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Renewal user id" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183RENEWAL_US_0" Type="Edm.String" MaxLength="81" sap:aggregation-role="dimension" sap:label="Renewal user name l" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A4ZCPIF0183SUPERVISE_MO" Type="Edm.String" MaxLength="18" sap:aggregation-role="dimension" sap:label="Model" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="ZIOCH3139" Type="Edm.String" MaxLength="14" sap:aggregation-role="dimension" sap:label="Timestamp (BW regist" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="A00A9WDUEY7H9FDBALBKBZ2TDL" Type="Edm.Decimal" Scale="0" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9FDBALBKBZ2TDL_F" sap:updatable="false" sap:label="Number of Records" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9FDBALBKBZ2TDL_F" Type="Edm.String" MaxLength="60" sap:label="Number of Records (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="A00A9WDUEY7H9FDBALBKBZ2ZP5" Type="Edm.Decimal" Scale="2" Precision="42" sap:aggregation-role="measure" sap:filterable="false" sap:text="A00A9WDUEY7H9FDBALBKBZ2ZP5_F" sap:updatable="false" sap:label="Price" sap:creatable="false"/>
+                <Property Name="A00A9WDUEY7H9FDBALBKBZ2ZP5_F" Type="Edm.String" MaxLength="60" sap:label="Price (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

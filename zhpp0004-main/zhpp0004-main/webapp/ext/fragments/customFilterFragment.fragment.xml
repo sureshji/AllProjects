@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+<smartfilterbar:ControlConfiguration groupId="_BASIC" 
+    key="process"
+    label="Process Mode"
+    visibleInAdvancedArea="true" id="cc1" mandatory="mandatory">
+    <smartfilterbar:customControl >
+        <ComboBox id="ComboProcessId" selectionChange="onSelectionChange" selectedKey="0">
+        <core:Item key="0" text="Sales Order Retrieved" id="ci1"/>
+        <core:Item key="1" text="Planned Order Retrieved" id="ci2"/>
+    </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>

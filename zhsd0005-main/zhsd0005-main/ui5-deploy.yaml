@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.6"
+metadata:
+  name: com.yokogawa.zhsd0005
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: s4003-ap-https
+          url: http://s4apdevds1:44300
+        app:
+          name: ZHSD0005
+          description: YIL Invoice Print
+          package: ZHS4002
+          transport: DS1K913230
+        exclude:
+          - /test/

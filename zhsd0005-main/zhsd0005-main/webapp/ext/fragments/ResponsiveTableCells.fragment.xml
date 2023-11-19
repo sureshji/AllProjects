@@ -1,0 +1,4 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<CheckBox id="_IDGenCheckBox1" selected="false"/>
+    <CheckBox id="_IDGenCheckBox2" selected="false"/>
+</core:FragmentDefinition>

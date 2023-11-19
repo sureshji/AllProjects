@@ -1,0 +1,94 @@
+_schema-version: "3.2"
+ID: com-yokogawa-zhpp0004
+description: Assign Serial Number/Component Number
+version: 0.0.1
+modules:
+- name: com-yokogawa-zhpp0004-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: com-yokogawa-zhpp0004-destination-service
+    parameters:
+      content-target: true
+  - name: com-yokogawa-zhpp0004-repo-host
+    parameters:
+      service-key:
+        name: com-yokogawa-zhpp0004-repo-host-key
+  - name: com-yokogawa-zhpp0004-uaa
+    parameters:
+      service-key:
+        name: com-yokogawa-zhpp0004-uaa-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: com-yokogawa-zhpp0004_html_repo_host
+          ServiceInstanceName: com-yokogawa-zhpp0004-html5-srv
+          ServiceKeyName: com-yokogawa-zhpp0004-repo-host-key
+          sap.cloud.service: com-yokogawa-zhpp0004
+        - Authentication: OAuth2UserTokenExchange
+          Name: com-yokogawa-zhpp0004_uaa
+          ServiceInstanceName: com-yokogawa-zhpp0004-xsuaa-srv
+          ServiceKeyName: com-yokogawa-zhpp0004-uaa-key
+          sap.cloud.service: com-yokogawa-zhpp0004
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+- name: com-yokogawa-zhpp0004-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: com-yokogawa-zhpp0004-repo-host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - comyokogawazhpp0004.zip
+      name: comyokogawazhpp0004
+      target-path: resources/
+- name: comyokogawazhpp0004
+  type: html5
+  path: .
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+resources:
+- name: com-yokogawa-zhpp0004-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: com-yokogawa-zhpp0004-destination-service
+    service-plan: lite
+- name: com-yokogawa-zhpp0004-uaa
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: com-yokogawa-zhpp0004-xsuaa-srv
+    service-plan: application
+- name: com-yokogawa-zhpp0004-repo-host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: com-yokogawa-zhpp0004-html5-srv
+    service-plan: app-host
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true

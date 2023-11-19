@@ -1,0 +1,30 @@
+<core:FragmentDefinition
+	xmlns="sap.m" core:require="{handler: 'com/yokogawa/zhps0005/custom/ListReportExt'}"
+	xmlns:core="sap.ui.core" 
+>
+	<CheckBox id="InclDocItemNo" select=".extension.com.yokogawa.zhps0005.ext.controller.ListReportExt.onSelectInclInclDocItemNo"    ></CheckBox>
+<!-- <HBox id="multiComboGeneralSelection" > -->
+	<!-- <CheckBox text="{i18n>InclGLComp}" id="InclGLComp" selected="{path: 'filterValues>', type: 'sap.ui.model.type.Boolean', formatOptions: { operator: 'com.yokogawa.zhps0005.custom.ListReportExt.generalSelectionFilter' }}" ></CheckBox> -->
+	 <!-- <CheckBox text="{i18n>InclCLSD}" id="InclCLSD" selected="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'com.yokogawa.zhps0005.custom.ListReportExt.generalSelectionFilter' }}" ></CheckBox> -->
+	<!-- <CheckBox text="{i18n>InclDocItemNo}" id="InclDocItemNo" selected="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'com.yokogawa.zhps0005.custom.ListReportExt.generalSelectionFilter' }}" ></CheckBox> -->  
+<!-- </HBox> --> 
+	<!-- <MultiComboBox selectionFinish="handler.generalSelectionFilter"   
+	selectedKeys="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.MultiValue', formatOptions: { operator: 'com.yokogawa.zhps0005.custom.ListReportExt.generalSelectionFilter' }}" 
+	id="multiComboGeneeralSelection">
+		<core:Item
+			id="coreItemIncGLCom"
+			key="0"
+			text="{i18n>InclGLComp}"
+		/> 
+		 <core:Item
+			id="coreItemCLSD"
+			key="1"
+			text="{i18n>InclCLSD}"
+		/>
+		<core:Item
+			id="coreItemIncDocItem"
+			key="2"
+			text="{i18n>InclDocItemNo}"
+		/>
+	</MultiComboBox>  -->
+</core:FragmentDefinition>

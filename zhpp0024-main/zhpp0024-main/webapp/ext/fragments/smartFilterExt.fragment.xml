@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+<smartfilterbar:ControlConfiguration id="_IDGenControlConfiguration1" groupId="_BASIC" 
+    key="SelectOption"
+    label="Selection Type"
+    visibleInAdvancedArea="true" mandatory="mandatory">
+    <smartfilterbar:customControl>
+        <ComboBox selectionChange="onSelectionChange" selectedKey="matnr" id="idSelectOption">
+         <core:Item id="_IDGenItem2" key="matnr" text="Material" />
+         <core:Item id="_IDGenItem1" key="MsCode" text="MS Code" />
+    </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration visible="false" groupId="_BASIC" key="zz1_mscode_prd" id="MsCode" label="MS Code" index="2" >
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration visible="true" groupId="_BASIC" key="matnr" id="Material" label="Material" index="3">
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration visible="true" groupId="_BASIC" key="verwe" id="idTaskUsage" label="Task list usage" index="70">
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration id="_IDGenControlConfiguration2"  groupId="_BASIC" 
+    key="loekz"
+    label="Deletion flag (Header)"
+    visibleInAdvancedArea="true" index="130">
+    <smartfilterbar:customControl>
+        <ComboBox id="_IDGenComboBox1" selectionChange="onDeletionChange1" selectedKey="yesNo" >
+         <core:Item id="_IDGenItem3" key="yesNo" text="" />
+         <core:Item id="_IDGenItem4" key="yes" text="X" />
+    </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration id="_IDGenControlConfiguration3"  groupId="_BASIC" 
+    key="delkz"
+    label="Deletion flag (Header)"
+    visibleInAdvancedArea="true" index="140" >
+    <smartfilterbar:customControl>
+        <ComboBox id="_IDGenComboBox2" selectionChange="onDeletionChange2" selectedKey="yesNo" >
+         <core:Item id="_IDGenItem5" key="yesNo" text="" />
+         <core:Item id="_IDGenItem6" key="yes" text="X" />
+    </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+<smartfilterbar:ControlConfiguration id="_IDGenControlConfiguration4"  groupId="_BASIC" 
+    key="delete_opr"
+    label="Deletion flag (Operation)"
+    visibleInAdvancedArea="true" index="150">
+    <smartfilterbar:customControl>
+        <ComboBox id="_IDGenComboBox3" selectionChange="onDeletionChange3" selectedKey="yesNo" >
+         <core:Item id="_IDGenItem7" key="yesNo" text="" />
+         <core:Item id="_IDGenItem8" key="yes" text="X" />
+    </ComboBox>
+    </smartfilterbar:customControl>
+</smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>

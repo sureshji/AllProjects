@@ -1,0 +1,63 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:core="sap.ui.core">
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" key="Process_flag" id="Process_flag" index="0" label="{@i18n>processFlag}" visibleInAdvancedArea="true">
+        <smartfilterbar:customControl>
+            <ComboBox id="comboProcess_flag" selectedKey="{ui>/search/Process_flag}">
+                <core:Item id="PartsRequest12" key="PartsRequest12" text="{@i18n>PartsRequest12}"/>
+                <core:Item id="FirstIssue" key="FirstIssue" text="{@i18n>FirstIssue}"/>
+                <core:Item id="Display" key="Display" text="{@i18n>Display}"/>
+            </ComboBox>
+        </smartfilterbar:customControl>
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" key="issue_flag" id="issue_flag" visible="{= ${ui>/search/Process_flag} === 'PartsRequest12'}" label="{@i18n>IssueType}" index="1" visibleInAdvancedArea="true">
+        <smartfilterbar:customControl>
+            <ComboBox selectedKey="{ui>/search/issue_flag}" id="comboIssueType">
+                <core:Item id="Regular" key="Y1" text="{@i18n>Regular}"/>
+                <core:Item id="ReIssue" key="Y2" text="{@i18n>ReIssue}"/>
+            </ComboBox>
+        </smartfilterbar:customControl>
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" key="Kanban_type" id="Kanban_type" visible="{= (${ui>/search/Process_flag} === 'Display' || ${ui>/search/Process_flag} === 'FirstIssue')}" label="{@i18n>KanbanType}" index="2" visibleInAdvancedArea="true">
+        <smartfilterbar:customControl>
+            <ComboBox selectedKey="{ui>/search/Kanban_type}" id="comboKanban_type">
+                <core:Item id="1" key="1" text="{@i18n>PartsRequest1step}"/>
+                <core:Item id="2" key="2" text="{@i18n>PartsRequest2step}"/>
+                <core:Item id="3" key="3" text="{@i18n>PartsRequestScan1}"/>
+                <core:Item id="4" key="4" text="{@i18n>PartsRequestScan2}"/>
+                <core:Item id="5" key="5" text="{@i18n>ProdOrder1Scan}"/>
+                <core:Item id="6" key="6" text="{@i18n>ProdOrder2Scan}"/>
+                <core:Item id="7" key="7" text="{@i18n>SignalScan1}"/>
+                <core:Item id="8" key="8" text="{@i18n>SignalScan2}"/>
+            </ComboBox>
+        </smartfilterbar:customControl>
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" key="material" id="material" label="{@i18n>Material}" index="3" visibleInAdvancedArea="true">
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" key="kanbanid" id="kanbanid" label="{@i18n>Kanban}" index="4" visibleInAdvancedArea="true">
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="plt_issfrm" mandatory="{= ( ${ui>/search/Process_flag} === 'PartsRequest12' || ${ui>/search/Process_flag} === 'Display' ) ? 'mandatory' : 'notMandatory'}" key="plt_issfrm"  visible="{= ${ui>/search/Process_flag} === 'PartsRequest12'  || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>PlantIssuedfrom}" index="5" visibleInAdvancedArea="true">
+    <!-- <smartfilterbar:ControlConfiguration groupId="_BASIC" mandatory="{parts:[{path: 'ui>/search/Process_flag'}, {path: 'ui>/search/Process_flag'}, {path: 'ui>/search/Process_flag'}], formatter:'plantIsFrom'}" key="plt_issfrm" id="plt_issfrm" visible="{= ${ui>/search/Process_flag} === 'PartsRequest12' || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>PlantIssuedfrom}" index="5" visibleInAdvancedArea="true"> -->
+
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="sloc_issfrm"  mandatory="{= ( ${ui>/search/Process_flag} === 'PartsRequest12' || ${ui>/search/Process_flag} === 'FirstIssue' ) &amp;&amp; ${ui>/search/Process_flag} !== 'Display' ? 'mandatory' : 'notMandatory'}" key="sloc_issfrm" visible="{= ${ui>/search/Process_flag} === 'PartsRequest12' || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>StorageLocFrom}" index="6" visibleInAdvancedArea="true">
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="printdt" key="printdt"  visible="{= (${ui>/search/Process_flag} === 'PartsRequest12' ) &amp;&amp; ${ui>/search/issue_flag} !== 'Y1'}" label="{@i18n>PrintedDate}" index="7" visibleInAdvancedArea="true">
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="printtm" key="printtm"  visible="{= (${ui>/search/Process_flag} === 'PartsRequest12') &amp;&amp; ${ui>/search/issue_flag} !== 'Y1'}" label="{@i18n>PrintedTime}" index="8" visibleInAdvancedArea="true">
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="plant_issto" mandatory="{= ${ui>/search/Process_flag} === 'FirstIssue' ? 'mandatory' : 'notMandatory'}" key="plant_issto"  visible="{= ${ui>/search/Process_flag} === 'FirstIssue' || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>PlantIssuedTo}" index="9" visibleInAdvancedArea="true">
+    <!-- <smartfilterbar:ControlConfiguration groupId="_BASIC" id="plant_issto" mandatory="{path :'ui>/search/Process_flag', formatter: '.plantIsTo'}" key="plant_issto"  visible="{= ${ui>/search/Process_flag} === 'FirstIssue' || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>PlantIssuedTo}" index="9" visibleInAdvancedArea="true"> -->
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="sloc_issto" mandatory="{= ${ui>/search/Process_flag} === 'FirstIssue' ? 'mandatory' : 'notMandatory'}" key="sloc_issto"  visible="{= ${ui>/search/Process_flag} === 'FirstIssue' || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>StorageLocIssuedto}" index="10" visibleInAdvancedArea="true">
+    </smartfilterbar:ControlConfiguration>
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="supp_areaissto" key="supp_areaissto"  visible="{= ${ui>/search/Process_flag} === 'FirstIssue' || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>SupplyAreaIssuedto}" index="11" visibleInAdvancedArea="true">
+    </smartfilterbar:ControlConfiguration>
+    <!-- <smartfilterbar:ControlConfiguration groupId="_BASIC" id="language" key="language"  visible="{= ${ui>/search/Process_flag} === 'FirstIssue' || ${ui>/search/Process_flag} === 'Display'}" label="{@i18n>LanguageKey}" index="12" visibleInAdvancedArea="true"> -->
+    <smartfilterbar:ControlConfiguration groupId="_BASIC" id="language" key="language"  visible="true" label="{@i18n>LanguageKey}" index="12" visibleInAdvancedArea="true">
+
+    </smartfilterbar:ControlConfiguration>
+    <!-- <smartfilterbar:ControlConfiguration groupId="_BASIC" key="Kanban_type" id="Kanban_type2" visible="{= ${ui>/search/Process_flag} === 'Display'}" label="Kanban Type" index="12" visibleInAdvancedArea="true"> 
+</smartfilterbar:ControlConfiguration>  -->
+</core:FragmentDefinition>
+

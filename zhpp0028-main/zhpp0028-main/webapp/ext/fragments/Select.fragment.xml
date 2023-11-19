@@ -1,0 +1,51 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+<TableSelectDialog
+		id="mySelectDialog"
+		noDataText="No Printer Found"
+		title="Select Printer" search=".onQueueSearch" confirm=".onQDialogClose" cancel=".onQDialogClose"
+		items="{
+			path : '/PrinterConfiguration',
+			sorter : {
+				path : 'PRINTERID',
+				descending : false
+			}
+		}">
+		<ColumnListItem vAlign="Middle" id="clip"> 	
+			<cells>
+                <ObjectIdentifier title="{PRINTERID}" text="{PRINTERID}" id="oip1"/>
+				<Text text="{REPORTID}" id="tcp1"/>
+                <Text text="{KEY1}" id="tcp2"/>
+                <Text text="{KEY2}" id="tcp3"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+            <Column width="10em" id="cp1">
+				<header>
+					<Text text="{i18n>Printer}" id="tp1"/>
+				</header>
+			</Column>
+			<Column width="12em" id="cp2">
+				<header>
+					<Text text="{i18n>ReportId}" id="tp2"/>
+				</header>
+			</Column>
+			<Column width="10em" id="cp3">
+				<header>
+					<Text text="{i18n>Key1}" id="tp3"/>
+				</header>
+			</Column>
+			<Column width="10em" id="cp4">
+				<header>
+					<Text text="{i18n>Key2}" id="tp4"/>
+				</header>
+			</Column>
+			
+		</columns>
+	</TableSelectDialog>
+
+    <!-- <SelectDialog id="mySelectDialog" noDataText="No Printers Found" title="Select Printer" search=".onQueueSearch" confirm=".onQDialogClose" cancel=".onQDialogClose" items="{
+			path: 'ui>/aQueues'
+		}">
+        <StandardListItem id="listQueue" title="{ui>qname}" description="{ui>qdescription}" iconDensityAware="false" iconInset="false" type="Active" />
+    </SelectDialog> -->
+</core:FragmentDefinition>

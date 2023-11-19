@@ -1,0 +1,73 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Dialog id="selectOutputDialog" title="Output Option" class="sapUiContentPadding" contentWidth="850px">
+        <customHeader>
+            <Bar id="oBar">
+                <contentMiddle>
+                    <Title id="idSelectOutput" text="Select Output" />
+                </contentMiddle>
+                <contentRight />
+            </Bar>
+        </customHeader>
+        <f:Form  id="simpeForm" >
+          <f:layout>
+                        <f:ResponsiveGridLayout id="rgl4Id" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                    </f:layout>
+        <!-- <VBox id="12"> -->
+            <!-- <FlexBox id="13"> -->
+                <!-- <Label width="14rem" id="1" text="Paper Immediatly" /> -->
+                
+                <!-- <VBox width="14rem" id="2"> -->
+                <f:formContainers>
+                        <f:FormContainer id="fc4Id">
+                            <f:formElements>
+                                <f:FormElement id="fe12Id">
+                                    <f:fields>
+                    <RadioButtonGroup id="rbgoo" selectedIndex="{ui>/outputOptionSelected}" columns="3">
+                        <RadioButton  selected="true" id="printoo" text="Paper Immediately" />
+                        <RadioButton  selected="true" id="pdfoo" text="PDF Immediately" />
+                        <RadioButton  selected="true" id="textoo" text="Text Immediately" />
+                        
+                    </RadioButtonGroup>
+                     </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe33Id">
+                                    <f:fields>
+                    <RadioButtonGroup id="rbgprintero" selectedIndex="{ui>/printerOptionSelected}" visible="{= ${ui>/outputOptionSelected} === 0 ? true : false}" columns="2">
+                        <RadioButton  selected="true" id="defaultp" text="Use the Default Printer of the work center" />
+                        <RadioButton  selected="true" id="specificp" text="Specify Printer" />
+                        </RadioButtonGroup>
+                        </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="fe34Id">
+                                    <f:fields>
+                        <Input id="7v" value="{ui>/SpecifiedPrinter}" showValueHelp="true" valueHelpRequest="onValueHelpSpecifyPrinter" visible="{= ${ui>/printerOptionSelected} === 1 ? ${ui>/outputOptionSelected} === 0 ? true : false : false}" width="30%"/>
+                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+                    <!-- <HBox id="6">
+                        <RadioButton groupName="paperIm" selected="{= ${ui>/SpecifiedPrinter} ? true : false}" id="specifyPrinter" text="Specify Printer Queue" />
+                       
+                    </HBox> -->
+                <!-- </VBox> -->
+            <!-- </FlexBox> -->
+            <!-- <FlexBox id="14">
+                <Label width="14rem" id="8" text="PDF Immediately" />
+                <Button width="14rem" id="9" text="Download" press="onPDFDownload" />
+            </FlexBox>
+            <FlexBox id="15" >
+                <Label width="14rem" id="10" text="Text Immediately" />
+                <Button width="14rem" id="11" text="Download" press="onTextDownload" />
+            </FlexBox> -->
+        <!-- </VBox> -->
+       
+        <!-- </f:content>
+        </f:SimpleForm> -->
+        <buttons>
+            <Button id="btnPrint" width="8rem" type="Accept" press="onPrint" text="Okay" />
+            <Button id="btnCancel" width="8rem" type="Reject" press="onClose" text="Cancel" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

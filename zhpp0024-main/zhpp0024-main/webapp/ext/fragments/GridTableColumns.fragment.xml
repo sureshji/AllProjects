@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns="sap.m">
+    <!-- <table:Column width="80px" visible="false">
+        <Text text="Assignment number1"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;knobj&quot;, &quot;columnIndex&quot;: &quot;121&quot;}"/>
+        </table:customData>
+        <table:template>
+            <Text text="{knobj}"/>
+        </table:template>
+		</table:Column> -->
+		<!-- <table:Column width="900px" >
+		<Text text="Object dependency"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;Source&quot;, &quot;columnIndex&quot;: &quot;111&quot;}"/>
+        </table:customData>
+        <table:template>
+            <Text text="{Source}"/>
+        </table:template>
+    </table:Column> -->
+</core:FragmentDefinition>

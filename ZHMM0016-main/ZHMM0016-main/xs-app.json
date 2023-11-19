@@ -1,0 +1,193 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/v2/(.*)$",
+      "target": "/v2/$1",
+      "destination": "cap-zhs402-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/(.*)$",
+      "target": "/sap/$1",
+      "destination": "s4003-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZSRVBHMM0020/(.*)$",
+      "target": "/sap/opu/odata/sap/ZSRVBHMM0020/$1",
+      "destination": "s4003-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/(.*)$",
+      "target": "/sap/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0144_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0144_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },  
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0144_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0144_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0124_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0124_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0165_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0165_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0075_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0075_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0434_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0434_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0432_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0432_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0436_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0436_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0113_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0113_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0097_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0097_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0163_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0163_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0438_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0438_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0446_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0446_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0436_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0436_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0505_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0505_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0444_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0444_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0508_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0508_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0453_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0453_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0192_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0444_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/sap/opu/odata/sap/ZBQIF0076_001_SRV/(.*)$",
+      "target": "/sap/opu/odata/sap/ZBQIF0076_001_SRV/$1",
+      "destination": "bw001-ap-https",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^/test-resources/(.*)$",
+      "target": "/test-resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

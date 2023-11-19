@@ -1,0 +1,13 @@
+{
+	"cols": [
+		{
+			"label": "Company Code",
+			"template": "CompanyCode",
+			"width": "5rem"
+		},
+		{
+			"label": "Company Code Desc",
+			"template": "CompanyCodeDesc"
+		}
+	]
+}

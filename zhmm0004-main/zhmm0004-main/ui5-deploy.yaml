@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: app.yokogawa.zhmm0004.zhmm0004
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: s4apdevds1-120-https
+          url: http://s4apdevds1:44300
+        app:
+          name: ZHMM0004
+          description: Physical Inventory
+          package: ZHS402
+          transport: DS1K913758

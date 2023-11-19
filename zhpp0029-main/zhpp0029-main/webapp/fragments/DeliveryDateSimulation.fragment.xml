@@ -1,0 +1,68 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="DeliveryDateDialogIdInFragment" title="{i18n>InputData}" contentWidth="450px" contentHeight="200px" resizable="true" draggable="true">
+        <buttons>
+            <Button id="DeliveryDateDateButtonIdInFragment" text="{i18n>Simulation}" press="onDeliveryDateSimulationFromPopUp"/>
+            <Button id="CloseButtonIdInFragment" text="{i18n>Cancel}" press="onCancelDeliveryDateSimulationFromPopUp"/>
+        </buttons>
+        <content>
+            <FlexBox id="FlexBoxId" direction="Column" height="100px">
+
+                <HBox id="HboxId" fitContainer="true" alignItems="Center">
+                    <Label id="LinkageNumberDisplayFieldId" labelFor="LinkageNumberTextFieldId" text="{i18n>LinkageNumberInputField}"></Label>
+                    <Toolbar id="FirstToolBarId">
+                        <ToolbarSpacer id="FirstToolBarSpacerId"/>
+                    </Toolbar>
+                    <Text id="LinkageNumberTextFieldId" text="{currentUserModel>/ZZG_LINKNO}" />
+                </HBox>
+
+                <HBox id="HboxId2" fitContainer="true" alignItems="Center">
+                    <Label id="SalesOrgDisplayFieldId" labelFor="SalesOrgTextFieldId" text="{i18n>SalesOrgInputField}"></Label>
+                    <Toolbar id="SecondToolBarId">
+                        <ToolbarSpacer id="SecondToolBarSpacerId"/>
+                    </Toolbar>
+                    <Text id="SalesOrgTextFieldId" text="{currentUserModel>/VKORG}" />
+                </HBox>
+
+                <HBox id="HboxId3" fitContainer="true" alignItems="Center">
+                    <Label id="SalesOrderDisplayFieldId" labelFor="SalesOrderTextFieldId" text="{i18n>SalesOrderInputField}"></Label>
+                    <Toolbar id="ThirdToolBarId">
+                        <ToolbarSpacer id="ThirdToolBarSpacerId"/>
+                    </Toolbar>
+                    <Text id="SalesOrderTextFieldId" text="{currentUserModel>/VBELN}" />
+                </HBox>
+
+                <HBox id="HboxId4" fitContainer="true" alignItems="Center">
+                    <Label id="SalesOrderItemId" labelFor="SalesOrderItemTextFieldId" text="{i18n>SalesOrderItemInputField}"></Label>
+                    <Toolbar id="FourthToolBarId">
+                        <ToolbarSpacer id="FourthToolBarSpacerId"/>
+                    </Toolbar>
+                    <Text id="SalesOrderItemTextFieldId" text="{currentUserModel>/POSNR}" />
+                </HBox>
+                <HBox id="HboxId5" fitContainer="true" alignItems="Center">
+                    <Label id="LabelforDeliveryDateIdInFragment" labelFor= "DeliveryDateInputID" text="{i18n>DeliveryDateInput}"></Label>
+                    <Toolbar id="FifthToolBarId">
+                        <ToolbarSpacer id="FifthToolBarSpacerId"/>
+                    </Toolbar>
+                    <DatePicker id="DeliveryDateInputID" value="{'path': 'currentUserModel>/deliveryDate' ,
+                                                                'type':'sap.ui.model.type.Date',
+                                                                'formatOptions': {
+							'pattern': 'yyyy-MM-dd'
+						}}" />
+
+                </HBox>
+                <HBox id="HboxId6" fitContainer="true" alignItems="Center">
+                    <Label id="LabelforMaterialAvailDateIdInFragment" labelFor= "MaterialAvailableDateInputID" text="{i18n>MaterialAvailableDateInput}"></Label>
+                      <Toolbar id="SixthToolBarId">
+                        <ToolbarSpacer id="SixthToolBarSpacerId"/>
+                    </Toolbar>
+                    <DatePicker id="MaterialAvailableDateInputID" value="{'path': 'currentUserModel>/materialAvailableDate' ,
+                                                                'type':'sap.ui.model.type.Date',
+                                                                'formatOptions': {
+							'pattern': 'yyyy-MM-dd'
+						}}" />
+                </HBox>
+            </FlexBox>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns="sap.m">
+    <table:Column id="_IDGenColumn1" width="80px">
+        <Text id="_IDGenText1" text="Unit"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;Unit&quot;, &quot;columnIndex&quot;: &quot;11&quot;}"/>
+        </table:customData>
+        <table:template>
+            <CheckBox id="_IDGenCheckBox1" select="onSelectUnit" selected="true"/>
+            <!-- selected="{= ${Unit} === 'X' ? 'true' : 'false" -->
+        </table:template>
+    </table:Column>
+    <table:Column id="_IDGenColumn2" width="50px">
+        <Text id="_IDGenText2" text="Tax"/>
+        <table:customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;Tax&quot;, &quot;columnIndex&quot;: &quot;12&quot;}"/>
+        </table:customData>
+        <table:template>
+            <CheckBox id="_IDGenCheckBox2" select="onSelectTax" selected="true"/>
+        </table:template>
+    </table:Column>
+</core:FragmentDefinition>

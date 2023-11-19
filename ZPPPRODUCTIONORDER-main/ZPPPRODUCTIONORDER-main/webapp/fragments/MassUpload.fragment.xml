@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns:sap.ui.layout="sap.ui.layout" xmlns:semantic="sap.m.semantic" xmlns:unified="sap.ui.unified" xmlns="sap.m">
+	<Dialog id="dialogId2" draggable="true" resizable="true" title="Import from Excel" contentWidth="850px">
+		<content>
+        	<VBox id="vBoxId2" class="sapUiSmallMargin">
+            <unified:FileUploader id="FileUploaderId" name="myFileUpload" sameFilenameAllowed="true" iconOnly="false" buttonOnly="false" fileType="XLSX,xlsx"
+				icon="sap-icon://upload" iconFirst="true" style="Emphasized" useMultipart="false"  uploadComplete="handleUploadComplete" placeholder="{i18n>uploadPlaceholder}" sendXHR="true"/>
+            </VBox>
+            <FlexBox id="fbId2" height="100px" alignItems="Start" justifyContent="End">
+				<Button text="{i18n>submit}" type="Accept" width="200px" class="sapUiSmallMargin" enabled="{oModelUI>/formEditable}" press='onMassUploadSave' id="btnSubmit"/>
+                <Button text="{i18n>close}" type="Accept" width="200px" class="sapUiSmallMargin" enabled="{oModelUI>/formEditable}" press='onMassUploadCancel' id="btnClose"/>
+			</FlexBox>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

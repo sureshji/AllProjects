@@ -1,0 +1,108 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/v2/ZCAPIH0018/$metadata">
+        <edmx:Include Namespace="ZCAPIH0018"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="ZCAPIH0018.ZCDSEHPPB0085">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <!-- <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="trafic_light"/>
+                            <PropertyValue Property="Label" String="{@i18n>trafic_light}"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record> -->
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="rep_strategy"/>
+                            <PropertyValue Property="Label" String="{@i18n>replenishmentStrategy}"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="plt_issfrm"/>
+                            <PropertyValue Property="Label" String="{@i18n>plantIssuedFrom}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="sloc_issfrm"/>
+                            <PropertyValue Property="Label" String="{@i18n>slocIssuedFrom}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="sloc_binfrm"/>
+                            <PropertyValue Property="Label" String="{@i18n>slocBinIssuedFrom}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="material"/>
+                            <PropertyValue Property="Label" String="{@i18n>Material}"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="quantity"/>
+                            <PropertyValue Property="Label" String="Quantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="unit"/>
+                            <PropertyValue Property="Label" String="{@i18n>unit}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="plant_issto"/>
+                            <PropertyValue Property="Label" String="{@i18n>plantIssuedTo}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="sloc_issto"/>
+                            <PropertyValue Property="Label" String="{@i18n>slocIssuedTo}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="supp_areaissto"/>
+                            <PropertyValue Property="Label" String="{@i18n>SupplyAreaIssuedto}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="status"/>
+                            <PropertyValue Property="Label" String="{@i18n>status}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="kanbanid"/>
+                            <PropertyValue Property="Label" String="{@i18n>kanbanId}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="printdt"/>
+                            <PropertyValue Property="Label" String="{@i18n>PrintedDate}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="printtm"/>
+                            <PropertyValue Property="Label" String="{@i18n>PrintedTime}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="boxtyp_cod"/>
+                            <PropertyValue Property="Label" String="{@i18n>boxTypeCode}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="boxtyp_text"/>
+                            <PropertyValue Property="Label" String="{@i18n>boxTypeText}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Printhist"/>
+                            <PropertyValue Property="Label" String="{@i18n>printHistory}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Printmed"/>
+                            <PropertyValue Property="Label" String="{@i18n>printingMediaForThe}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="message"/>
+                            <PropertyValue Property="Label" String="{@i18n>message}"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
